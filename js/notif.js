@@ -5,7 +5,7 @@
     async function handleButtonClick() {
       const alert = await alertController.create({
         header: 'Hi, Selamat Datang',
-        message: '<b><center>Base on Theme JekyllNow, Build With Ionic Framework, Masih Dalam Tahap Perbaikan</center></b>',
+        message: '<b><div style="text-align:justify;">Base on Theme JekyllNow, Build With Ionic Framework, Masih Dalam Tahap Perbaikan</div></b>',
         buttons: ['OK']
       });
 
