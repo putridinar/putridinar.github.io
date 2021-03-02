@@ -1,0 +1,23 @@
+- name: Produk 1
+  diskon: 20K
+  harga: 15K
+  image: /images/wa.png
+  url: /store/produk1
+
+- name: Produk 2
+  diskon: 20K
+  harga: 15K
+  image: /images/wa.png
+  url: /store/produk2
+
+- name: Produk 3
+  diskon: 20K
+  harga: 15K
+  image: /images/wa.png
+  url: /store/produk3
+
+- name: Produk 4
+  diskon: 20K
+  harga: 15K
+  image: /images/wa.png
+  url: /store/produk4

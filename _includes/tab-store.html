@@ -1,0 +1,29 @@
+
+<style type="text/css">
+.toko {
+    display: flex;
+    flex-flow: wrap;
+    margin: auto;
+    max-width: 930px;
+    }
+.diskon  {
+    text-decoration: line-through;
+    }
+</style>
+        <ion-content fullscreen class="ion-padding">
+<div class="toko">
+{% for produk in site.data.produk %}
+<ion-card class="store" href="{{ produk.url }}">
+        <img src="{{ produk.image }}" />
+  <ion-card-header>
+    <ion-card-subtitle>{{ produk.name }}</ion-card-subtitle>
+    <ion-card-title style="color:grey;"><div class="diskon">IDR. {{ produk.diskon }} </div></ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-label color="danger"><ion-icon name="pricetags-outline"></ion-icon> IDR.{{ produk.harga }}</ion-label>
+  </ion-card-content>
+</ion-card>
+{% endfor %}
+</div>
+        </ion-content>

@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+	<ion-grid class="content">
+        <ion-row>
+          <ion-col>
+  {% for post in site.posts %}
+      <ion-card class="artikel">
+        <img class="img" src="{{ post.image }}" />
+		<div class="konten">
+        <ion-card-header class="blog">
+  <ion-item>
+<ion-icon name="bookmark" slot="start"></ion-icon>
+<ion-label color="danger">{{ post.label }}</ion-label>
+  </ion-item>
+          <ion-card-title>{{ post.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="summary">
+        {{ post.excerpt }}
+        </ion-card-content>
+		<section class="read">
+        <ion-button href="{{ site.baseurl }}{{ post.url }}" fill="outline" slot="end" size="small" color="secondary">Read More</ion-button>
+		</section>
+		</div>
+      </ion-card>
+  {% endfor %}
+	  </ion-col>
+        </ion-row>
+	</ion-grid>

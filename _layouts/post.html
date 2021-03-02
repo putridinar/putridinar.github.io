@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="post">
+<ion-label color="primary">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </ion-label>
+      <ion-card>
+  <ion-item>
+<ion-icon name="bookmark" slot="start"></ion-icon>
+          <ion-card-title>{{ page.title }}</ion-card-title>
+  </ion-item>
+        <center><img src="{{ page.image }}" /></center>
+        <ion-card-content>
+    {{ content }}
+        </ion-card-content>
+      </ion-card>
+<ion-card>
+  {% include disqus.html %}
+</ion-card>
+</article>

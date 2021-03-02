@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<style type="text/css">
+.productPhotoWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    position: relative;
+}
+.pic-produk {
+    max-width: 515px;
+}
+</style>
+<article class="page"  id='buyWhatsApp'>
+<ion-card class="pic-produk">
+    <img src="{{ page.image }}"/>
+<div class="productPhotoWrapper">
+    <img src="{{ page.image }}"/>
+    <img src="{{ page.image }}"/>
+    <img src="{{ page.image }}"/>
+    <img src="{{ page.image }}"/>
+
+</div>
+</ion-card>
+<div class="produkOrder">
+<ion-card>
+<ion-card-header>
+  <ion-card-title>{{ page.title }}</ion-card-title>
+  <ion-card-subtitle class="diskon">IDR.{{ page.diskon }}</ion-card-subtitle>
+  <ion-card-title>IDR.{{ page.harga }}</ion-card-title>
+</ion-card-header>
+    <ion-card-content>{{ content }}</ion-card-content>
+</ion-card>
+<ion-card>
+<ion-card-header>
+<ion-label>Order Now {{ page.title }}</ion-label>
+</ion-card-header>
+<div class='data-form validate-form' id='whatsapp'>
+<input class='tujuan' id='noAdmin' type='hidden'/>
+        <ion-item>
+          <ion-label position="fixed">*Nama</ion-label>
+          <ion-input class='nama wajib' placeholder="Nama Anda"></ion-input>
+        </ion-item><ion-item>
+          <ion-label position="fixed">*WhatsApp</ion-label>
+          <ion-input class='nomor wajib' placeholder="No. WhatsApp" type="number"></ion-input>
+        </ion-item>
+<ion-item>
+          <ion-label position="stacked">*Alamat</ion-label>
+          <ion-textarea class='alamat wajib' placeholder="Alamat Lengkap"></ion-textarea>
+        </ion-item>
+ <ion-item>
+          <ion-label>*Pilih Warna</ion-label>
+          <ion-select class='warna wajib' placeholder='Warna' value="notifications" interface="action-sheet">
+            <ion-select-option value="Hitam">Hitam</ion-select-option>
+            <ion-select-option value="Putih">Putih</ion-select-option>
+            <ion-select-option value="Pink">Pink</ion-select-option>
+            <ion-select-option value="Marun">Marun</ion-select-option>
+          </ion-select>
+        </ion-item>
+ <ion-item>
+          <ion-label>*Pilih Model</ion-label>
+          <ion-select class='tali wajib' placeholder='Model' value="notifications" interface="action-sheet">
+            <ion-select-option value="HeadLoop">HeadLoop</ion-select-option>
+            <ion-select-option value="EarLoop">EarLoop</ion-select-option>
+            <ion-select-option value="Tali Ikat">Tali Ikat</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>*Jumlah</ion-label>
+          <ion-select class='qty wajib' placeholder='Quatity' value="1">
+            <ion-select-option value="1">1pcs</ion-select-option>
+            <ion-select-option value="2">2pcs</ion-select-option>
+            <ion-select-option value="3">3pcs</ion-select-option>
+            <ion-select-option value="4">4pcs</ion-select-option>
+            <ion-select-option value="5">5pcs</ion-select-option>
+            <ion-select-option value="6">6pcs</ion-select-option>
+            <ion-select-option value="7">7pcs</ion-select-option>
+            <ion-select-option value="8">8pcs</ion-select-option>
+            <ion-select-option value="9">9pcs</ion-select-option>
+            <ion-select-option value="10">10pcs</ion-select-option>
+          </ion-select>
+        </ion-item>
+ <ion-item>
+          <ion-label>*Pilih Kurir</ion-label>
+          <ion-select class='informasi wajib' placeholder='Informasi' value="notifications" interface="action-sheet">
+            <ion-select-option value="J%26T Express">J&T Express</ion-select-option>
+            <ion-select-option value="JNE Express">JNE Express</ion-select-option>
+            <ion-select-option value="*GoSend">*GoSend</ion-select-option>
+            <ion-select-option value="*GrabExpress">*GrabExpress</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>*Pembayaran</ion-label>
+          <ion-select class='bayar wajib' placeholder='Bayar Dengan'>
+            <ion-select-option value="Bank 1">Bank 1</ion-select-option>
+            <ion-select-option value="Bank 2">Bank 2</ion-select-option>
+            <ion-select-option value="Bank 3">Bank 3</ion-select-option>
+            <ion-select-option value="Bank 4">Bank 4</ion-select-option>
+          </ion-select>
+        </ion-item>
+<ion-item>
+<ion-button class='sendWAclik kirim' slot="end" size="normal">Buy Now</ion-button>
+</ion-item>
+</div>
+</ion-card>
+</div>
+</article>

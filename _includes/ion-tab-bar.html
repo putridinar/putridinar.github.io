@@ -1,0 +1,36 @@
+
+      <ion-tab-bar slot="bottom">
+    {% if page.layout == "default" %}
+        <ion-tab-button tab="blog">
+          <ion-label>Post</ion-label>
+          <ion-icon name="newspaper-outline"></ion-icon>
+        </ion-tab-button>
+    {% endif %}
+    {% if page.layout == "post" %}
+        <ion-tab-button tab="blog">
+          <ion-label>Reading</ion-label>
+          <ion-icon name="reader-outline"></ion-icon>
+        </ion-tab-button>
+    {% endif %}
+    {% if page.layout == "page" %}
+        <ion-tab-button tab="blog">
+          <ion-label>Page</ion-label>
+          <ion-icon name="book-outline"></ion-icon>
+        </ion-tab-button>
+    {% endif %}
+    {% if page.layout == "produk" %}
+        <ion-tab-button tab="blog">
+          <ion-label>Produk</ion-label>
+          <ion-icon name="albums-outline"></ion-icon>
+        </ion-tab-button>
+    {% endif %}
+        <ion-tab-button tab="store">
+          <ion-label>Store</ion-label>
+          <ion-icon src="/css/icon/storefront-outline.svg"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="kontak">
+          <ion-label>Kontak</ion-label>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+

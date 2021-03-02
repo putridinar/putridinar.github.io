@@ -1,0 +1,50 @@
+
+      <ion-tab tab="blog">
+        <ion-header translucent>
+          <ion-toolbar>
+    {% if page.layout == "post" %}
+        <ion-buttons slot="start" onclick="javascript:history.back()">
+          <ion-button><ion-icon name="chevron-back-outline"></ion-icon><ion-label>Back</ion-label>
+          </ion-button>
+        </ion-buttons>
+{% endif %}
+    {% if page.layout == "page" %}
+        <ion-buttons slot="start" onclick="javascript:history.back()">
+          <ion-button><ion-icon name="chevron-back-outline"></ion-icon><ion-label>Back</ion-label>
+          </ion-button>
+        </ion-buttons>
+{% endif %}
+    {% if page.layout == "produk" %}
+        <ion-buttons slot="start" onclick="javascript:history.back()">
+          <ion-button><ion-icon name="chevron-back-outline"></ion-icon><ion-label>Back</ion-label>
+          </ion-button>
+        </ion-buttons>
+{% endif %}
+    {% if page.layout == "default" %}
+            <ion-title>Blog</ion-title>
+{% endif %}
+        <ion-buttons slot="end">
+          <ion-dot><ion-button><ion-icon name="notifications-outline"></ion-icon><ion-badge color="danger">!</ion-badge></ion-button></ion-dot>
+        </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+          {% include tab-blog.html %}
+      </ion-tab>
+
+      <ion-tab tab="store">
+        <ion-header translucent>
+          <ion-toolbar>
+            <ion-title>Store</ion-title>
+          </ion-toolbar>
+        </ion-header>
+          {% include tab-store.html %}
+      </ion-tab>
+
+      <ion-tab tab="kontak">
+        <ion-header translucent>
+          <ion-toolbar>
+            <ion-title>Kontak</ion-title>
+          </ion-toolbar>
+        </ion-header>
+          {% include tab-kontak.html %}
+      </ion-tab>
