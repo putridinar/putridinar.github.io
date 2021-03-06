@@ -13,6 +13,11 @@ Bersamaan dengan dukungan untuk perluasan penyimpanan, PlayStation 5 juga akan d
 
 <h2>Pembaruan PlayStation 5 untuk menyelesaikan masalah umum</h2>
 
+
+<center><img src="/images/Xbox-Series-X-7.webp" alt="The Storage Expansion slot on the Xbox Series X." style="width: auto;"/></center>
+
+
+
 Karena Sony belum mengumumkan apa pun di bagian depan ini secara resmi, masih harus dilihat apakah Sony menggunakan cara Microsoft untuk membatasi jenis drive penyimpanan tertentu untuk PS5. Di dunia Xbox Series X dan Series S, satu-satunya cara untuk memperluas penyimpanan Anda adalah dengan membeli Kartu Ekspansi Penyimpanan Seagate dan meletakkannya di slot khusus. Solusi Seagate menawarkan ruang 1TB untuk penginstalan game di konsol Xbox baru.
 
 Saat ini, Xbox Series X menawarkan ruang penyimpanan internal paling banyak dari semua konsol game generasi modern. PS5 berada di urutan kedua dengan penyimpanan 667GB sedangkan Xbox Series S menawarkan penyimpanan sub-400GB. Solusi perluasan penyimpanan Microsoft akan membuat Anda kembali sebesar Rs 23.499 di India.
