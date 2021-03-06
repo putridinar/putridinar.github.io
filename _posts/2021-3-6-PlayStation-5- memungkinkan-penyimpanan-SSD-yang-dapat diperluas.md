@@ -2,7 +2,7 @@
 layout: post
 title: PlayStation 5 memungkinkan penyimpanan SSD yang dapat diperluas
 label: Konsol Games
-image: /images/PS-5.webp
+image: /images/Xbox-Series-X-7.webp
 ---
 Jika Anda baru saja membeli PlayStation 5 dan mencari cara untuk memperluas penyimpanannya, ada kabar baik. Seorang juru bicara Sony telah mengonfirmasi bahwa pihaknya akan membawa dukungan ekspansi penyimpanan M.2 SSD di konsol PS5 dengan pembaruan perangkat lunak. 
 
