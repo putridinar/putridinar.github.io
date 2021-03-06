@@ -7,7 +7,9 @@ image: /images/pubg-new-state.webp
 
 PUBG: New State atau PUBG Mobile 2 telah melewati lima juta prapendaftaran di Google Play dalam waktu seminggu setelah merilis tautan prapendaftaran. Game yang diterbitkan oleh perusahaan induk video game Korea Selatan, Krafton, kemungkinan besar tidak akan datang ke India, menurut beberapa laporan.
 
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">You did it! We did it! Thanks to our AMAZING community, we’ve hit over 5 million pre-registrations on Google Play within a week! 🙏<br><br>We&#39;re excited to share more exclusive info soon, so keep an eye on our social channels and spread the word! 👀<a href="https://twitter.com/hashtag/pubgnewstate?src=hash&amp;ref_src=twsrc%5Etfw">#pubgnewstate</a> <a href="https://twitter.com/hashtag/pubgns?src=hash&amp;ref_src=twsrc%5Etfw">#pubgns</a> <a href="https://twitter.com/hashtag/newstate?src=hash&amp;ref_src=twsrc%5Etfw">#newstate</a> <a href="https://t.co/gBrtPism6c">pic.twitter.com/gBrtPism6c</a></p>&mdash; PUBG: NEW STATE (@PUBG_NEWSTATE) <a href="https://twitter.com/PUBG_NEWSTATE/status/1367716506130391043?ref_src=twsrc%5Etfw">March 5, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 PUBG: Prapendaftaran New State di Google Play Store dimulai pada 25 Februari. Perusahaan melalui Twitter mengumumkan bahwa mereka telah melewati angka lima juta dalam seminggu. Perhatikan bahwa India tidak termasuk dalam prapendaftaran.
 
