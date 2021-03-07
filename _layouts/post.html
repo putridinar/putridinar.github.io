@@ -3,9 +3,6 @@ layout: default
 ---
 
 <article class="post">
-<ion-label color="primary">
-    <small>Written on {{ page.date | date: "%B %e, %Y" }}</small>
-  </ion-label>
       <ion-card>
   <ion-item>
 <ion-icon name="bookmark" slot="start"></ion-icon>
@@ -19,4 +16,7 @@ layout: default
 <ion-card>
   {% include disqus.html %}
 </ion-card>
+<ion-label color="primary">
+    <small>Written on {{ page.date | date: "%B %e, %Y" }}</small>
+  </ion-label>
 </article>
