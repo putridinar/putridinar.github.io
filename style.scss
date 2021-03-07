@@ -350,12 +350,15 @@ footer {
 	    float: left;
         padding: 10px 10px;
 		}
-	.sidebar-wrapper {
-	float: right;
-	width: 320px;
+.sidebar-content {
     position: fixed;
-    right: 80px;
-    bottom: 40px;
+    max-width: 320px;
+    top: 68px;
+}
+	.sidebar-wrapper {
+    float: right;
+    width: 320px;
+    margin: auto;
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 768px)  {
