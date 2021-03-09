@@ -49,13 +49,15 @@ box-shadow: 0px 0px 8px rgba(0,0,0,.3);
     <ion-card-content>
         {{ content }}
     <br />
-<small><b color="warning">Disclaimer:</b> Persamaan warna foto katalog dengan produk asli mencapai 98%. Efek cahaya, kecerahan, kerapatan, dan resolusi layar memungkinkan terjadinya distorsi warna.</small>
+<div class="disclaim">
+<small><b style="color:crimson;">Disclaimer:</b> Persamaan warna foto katalog dengan produk asli mencapai 98%. Efek cahaya, kecerahan, kerapatan, dan resolusi layar memungkinkan terjadinya distorsi warna.</small>
+</div>
     
     </ion-card-content>
 </ion-card>
 <ion-card>
 <ion-card-header>
-<ion-label>Order {{ page.title }}</ion-label>
+<ion-label>Order {{ page.title }} melalui whatsapp</ion-label>
 </ion-card-header>
 <div class='data-form validate-form' id='whatsapp'>
 <input class='tujuan' id='noAdmin' type='hidden'/>
@@ -72,19 +74,18 @@ box-shadow: 0px 0px 8px rgba(0,0,0,.3);
         </ion-item>
  <ion-item>
           <ion-label>*Pilih Warna</ion-label>
-          <ion-select class='warna wajib' placeholder='Warna' value="notifications" interface="action-sheet">
+          <ion-select class='warna wajib' placeholder='Warna' value="Pilih Warna" interface="action-sheet">
             <ion-select-option value="Hitam">Hitam</ion-select-option>
             <ion-select-option value="Putih">Putih</ion-select-option>
-            <ion-select-option value="Pink">Pink</ion-select-option>
             <ion-select-option value="Marun">Marun</ion-select-option>
           </ion-select>
         </ion-item>
  <ion-item>
-          <ion-label>*Pilih Model</ion-label>
-          <ion-select class='tali wajib' placeholder='Model' value="notifications" interface="action-sheet">
-            <ion-select-option value="HeadLoop">HeadLoop</ion-select-option>
-            <ion-select-option value="EarLoop">EarLoop</ion-select-option>
-            <ion-select-option value="Tali Ikat">Tali Ikat</ion-select-option>
+          <ion-label>*Pilih Ukuran</ion-label>
+          <ion-select class='tali wajib' placeholder='Ukuran' value="Plih Ukuran" interface="action-sheet">
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
           </ion-select>
         </ion-item>
         <ion-item>
@@ -104,7 +105,7 @@ box-shadow: 0px 0px 8px rgba(0,0,0,.3);
         </ion-item>
  <ion-item>
           <ion-label>*Pilih Kurir</ion-label>
-          <ion-select class='informasi wajib' placeholder='Informasi' value="notifications" interface="action-sheet">
+          <ion-select class='informasi wajib' placeholder='Informasi' value="Pilih Kurir" interface="action-sheet">
             <ion-select-option value="J%26T Express">J&T Express</ion-select-option>
             <ion-select-option value="JNE Express">JNE Express</ion-select-option>
             <ion-select-option value="*GoSend">*GoSend</ion-select-option>
@@ -121,7 +122,7 @@ box-shadow: 0px 0px 8px rgba(0,0,0,.3);
           </ion-select>
         </ion-item>
 <ion-item>
-<ion-button fill="clear" class='sendWAclik kirim' slot="end" size="normal">Buy Now</ion-button>
+<ion-button fill="clear" class='sendWAclik kirim' slot="end" size="normal">Order Now</ion-button>
 </ion-item>
 </div>
 </ion-card>

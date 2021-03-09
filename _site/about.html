@@ -18,6 +18,24 @@
     <meta property="og:title" content="About" />
     <meta property="twitter:title" content="About" />
     
+    <link rel="apple-touch-icon" sizes="57x57" href="/css/icon/fav/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/css/icon/fav/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/css/icon/fav/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/css/icon/fav/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/css/icon/fav/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/css/icon/fav/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/css/icon/fav/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/css/icon/fav/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/css/icon/fav/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/css/icon/fav/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/css/icon/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/css/icon/fav/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/css/icon/fav/favicon-16x16.png">
+<link rel="manifest" href="/css/icon/fav/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/css/icon/fav/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
 
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,6 +46,10 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <style>
     :root {
       --ion-safe-area-top: 0px;
@@ -36,7 +58,9 @@
       --offset-bottom:0px!mportant;
     }
   </style>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' type='text/javascript'></script>
+
+    
+    
   <script type="module">
     import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
     window.alertController = alertController;
@@ -98,11 +122,11 @@
           <style>
 </style>
 	<div class="sidebar-wrapper">
-	<ion-grid class="content">
+	<ion-grid class="sidebar-content content">
         <ion-row>
           <ion-col>
       <ion-card>
-        <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+        <img class="bundar" src="/images/logo.png" />
 		<div class="konten">
         <ion-card-header>
           <ion-card-subtitle>Destination</ion-card-subtitle>
@@ -209,7 +233,7 @@
 .my-contact {
     width: 100%;
     margin: auto;
-    max-width: 350px;
+    max-width: 450px;
 }
 .wa {
     background: #4fda86;
@@ -217,6 +241,9 @@
 .fab {
     width: 40px;
     height: 40px;
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
 }
 </style>
 
@@ -255,8 +282,7 @@
       </ion-tab>
 
 
-          
-      <ion-tab-bar slot="bottom">
+                <ion-tab-bar class="non-tab" slot="bottom">
     
     
     
@@ -275,7 +301,6 @@
           <ion-icon name="logo-whatsapp"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
-
 
 
     </ion-tabs>

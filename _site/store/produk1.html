@@ -18,6 +18,24 @@
     <meta property="og:title" content="Produk no.3544" />
     <meta property="twitter:title" content="Produk no.3544" />
     
+    <link rel="apple-touch-icon" sizes="57x57" href="/css/icon/fav/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/css/icon/fav/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/css/icon/fav/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/css/icon/fav/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/css/icon/fav/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/css/icon/fav/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/css/icon/fav/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/css/icon/fav/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/css/icon/fav/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/css/icon/fav/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/css/icon/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/css/icon/fav/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/css/icon/fav/favicon-16x16.png">
+<link rel="manifest" href="/css/icon/fav/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/css/icon/fav/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
 
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,6 +46,10 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <style>
     :root {
       --ion-safe-area-top: 0px;
@@ -36,7 +58,13 @@
       --offset-bottom:0px!mportant;
     }
   </style>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' type='text/javascript'></script>
+
+    
+    
+  <style>
+.non-tab { display: none; }
+  </style>
+    
   <script type="module">
     import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
     window.alertController = alertController;
@@ -84,27 +112,43 @@
 }
 .pic-produk {
     max-width: 515px;
+    height: fit-content;
+}
+.produkOrder {
+    width: 100%;
+    }
+  
+  .lightbox_wrapper {
+padding: 10px;
+margin: 10px;
+text-align: center;
+}
+a.lightbox img {
+height: 100px;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
 }
 </style>
+
 <article class="page"  id='buyWhatsApp'>
 <ion-card class="pic-produk">
-    <img src="/images/404.jpg"/>
+    <a data-fancybox="gallery" href="/images/404.jpg"><img src="/images/404.jpg"></a>
 <div class="productPhotoWrapper">
-    <img src="/images/404.jpg"/>
-    <img src="/images/404.jpg"/>
-    <img src="/images/404.jpg"/>
-    <img src="/images/404.jpg"/>
-
+    <a data-fancybox="gallery" href="/images/404.jpg"><img src="/images/404.jpg"></a>
+    <a data-fancybox="gallery" href="/images/404.jpg"><img src="/images/404.jpg"></a>
+    <a data-fancybox="gallery" href="/images/404.jpg"><img src="/images/404.jpg"></a>
+    <a data-fancybox="gallery" href="/images/404.jpg"><img src="/images/404.jpg"></a>
 </div>
 </ion-card>
-<div class="produkOrder">
+    <div class="produkOrder">
 <ion-card>
 <ion-card-header>
   <ion-card-title>Produk no.3544</ion-card-title>
   <ion-card-subtitle class="diskon">IDR.20K</ion-card-subtitle>
   <ion-card-title>IDR.15K</ion-card-title>
 </ion-card-header>
-    <ion-card-content><h3 id="deskripsi-produk">Deskripsi Produk</h3>
+    <ion-card-content>
+        <h3 id="deskripsi-produk">Deskripsi Produk</h3>
 
 <ul>
 <li>deskripsi 1</li>
@@ -112,11 +156,17 @@
 <li>deskripsi 3</li>
 <li>deskripsi 4</li>
 </ul>
-</ion-card-content>
+
+    <br />
+<div class="disclaim">
+<small><b style="color:crimson;">Disclaimer:</b> Persamaan warna foto katalog dengan produk asli mencapai 98%. Efek cahaya, kecerahan, kerapatan, dan resolusi layar memungkinkan terjadinya distorsi warna.</small>
+</div>
+    
+    </ion-card-content>
 </ion-card>
 <ion-card>
 <ion-card-header>
-<ion-label>Order Now Produk no.3544</ion-label>
+<ion-label>Order Produk no.3544 melalui whatsapp</ion-label>
 </ion-card-header>
 <div class='data-form validate-form' id='whatsapp'>
 <input class='tujuan' id='noAdmin' type='hidden'/>
@@ -125,7 +175,7 @@
           <ion-input class='nama wajib' placeholder="Nama Anda"></ion-input>
         </ion-item><ion-item>
           <ion-label position="fixed">*WhatsApp</ion-label>
-          <ion-input class='nomor wajib' placeholder="No. WhatsApp" type="number"></ion-input>
+          <ion-input class='nomor wajib' placeholder="No.WhatsApp" type="number"></ion-input>
         </ion-item>
 <ion-item>
           <ion-label position="stacked">*Alamat</ion-label>
@@ -133,19 +183,18 @@
         </ion-item>
  <ion-item>
           <ion-label>*Pilih Warna</ion-label>
-          <ion-select class='warna wajib' placeholder='Warna' value="notifications" interface="action-sheet">
+          <ion-select class='warna wajib' placeholder='Warna' value="Pilih Warna" interface="action-sheet">
             <ion-select-option value="Hitam">Hitam</ion-select-option>
             <ion-select-option value="Putih">Putih</ion-select-option>
-            <ion-select-option value="Pink">Pink</ion-select-option>
             <ion-select-option value="Marun">Marun</ion-select-option>
           </ion-select>
         </ion-item>
  <ion-item>
-          <ion-label>*Pilih Model</ion-label>
-          <ion-select class='tali wajib' placeholder='Model' value="notifications" interface="action-sheet">
-            <ion-select-option value="HeadLoop">HeadLoop</ion-select-option>
-            <ion-select-option value="EarLoop">EarLoop</ion-select-option>
-            <ion-select-option value="Tali Ikat">Tali Ikat</ion-select-option>
+          <ion-label>*Pilih Ukuran</ion-label>
+          <ion-select class='tali wajib' placeholder='Ukuran' value="Plih Ukuran" interface="action-sheet">
+            <ion-select-option value="S">S</ion-select-option>
+            <ion-select-option value="M">M</ion-select-option>
+            <ion-select-option value="XL">XL</ion-select-option>
           </ion-select>
         </ion-item>
         <ion-item>
@@ -165,7 +214,7 @@
         </ion-item>
  <ion-item>
           <ion-label>*Pilih Kurir</ion-label>
-          <ion-select class='informasi wajib' placeholder='Informasi' value="notifications" interface="action-sheet">
+          <ion-select class='informasi wajib' placeholder='Informasi' value="Pilih Kurir" interface="action-sheet">
             <ion-select-option value="J%26T Express">J&T Express</ion-select-option>
             <ion-select-option value="JNE Express">JNE Express</ion-select-option>
             <ion-select-option value="*GoSend">*GoSend</ion-select-option>
@@ -182,22 +231,22 @@
           </ion-select>
         </ion-item>
 <ion-item>
-<ion-button class='sendWAclik kirim' slot="end" size="normal">Buy Now</ion-button>
+<ion-button fill="clear" class='sendWAclik kirim' slot="end" size="normal">Order Now</ion-button>
 </ion-item>
 </div>
 </ion-card>
-</div>
+    </div>
 </article>
 
 	</div>	
           <style>
 </style>
 	<div class="sidebar-wrapper">
-	<ion-grid class="content">
+	<ion-grid class="sidebar-content content">
         <ion-row>
           <ion-col>
       <ion-card>
-        <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+        <img class="bundar" src="/images/logo.png" />
 		<div class="konten">
         <ion-card-header>
           <ion-card-subtitle>Destination</ion-card-subtitle>
@@ -304,7 +353,7 @@
 .my-contact {
     width: 100%;
     margin: auto;
-    max-width: 350px;
+    max-width: 450px;
 }
 .wa {
     background: #4fda86;
@@ -312,6 +361,9 @@
 .fab {
     width: 40px;
     height: 40px;
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
 }
 </style>
 
@@ -350,8 +402,7 @@
       </ion-tab>
 
 
-          
-      <ion-tab-bar slot="bottom">
+                <ion-tab-bar class="non-tab" slot="bottom">
     
     
     
@@ -370,7 +421,6 @@
           <ion-icon name="logo-whatsapp"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
-
 
 
     </ion-tabs>

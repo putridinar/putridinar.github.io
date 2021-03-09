@@ -24,7 +24,7 @@ google_analytics:
 
 url: https://putridinar.github.io
 
-baseurl: "https://putridinar.github.io"
+baseurl: ""
 
 permalink: /:title
 

@@ -343,6 +343,17 @@ nav a {
   border-bottom: none;
 }
 
+.disclaim {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.bundar {
+  border-radius: 1.5%;
+  position: absolute;
+}
+
 .post blockquote {
   margin: 1.8em .8em;
   border-left: 2px solid #666;
@@ -417,12 +428,16 @@ footer {
   padding: 10px 10px;
 }
 
+.sidebar-content {
+  position: fixed;
+  max-width: 320px;
+  top: 68px;
+}
+
 .sidebar-wrapper {
   float: right;
   width: 320px;
-  position: fixed;
-  right: 80px;
-  bottom: 40px;
+  margin: auto;
   /* iPads (portrait and landscape) ----------- */
   /* iPads (portrait and landscape) ----------- */
 }
