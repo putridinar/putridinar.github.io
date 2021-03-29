@@ -7,7 +7,7 @@ layout: default
 <ion-icon name="bookmark" slot="start"></ion-icon>
           <ion-card-title>{{ page.title }}</ion-card-title>
   </ion-item>
-          <center><a data-fancybox="gallery" href="{{ page.image }}"><img src="{{ page.image }}"></a></center>
+          <center><a data-fancybox="gallery" href="{{ page.image }}"><img alt="{{ page.title }}" src="{{ page.image }}"></a></center>
         <ion-card-content>
     {{ content }}
         </ion-card-content>

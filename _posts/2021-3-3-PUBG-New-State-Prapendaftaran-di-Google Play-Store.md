@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PUBG New State Prapendaftaran di Google Play Store
-label: Game
+label: Games
 image: /images/pubg-new-state.webp
 ---
 
