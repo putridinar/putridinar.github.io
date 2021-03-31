@@ -226,6 +226,7 @@ ion-col > div {
   max-width: 50%;
   border: 0;
   float: left;
+  height: 333px;
 }
 
 .read {
