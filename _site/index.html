@@ -7,7 +7,8 @@
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-    <meta name="propeller" content="c17319703e4bf44fbb71c36814fbaeb7">
+    <!--<meta name="propeller" content="c17319703e4bf44fbb71c36814fbaeb7">-->
+    <meta name="facebook-domain-verification" content="75nsje4hhydd95tgyjqv5qjxt3ws0c" />
 
     
     <meta name="description" content="Web Developer from Somewhere">
@@ -68,12 +69,27 @@
     import { modalController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
     window.modalController = modalController;
   </script>
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '287694332807678');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=287694332807678&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
   </head>
 
   <body>
-  <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4091839,document.body||document.documentElement)</script>
+  <!--<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4091839,document.body||document.documentElement)</script>-->
   <ion-app>
     <ion-tabs>
 
@@ -348,6 +364,26 @@ Beberapa laporan menunjukkan PUBG Mobile India akan segera menuju ke negara itu 
 
       </ion-tab>
 
+
+                <ion-tab-bar class="non-tab" slot="bottom">
+    
+        <ion-tab-button tab="blog">
+          <ion-label>Post</ion-label>
+          <ion-icon name="newspaper-outline"></ion-icon>
+        </ion-tab-button>
+    
+    
+    
+    
+        <ion-tab-button tab="store">
+          <ion-label>Store</ion-label>
+          <ion-icon src="/css/icon/storefront-outline.svg"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="kontak">
+          <ion-label>Kontak</ion-label>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
 
 
     </ion-tabs>

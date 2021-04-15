@@ -1,6 +1,6 @@
-    const button = document.querySelector(
+    const icon = document.querySelector(
 'ion-dot');
-    button.addEventListener('click', handleButtonClick);
+    icon.addEventListener('click', handleButtonClick);
 
     async function handleButtonClick() {
       const alert = await alertController.create({
