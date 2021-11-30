@@ -220,13 +220,31 @@ ion-col > div {
 
 .artikel {
   display: flex;
+  height: 250px;
+}
+
+@media screen and (max-width: 640px) {
+  .artikel {
+    height: auto;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
 }
 
 .img {
-  max-width: 50%;
+  max-width: 40%;
   border: 0;
   float: left;
   height: 333px;
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .img {
+    display: inline-block;
+    max-width: 100%;
+    height: 200px;
+  }
 }
 
 .read {
@@ -394,12 +412,17 @@ footer {
 }
 
 @media screen and (max-width: 640px) {
-  .sidebar-wrapper, .img {
+  .sidebar-wrapper {
     display: none;
   }
   .summary {
     min-height: 0px !important;
   }
+}
+
+.stick {
+  position: sticky;
+  top: 0px;
 }
 
 .store {
@@ -431,7 +454,6 @@ footer {
 }
 
 .sidebar-content {
-  position: fixed;
   max-width: 320px;
   top: 68px;
 }

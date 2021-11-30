@@ -126,15 +126,15 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
-    opacity: 0.3;
+    background: #222;
+    opacity: 0.8;
     top: 0;
     left: 0;
 }
  
 .modal .content {
     position: relative;
-    width: 30%;
+    width: 60%;
     height: auto;
     top: 10%;
     background: #fff;
@@ -267,33 +267,47 @@ body{
 <div class="form-body">
 <div class='data-form validate-form' id='whatsapp'>
 <input class='tujuan' id='noAdmin' type='hidden'/>
+<ion-grid>
+        <ion-row>
+          <ion-col>
         <ion-item>
-          <ion-label position="fixed">*Nama</ion-label>
+          <ion-label position="floating">*Nama</ion-label>
           <ion-input class='nama wajib' placeholder="Nama Anda"></ion-input>
-        </ion-item><ion-item>
-          <ion-label position="fixed">*WhatsApp</ion-label>
+        </ion-item>
+          </ion-col>
+          <ion-col>
+<ion-item>
+          <ion-label position="floating">*WhatsApp</ion-label>
           <ion-input class='nomor wajib' placeholder="No.WhatsApp" type="number"></ion-input>
         </ion-item>
+          </ion-col>
+        </ion-row>
 <ion-item>
           <ion-label position="stacked">*Alamat</ion-label>
           <ion-textarea class='alamat wajib' placeholder="Alamat Lengkap"></ion-textarea>
         </ion-item>
+        <ion-row>
+          <ion-col>
  <ion-item>
-          <ion-label>*Pilih Warna</ion-label>
+          <ion-label position="stacked">*Pilih Warna</ion-label>
           <ion-select class='warna wajib' placeholder='Warna' value="Pilih Warna" interface="action-sheet">
             <ion-select-option value="Hitam">Hitam</ion-select-option>
             <ion-select-option value="Putih">Putih</ion-select-option>
             <ion-select-option value="Marun">Marun</ion-select-option>
           </ion-select>
         </ion-item>
+          </ion-col>
+          <ion-col>
  <ion-item>
-          <ion-label>*Pilih Ukuran</ion-label>
+          <ion-label position="stacked">*Pilih Ukuran</ion-label>
           <ion-select class='tali wajib' placeholder='Ukuran' value="Plih Ukuran" interface="action-sheet">
             <ion-select-option value="S">S</ion-select-option>
             <ion-select-option value="M">M</ion-select-option>
             <ion-select-option value="XL">XL</ion-select-option>
           </ion-select>
         </ion-item>
+          </ion-col>
+        </ion-row>
         <ion-item>
           <ion-label>*Jumlah</ion-label>
           <ion-select class='qty wajib' placeholder='Quatity' value="1">
@@ -309,8 +323,10 @@ body{
             <ion-select-option value="10">10pcs</ion-select-option>
           </ion-select>
         </ion-item>
+        <ion-row>
+          <ion-col>
  <ion-item>
-          <ion-label>*Pilih Kurir</ion-label>
+          <ion-label position="stacked">*Pilih Kurir</ion-label>
           <ion-select class='informasi wajib' placeholder='Informasi' value="Pilih Kurir" interface="action-sheet">
             <ion-select-option value="J%26T Express">J&T Express</ion-select-option>
             <ion-select-option value="JNE Express">JNE Express</ion-select-option>
@@ -318,8 +334,10 @@ body{
             <ion-select-option value="*GrabExpress">*GrabExpress</ion-select-option>
           </ion-select>
         </ion-item>
+          </ion-col>
+          <ion-col>
         <ion-item>
-          <ion-label>*Pembayaran</ion-label>
+          <ion-label position="stacked">*Pembayaran</ion-label>
           <ion-select class='bayar wajib' placeholder='Bayar Dengan'>
             <ion-select-option value="Bank 1">Bank 1</ion-select-option>
             <ion-select-option value="Bank 2">Bank 2</ion-select-option>
@@ -327,7 +345,10 @@ body{
             <ion-select-option value="Bank 4">Bank 4</ion-select-option>
           </ion-select>
         </ion-item>
+          </ion-col>
+        </ion-row>
 <ion-item>
+</ion-grid>
 <ion-button fill="clear" class='sendWAclik kirim' slot="end" size="normal">Order Now</ion-button>
 </ion-item>
 </div>

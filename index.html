@@ -9,19 +9,16 @@ layout: default
       <ion-card class="artikel">
         <img alt="{{ post.title }}" class="img" src="{{ post.image }}" />
 		<div class="konten">
-        <ion-card-header class="blog">
   <ion-item>
-<ion-icon name="bookmark" slot="start"></ion-icon>
+<ion-icon name="bookmark" color="danger" slot="start"></ion-icon>
 <ion-label color="danger">{{ post.label }}</ion-label>
   </ion-item>
-          <ion-card-title>{{ post.title }}</ion-card-title>
+        <ion-card-header class="blog">
+          <ion-router-link color="tertiary" href="{{ site.baseurl }}{{ post.url }}"><ion-card-title>{{ post.title }}</ion-card-title></ion-router-link>
         </ion-card-header>
         <ion-card-content class="summary">
         {{ post.excerpt }}
         </ion-card-content>
-		<section class="read">
-        <ion-button href="{{ site.baseurl }}{{ post.url }}" fill="outline" slot="end" size="small" color="secondary">Read More</ion-button>
-		</section>
 		</div>
       </ion-card>
   {% endfor %}

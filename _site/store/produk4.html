@@ -50,7 +50,6 @@
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <style>
@@ -141,8 +140,10 @@ img {
 .produkOrder {
     width: 100%;
     }
-  
-  .lightbox_wrapper {
+.item-inner {
+    border-color: #fff!important;
+    }
+.lightbox_wrapper {
 padding: 10px;
 margin: 10px;
 text-align: center;
@@ -244,15 +245,15 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0);
-    opacity: 0.3;
+    background: #222;
+    opacity: 0.8;
     top: 0;
     left: 0;
 }
  
 .modal .content {
     position: relative;
-    width: 30%;
+    width: 60%;
     height: auto;
     top: 10%;
     background: #fff;
@@ -302,43 +303,43 @@ body{
 
 @media screen and (max-width: 600px) {
     .modal .content{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: auto;
-    top: 10.5%;
+    bottom: -15px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 3px 15px -2px #222;
     padding: 10px;
-    margin:auto;
+    margin: auto;
     }
 }
 
 @media only screen and (width: 768px) {
     .modal .content{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: auto;
-    top: 10.5%;
+    bottom: -15px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 3px 15px -2px #222;
     padding: 10px;
-    margin:auto;
+    margin: auto;
     }
 }
 
 @media only screen and (width: 1024px) {
     .modal .content{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: auto;
-    top: 10.5%;
+    bottom: -15px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 3px 15px -2px #222;
-    padding: 20px;
-    margin:auto;
+    padding: 10px;
+    margin: auto;
     }
 }
 
@@ -393,33 +394,47 @@ body{
 <div class="form-body">
 <div class='data-form validate-form' id='whatsapp'>
 <input class='tujuan' id='noAdmin' type='hidden'/>
+<ion-grid>
+        <ion-row>
+          <ion-col>
         <ion-item>
-          <ion-label position="fixed">*Nama</ion-label>
+          <ion-label position="floating">*Nama</ion-label>
           <ion-input class='nama wajib' placeholder="Nama Anda"></ion-input>
-        </ion-item><ion-item>
-          <ion-label position="fixed">*WhatsApp</ion-label>
+        </ion-item>
+          </ion-col>
+          <ion-col>
+<ion-item>
+          <ion-label position="floating">*WhatsApp</ion-label>
           <ion-input class='nomor wajib' placeholder="No.WhatsApp" type="number"></ion-input>
         </ion-item>
+          </ion-col>
+        </ion-row>
 <ion-item>
           <ion-label position="stacked">*Alamat</ion-label>
           <ion-textarea class='alamat wajib' placeholder="Alamat Lengkap"></ion-textarea>
         </ion-item>
+        <ion-row>
+          <ion-col>
  <ion-item>
-          <ion-label>*Pilih Warna</ion-label>
+          <ion-label position="stacked">*Pilih Warna</ion-label>
           <ion-select class='warna wajib' placeholder='Warna' value="Pilih Warna" interface="action-sheet">
             <ion-select-option value="Hitam">Hitam</ion-select-option>
             <ion-select-option value="Putih">Putih</ion-select-option>
             <ion-select-option value="Marun">Marun</ion-select-option>
           </ion-select>
         </ion-item>
+          </ion-col>
+          <ion-col>
  <ion-item>
-          <ion-label>*Pilih Ukuran</ion-label>
+          <ion-label position="stacked">*Pilih Ukuran</ion-label>
           <ion-select class='tali wajib' placeholder='Ukuran' value="Plih Ukuran" interface="action-sheet">
             <ion-select-option value="S">S</ion-select-option>
             <ion-select-option value="M">M</ion-select-option>
             <ion-select-option value="XL">XL</ion-select-option>
           </ion-select>
         </ion-item>
+          </ion-col>
+        </ion-row>
         <ion-item>
           <ion-label>*Jumlah</ion-label>
           <ion-select class='qty wajib' placeholder='Quatity' value="1">
@@ -435,8 +450,10 @@ body{
             <ion-select-option value="10">10pcs</ion-select-option>
           </ion-select>
         </ion-item>
+        <ion-row>
+          <ion-col>
  <ion-item>
-          <ion-label>*Pilih Kurir</ion-label>
+          <ion-label position="stacked">*Pilih Kurir</ion-label>
           <ion-select class='informasi wajib' placeholder='Informasi' value="Pilih Kurir" interface="action-sheet">
             <ion-select-option value="J%26T Express">J&T Express</ion-select-option>
             <ion-select-option value="JNE Express">JNE Express</ion-select-option>
@@ -444,8 +461,10 @@ body{
             <ion-select-option value="*GrabExpress">*GrabExpress</ion-select-option>
           </ion-select>
         </ion-item>
+          </ion-col>
+          <ion-col>
         <ion-item>
-          <ion-label>*Pembayaran</ion-label>
+          <ion-label position="stacked">*Pembayaran</ion-label>
           <ion-select class='bayar wajib' placeholder='Bayar Dengan'>
             <ion-select-option value="Bank 1">Bank 1</ion-select-option>
             <ion-select-option value="Bank 2">Bank 2</ion-select-option>
@@ -453,7 +472,10 @@ body{
             <ion-select-option value="Bank 4">Bank 4</ion-select-option>
           </ion-select>
         </ion-item>
+          </ion-col>
+        </ion-row>
 <ion-item>
+</ion-grid>
 <ion-button fill="clear" class='sendWAclik kirim' slot="end" size="normal">Order Now</ion-button>
 </ion-item>
 </div>
@@ -469,18 +491,19 @@ body{
 	<ion-grid class="sidebar-content content">
         <ion-row>
           <ion-col>
-      <ion-card>
-        <img alt="" class="bundar" src="/images/logo.png" />
+<ion-router-link color="tertiary" href="https://cloudmining.page.link/RyzEx">
+      <ion-card class="stick">
+        <img alt="" class="bundar" src="https://ryzex.net/img/banners/ryzex-200.gif" width="100%" height="auto" />
 		<div class="konten">
         <ion-card-header>
-          <ion-card-subtitle>Destination</ion-card-subtitle>
-          <ion-card-title>Madison, WI</ion-card-title>
+          <ion-card-subtitle>Cloud mining platform</ion-card-subtitle>
+          <ion-card-title>DOGE, TRX, LTC and BNB</ion-card-title>
         </ion-card-header>
         <ion-card-content class="summary">
-          Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+          The advanced RyzEx cloud mining platform uses modern technologies and the latest blockchain algorithms to mine cryptocurrencies in the shortest possible time, which allows users to receive up to 5% profit per day.
         </ion-card-content>
 		</div>
-      </ion-card>
+      </ion-card></ion-router-link>
 	  </ion-col>
         </ion-row>
 	</ion-grid>

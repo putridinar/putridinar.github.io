@@ -3,9 +3,10 @@ layout: post
 title: PUBG New State tidak akan dirilis di India, Krafton fokus pada peluncuran ulang
 label: Games
 image: /images/PUBG-new-state-news.jpg
+excerpt_separator: <!--more-->
 ---
 
-Pembaruan Terbaru: Krafton dilaporkan telah mengonfirmasi bahwa PUBG: New State tidak akan dirilis di India dan mereka fokus pada peluncuran ulang PUBG Mobile.
+Pembaruan Terbaru: Krafton dilaporkan telah mengonfirmasi bahwa PUBG: New State tidak akan dirilis di India<!--more--> dan mereka fokus pada peluncuran ulang PUBG Mobile.
 Beberapa laporan menunjukkan PUBG Mobile India akan segera menuju ke negara itu sementara yang lain membantah klaim ini.
 
 Sebuah laporan baru datang jauh-jauh dari penerbit Krafton menegaskan kembali bahwa game battle royale akan segera diluncurkan kembali di negara tersebut. Ini datang sebagai kelegaan bagi komunitas game. Kami harus menyebutkan bahwa pemerintah belum secara khusus mengonfirmasi peluncuran ulang peluncuran ulang PUBG Mobile di India. Menurut laporan dari Sportskeeda, Krafton sedang dalam pembicaraan dengan pejabat pemerintah untuk menghidupkan kembali game battle royale.
