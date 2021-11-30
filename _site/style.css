@@ -439,6 +439,7 @@ footer {
 
 .konten {
   max-width: 1220px;
+  height: 280px;
   margin: auto;
 }
 
@@ -461,7 +462,8 @@ footer {
 .sidebar-wrapper {
   float: right;
   width: 320px;
-  margin: auto;
+  margin: 10px auto 0px;
+  padding: 10px 10px;
   /* iPads (portrait and landscape) ----------- */
   /* iPads (portrait and landscape) ----------- */
 }
