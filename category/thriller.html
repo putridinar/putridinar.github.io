@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="posts">
+{% for thr in site.data.thriller %}
+    <ion-card href="{{ site.baseurl }}{{ thr.url }}" class="post cover" style="background-image: url({{ thr.cover }});">
+<ion-badge class="badge" color="{{post.color}}">{{ thr.res }}</ion-badge>
+    <ion-card-subtitle class="title">
+<div class="separator"></div>
+      <span style="padding: 5px 3px;color:#fff;">{{ thr.title }}</span>
+      <div class="entry">
+<div class="flex-between" data-content-feature="2">
+<div class="fG8Fp">{{ thr.tgl }}</div> 
+<g-review-stars aria-hidden="true">
+<span style="width:33px"></span>
+<span><ion-icon sloat="start" name="star" style="color: #ffce00;"></ion-icon> {{ thr.midb }}</span></g-review-stars></div>
+      </div>
+    </ion-card-subtitle>
+    </ion-card>
+  {% endfor %}
+</div>

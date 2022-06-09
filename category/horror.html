@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="posts">
+{% for horr in site.data.horror %}
+    <ion-card href="{{ site.baseurl }}{{ horr.url }}" class="post cover" style="background-image: url({{ horr.cover }});">
+<ion-badge class="badge" color="{{post.color}}">{{ horr.res }}</ion-badge>
+    <ion-card-subtitle class="title">
+<div class="separator"></div>
+      <span style="padding: 5px 3px;color:#fff;">{{ horr.title }}</span>
+      <div class="entry">
+<div class="flex-between" data-content-feature="2">
+<div class="fG8Fp">{{ horr.tgl }}</div> 
+<g-review-stars aria-hidden="true">
+<span style="width:33px"></span>
+<span><ion-icon sloat="start" name="star" style="color: #ffce00;"></ion-icon> {{ horr.midb }}</span></g-review-stars></div>
+      </div>
+    </ion-card-subtitle>
+    </ion-card>
+  {% endfor %}
+</div>

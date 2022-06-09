@@ -2,12 +2,11 @@
 layout: default
 ---
 
-<article>
-  <ion-item>
-<ion-icon name="bookmark" slot="start"></ion-icon>
-          <ion-card-title>{{ page.title }}</ion-card-title>
-  </ion-item>
-        <ion-card-content>
+<article class="page">
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
     {{ content }}
-        </ion-card-content>
+  </div>
 </article>

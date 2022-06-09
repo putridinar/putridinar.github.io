@@ -1,20 +1,20 @@
-    <meta charset="utf-8" />
+<meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-    <!--<meta name="propeller" content="c17319703e4bf44fbb71c36814fbaeb7">-->
-    <meta name="facebook-domain-verification" content="75nsje4hhydd95tgyjqv5qjxt3ws0c" />
-
-    {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt| strip_html }}" />
+    <meta name="google-site-verification" content="b7VxOxcDQVk2TqXFultjy58IdvsRZKhQZmT-xj-F3Ck" />
+    <meta name="msvalidate.01" content="D296F033882A7AEDE0FD03D114D0D7E0" />
+    <meta name="yandex-verification" content="b51da646a5976761" />
+    <meta name="author" content="{{ site.dev }}" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{page.url}}">
+    <meta property="description" content="{{ site.description }}" />
+    {% if page.title %}
+    <meta property="og:image" content="{{ page.img }}" />
+    <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
     {% else %}
-    <meta name="description" content="{{ site.description }}">
+    <meta property="og:image" content="{{ site.avatar }}" />
+    <meta property="og:title" content="{{ site.title }}">
     <meta property="og:description" content="{{ site.description }}" />
-    {% endif %}
-    <meta name="author" content="{{ site.name }}" />
-
-    {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
     {% endif %}

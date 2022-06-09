@@ -1,82 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    {% include meta.html %}
-    {% include favicon.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-  <style>
-    :root {
-      --ion-safe-area-top: 0px;
-      --ion-safe-area-bottom: 0px;
-      --offset-top:0px;
-      --offset-bottom:0px!mportant;
-    }
-  </style>
-
-    {% if page.layout == "post" %}
-  <style>
-.non-tab { display: none; }
-  </style>
-    {% endif %}
-    {% if page.layout == "produk" %}
-  <style>
-.non-tab { display: none; }
-  </style>
-    {% endif %}
-  <script type="module">
-    import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
-    window.alertController = alertController;
-  </script>
-  <script type="module">
-    import { modalController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
-    window.modalController = modalController;
-  </script>
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '287694332807678');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=287694332807678&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+    {% include isihead.html %}
   </head>
-
   <body>
-  <!--<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4091839,document.body||document.documentElement)</script>-->
-  <ion-app>
-    <ion-tabs>
+<!-- partial:index.partial.html -->
+<!-- @ionic/core@latest https://ionicframework.com/docs/ -->
+  <body onload="onLoadSkeletonpost()">
+     <ion-app>
+          <ion-content fullscreen>
+            <div id="data">
+            {% include header.html %}
+            <div class="container">
+                {{ content }}
+            </div>
+            {% include ion-footer.html %}
+            </div>
+            {% include skeleton.html %}
+          </ion-content>
+    </ion-app>
+<script>
+let elem = document.querySelector('.container');
+let infScroll = new InfiniteScroll( elem, {
+  // options
+  path: '.pagination__next',
+  append: '.post',
+  history: false,
+});
 
-          {% include ion-tab.html %}
-
-          {% include ion-tab-bar.html %}
-
-    </ion-tabs>
-  </ion-app>
-    {% include analytics.html %}
-  <script src="/js/script.js" type="text/javascript"></script>
-  <script src="/js/notif.js" type="text/javascript"></script>
+// element argument can be a selector string
+//   for an individual element
+let infScroll = new InfiniteScroll( '.container', {
+  // options
+});
+</script>
+  </body>
+<!-- partial -->
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+            {% include allscript.html %}
+<script>
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('{{ site.baseurl }}/sw.js')
+    })
+  }
+</script>
   </body>
 </html>

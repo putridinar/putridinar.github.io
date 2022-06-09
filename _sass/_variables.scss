@@ -21,7 +21,99 @@ $georgia: Georgia, serif;
 
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 747px) {
+    @content;
+  }
+}
+
+// Mobile breakpoints
+@mixin reso851 {
+  @media screen and (width: 851px) {
+    @content;
+  }
+}
+
+
+// iOS lawas breakpoints
+@mixin iOS-lawas {
+  @media screen and (width: 375px) {
+    @content;
+  }
+}
+
+// iOS XR breakpoints
+@mixin iOS-xr {
+  @media screen and (width: 414px) {
+    @content;
+  }
+}
+
+// iOS XRlanscape breakpoints
+@mixin iOS-xrL {
+  @media screen and (width: 896px) {
+    @content;
+  }
+}
+
+// iOS 12pro breakpoints
+@mixin iOS-12proL {
+  @media screen and (width: 844px) {
+    @content;
+  }
+}
+
+// iOS Galaxy Ultra L breakpoints
+@mixin reso915 {
+  @media screen and (width: 915px) {
+    @content;
+  }
+}
+
+// Surface DUO breakpoints
+@mixin sDUO {
+  @media screen and (width: 540px) {
+    @content;
+  }
+}
+
+// duoPro breakpoints
+@mixin duoPro {
+  @media screen and (width: 912px) {
+    @content;
+  }
+}
+
+// Fold breakpoints
+@mixin fold {
+  @media screen and (width: 280px) {
+    @content;
+  }
+}
+
+// iPAD air breakpoints
+@mixin i-air {
+  @media screen and (width: 820px) {
+    @content;
+  }
+}
+
+// 768 breakpoints
+@mixin reso768 {
+  @media screen and (width: 768px) {
+    @content;
+  }
+}
+
+// 1024 breakpoints
+@mixin reso1024 {
+  @media screen and (width: 1024px) {
+    @content;
+  }
+}
+
+// 1180 breakpoints
+@mixin reso1180 {
+  @media screen and (width: 1180px) {
     @content;
   }
 }

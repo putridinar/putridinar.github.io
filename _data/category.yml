@@ -1,0 +1,29 @@
+- name: Action
+  url: /category/action
+
+- name: Drama
+  url: /category/drama
+
+- name: Adventure
+  url: /category/adventure
+
+- name: Crime
+  url: /category/crime
+
+- name: Thriller
+  url: /category/thriller
+
+- name: Comedy
+  url: /category/comedy
+
+- name: SciFi
+  url: /category/sci-fi
+
+- name: Fantasy
+  url: /category/fantasy
+
+- name: Mistery
+  url: /category/mistery
+
+- name: Horror
+  url: /category/horror

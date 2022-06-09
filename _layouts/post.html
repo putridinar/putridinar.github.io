@@ -1,21 +1,96 @@
 ---
 layout: default
 ---
-<article class="post">
-      <ion-card>
-  <ion-item>
-<ion-icon name="bookmark" slot="start"></ion-icon>
-          <ion-card-title>{{ page.title }}</ion-card-title>
-  </ion-item>
-          <center><a data-fancybox="gallery" href="{{ page.image }}"><img alt="{{ page.title }}" src="{{ page.image }}"></a></center>
-        <ion-card-content>
-    {{ content }}
-        </ion-card-content>
-      </ion-card>
-<ion-card>
-  {% include disqus.html %}
+<style>.container{padding:0!important;}.responsive-iframe {position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;height: 100%;}.video-container{position: relative;overflow: hidden;width: 100%;padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */}</style>
+<div class=" flex">
+<div class="post-vid">
+<ion-card class="pc-mode" no-padding>
+<div class="video-container">
+<marquee id="marqPC" style="width:100%;font-size: 14px;font-weight: 700;position: absolute;top:0;color: #f2f2f2;background: rgb(0 0 0 / 14%);z-index:1" id="marqPC(">{{page.ket}}</marquee>
+  <iframe id="myvideoPC" class="responsive-iframe" frameborder="0" name="iframePC" src="{{ page.cover1 }}" width="100%" allowfullscreen style="background:#000;background-image:url({{ page.cover1 }});background-position:center;background-size:contain;background-repeat:no-repeat;" allowautoplay>
+  </iframe>
+</div>
+<ion-card-header class="flex-between" style="padding: 0 10px;">
+<ion-toolbar>
+          <ion-chip color="success" slot="start" onclick="playOnPC(true)" id="playBtnPC">
+<popupPC>
+<ion-router-link href="{{ page.movie }}" target="iframePC">
+            <div class="flex" style="grid-gap: 0 8px;padding: 2px;">
+            <ion-icon name="play" color="success"></ion-icon>
+            <ion-label color="success">Play Movie</ion-label>
+            </div>
+</ion-router-link>
+</popupPC>
+          </ion-chip>
+          <ion-chip color="danger" slot="start" onclick="playOnPC(false)" id="stopBtnPC" style="display: none;">
+<ion-router-link onclick="history.back()">
+            <div class="flex" style="grid-gap: 0 8px;padding: 2px;">
+            <ion-icon name="stop" color="danger"></ion-icon>
+            <ion-label color="danger">Stop Playing</ion-label>
+            </div>
+</ion-router-link>
+          </ion-chip>
+<ion-chip slot="end" disabled>
+<ion-icon name="time"></ion-icon>
+<ion-label>{{page.dur}}</ion-label>
+</ion-chip>
+<ion-buttons slot="end" id="screenPC" style="display:none;">
+<ion-chip color="secondary" onclick="fullscreenVPC();"><ion-label color="primary">Fullscreen</ion-label><ion-icon name="laptop-outline" color="primary"></ion-icon></ion-chip>
+</ion-buttons>
+</ion-toolbar>
+</ion-card-header>
 </ion-card>
-<ion-label color="primary">
-    <small>Written on {{ page.date | date: "%B %e, %Y" }}</small>
-  </ion-label>
-</article>
+</div>
+  {% include aside.html %}
+</div>
+<script>
+var elemVPC = document.getElementById("myvideoPC");
+function fullscreenVPC() {
+  if (elemVPC.requestFullscreen) {
+    elemVPC.requestFullscreen();
+  } else if (elemVPC.webkitRequestFullscreen) { /* Safari */
+    elemVPC.webkitRequestFullscreen();
+  } else if (elemVPC.msRequestFullscreen) { /* IE11 */
+    elemVPC.msRequestFullscreen();
+  }
+}
+</script>
+<script>
+ function playOnPC(play) {
+        var playBtnPC = document.getElementById('playBtnPC')
+        var stopBtnPC = document.getElementById('stopBtnPC')
+        var marqPC = document.getElementById('marqPC')
+        var screenPC = document.getElementById('screenPC')
+
+        if(play) {
+            stopBtnPC.style.display = "block"
+            playBtnPC.style.display = "none"
+            marqPC.style.display = "block"
+            screenPC.style.display = "none"
+        } else {
+            playBtnPC.style.display = "none"
+            stopBtnPC.style.display = "block"
+            marqPC.style.display = "none"
+            screenPC.style.display = "block"
+        }
+    }
+
+function playOnPC(play) {
+    var playBtnPC = document.getElementById('playBtnPC')
+    var stopBtnPC = document.getElementById('stopBtnPC')
+    var marqPC = document.getElementById('marqPC')
+    var screenPC = document.getElementById('screenPC')
+
+    if(play) {
+        stopBtnPC.style.display = "block"
+        playBtnPC.style.display = "none" 
+        marqPC.style.display = "none"
+        screenPC.style.display = "block"
+    } else {
+        stopBtnPC.style.display = "none"
+        playBtnPC.style.display = "block"
+        marqPC.style.display = "block"
+        screenPC.style.display = "none"
+    }
+}
+</script>

@@ -1,0 +1,37 @@
+<style>
+.kategori{display: flex;}
+.page-home-categories{
+    margin: auto;
+    box-shadow: 15px 0px 20px -15px rgb(0 0 0 / 14%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.page-categories {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1240px;
+}</style>
+<div class="kategori">
+<div class="page-home-categories">
+<a href="{{ site.baseurl }}/">
+<ion-chip color="dark">
+<ion-icon name="home" color="secondary"></ion-icon>
+<ion-label color="secondary">Home</ion-label>
+</ion-chip>
+</a>
+</div>
+<div class="page-categories">
+{% for cat in site.data.category %}
+<a href="{{ cat.url }}">
+<ion-chip color="secondary">
+<ion-label color="primary">{{ cat.name }}</ion-label>
+</ion-chip>
+</a>
+{% endfor %}
+</div>
+</div>

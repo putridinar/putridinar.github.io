@@ -1,0 +1,24 @@
+<div class='post-nav'>
+{% if paginator.total_pages > 1 %}
+{% if paginator.previous_page %}
+<ion-chip onclick="backP()" class='post-nav-newer-link' id='Blog1_post-nav-newer-link'>
+<ion-icon color="dark" name="caret-back-circle"></ion-icon>
+<ion-label>Back</ion-label>
+</ion-chip>{% endif %}
+    {% if paginator.next_page %}
+<ion-chip onclick="nextP()" class='post-nav-older-link' id="Blog1_post-nav-older-link">
+<ion-label>Next</ion-label>
+<ion-icon color="dark" name="caret-forward-circle"></ion-icon>
+</ion-chip>
+    {% endif %}
+{% endif %}
+</div>
+<script>
+function nextP() {
+  location.replace("{{ paginator.next_page_path | prepend: site.url }}")
+}
+
+function backP() {
+  location.replace("{{ paginator.previous_page_path | prepend: site.url }}")
+}
+</script>

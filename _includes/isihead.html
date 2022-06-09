@@ -1,0 +1,106 @@
+<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+    {% include ico.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/js/style.css">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+    <script type="module">
+      import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+      window.alertController = alertController;
+    </script>
+    <!-- Created with Jekyll -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "url": "{{site.url}}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/search?keyword={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Article",
+  "author": {
+    "@type": "Person",
+    "name": "{{site.dev}}",
+    "url": "{{ site.url }}{{page.url}}"
+  },
+  "headline": "{{ site.title }}{% if page.title %} – {{ page.title }}{% endif %}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{site.url}}{{page.url}}"
+  },
+  "datePublished": "{% if page.title %}{{ page.date | date_to_xmlschema }}{% endif %}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{site.name}}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{site.url}}{{page.url}}"
+    }
+  },
+  "keywords": "lalajo pilem, nonton streaming, Movie Streaming{% if page.title %}, {{ page.title }}{% endif %}",
+  "dateModified": "{% if page.title %}{{ page.date | date_to_xmlschema }}{% endif %}",
+  "mainEntityOfPage": "{{site.url}}{{page.url}}",
+  "description": "{{site.description}}{% if page.title %} – {{ page.excerpt| strip_html }}{% endif %}"
+}
+</script>
+    {% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "VideoObject",
+  "name": "{{page.title}}",
+  "description": "{{ page.excerpt| strip_html }}",
+  "thumbnailUrl": "{{ page.img }}",
+  "uploadDate": "{{ page.date | date_to_xmlschema }}",
+  "contentUrl": "https://lalajo.moviesstream.workers.dev/ambulance-(2022)",
+  "duration": "{{page.dur}}",
+  "expires": "0000-00-00T00:00:00.000Z",
+  "publication": {
+    "@type": "BroadcastEvent",
+    "isLiveBroadcast": "false",
+    "startDate": "0000-00-00T00:00:00.000Z",
+    "endDate": "0000-00-00T00:00:00.000Z"
+  },
+  "embedUrl": "https://lalajo.moviesstream.workers.dev/ambulance-(2022)",
+  "genre": "{{page.tags}}",
+  "headline": "{{page.title}}",
+  "keywords": "{{page.title}}",
+  "thumbnail": {
+    "@type": "ImageObject",
+    "url": "{{page.img}}",
+    "height": "265px",
+    "width": "154px"
+  },
+  "videoFrameSize": "720p",
+  "transcript": "indonesia",
+  "videoQuality": "{{page.res}}",
+  "caption": "{{page.tags}}"
+}
+</script>
+    {% endif %}
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "{{site.appID-one}}",
+    });
+  });
+</script>

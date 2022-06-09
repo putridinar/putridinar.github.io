@@ -1,0 +1,87 @@
+<style>.sticky{position: fixed;top: 0;width: 100%}ion-toolbar.sticky{position: -webkit-sticky;/* Safari */position: sticky;top: 0;box-shadow: 0px 2px 3px -1px #737373c4;}</style>
+      <ion-header class="page-header" translucent>
+        <ion-toolbar>
+          <ion-title color="primary">{{ site.name }}</ion-title><ion-buttons slot="end"><ion-button title="download AdBlock Plus" color="primary" href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb" target="_blank"><ion-icon class="pc-mode" slot="icon-only" name="extension-puzzle"></ion-icon></ion-button></ion-buttons><ion-buttons slot="end"><ion-button color="primary" title="Request Film" id="wa-button"><ion-icon slot="icon-only" color="secondary" name="paper-plane"></ion-icon></ion-button></ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+<ion-toolbar class="sticky" id="myHeader">
+    {% include category.html %}
+    {% if page.layout == "post" %}
+<div class="post-vid mobile-mode">
+<div class="video-container">
+<marquee style="width:100%;font-size: 14px;font-weight: 700;position: absolute;top:0;color: #f2f2f2;background: rgb(0 0 0 / 14%);z-index:1" id="marq">{{page.ket}}</marquee>
+  <iframe id="myvideo" class="responsive-iframe" frameborder="0" name="iframe" src="{{ page.cover1 }}" width="100%" allowfullscreen style="background:#000;background-image:url({{ page.cover1 }});background-position:center;background-size:contain;background-repeat:no-repeat;" allowautoplay>
+  </iframe>
+</div>
+<ion-toolbar>
+          <ion-chip color="success" slot="start" onclick="playMe(true)" id="playBtn">
+<popup>
+<ion-router-link href="{{ page.movie }}" target="iframe">
+            <div class="flex" style="grid-gap: 0 8px;padding: 2px;">
+            <ion-icon name="play" color="success"></ion-icon>
+            <ion-label color="success">Play Movie</ion-label>
+            </div>
+</ion-router-link>
+</popup>
+          </ion-chip>
+          <ion-chip color="danger" slot="start" onclick="playMe(false)" id="stopBtn" style="display: none;">
+<ion-router-link onclick="history.back()">
+            <div class="flex" style="grid-gap: 0 8px;padding: 2px;">
+            <ion-icon name="stop" color="danger"></ion-icon>
+            <ion-label color="danger">Stop Playing</ion-label>
+            </div>
+</ion-router-link>
+          </ion-chip>
+<ion-buttons slot="end" id="screenMbl" style="display:none">
+<ion-chip color="secondary" onclick="openFullscreen();"><ion-label color="primary">Fullscreen</ion-label><ion-icon name="laptop-outline" color="primary"></ion-icon></ion-chip>
+</ion-buttons>
+</ion-toolbar>
+</div>
+{% endif %}
+</ion-toolbar>
+<ion-modal trigger="wa-button" id="waMe">
+<ion-modal-header collapse="fade" translucent="true">
+        <ion-toolbar>
+<ion-title>Request Film</ion-title>
+    <ion-buttons slot="end">
+      <ion-button onClick="dismissMe()">
+        <ion-icon color="danger" slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+        </ion-toolbar>
+     </ion-modal-header>
+    <ion-content>
+            <form id="teleForm" action="javascript:contactUs();" name="teleForm"  style="padding:10px;" >
+        <ion-list lines="full" class="ion-no-margin">
+          <ion-list-header lines="full">
+            <ion-note> Isi Semua Data untuk Request Film </ion-note>
+          </ion-list-header>
+          <ion-item>
+            <ion-label position="floating">Isi Nama</ion-label>
+            <ion-input id="nama" type="text" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">no.Telegram</ion-label>
+            <ion-input id="telegram" type="number" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Isi Request Film</ion-label>
+            <ion-textarea id="pesan" type="text" required></ion-textarea>
+          </ion-item>
+        </ion-list>
+    <ion-buttons style="float:right;margin-right:15px;margin-top:15px;">
+      <ion-button type="submit" color="secondary">
+        <ion-label color="secondary">Kirim</ion-label>
+        <ion-icon slot="end" name="send" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+            </form>
+    </ion-content>
+<div id="confirm" style="display:none">
+<ion-chip color="success" class="chip-confirm">
+<ion-icon name="checkmark-done"></ion-icon>
+<ion-label>Succes terkirim via Bot Telegram</ion-label>
+</ion-chip>
+</div>
+<script src="{{ site.baseurl }}/js/telegram.js"></script>
+  </ion-modal>

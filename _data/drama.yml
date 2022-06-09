@@ -1,0 +1,23 @@
+- title: Top Gun - Maverick (2022)
+  cover: https://blue.kumparan.com/image/upload/v1634025439/0180f36548e7ac3d58c3ca5ebcbabf23.jpg
+  tgl: 29 Mey 2022
+  midb: 8,7/10
+  res: CAM
+  color: danger
+  url: /Top-Gun-Maverick(2022)
+
+- title: Ambulance (2022)
+  cover: https://basenaija.com/wp-content/uploads/2022/04/deYak0ykNP3.jpg
+  tgl: 22 Apr 2022
+  midb: 6,2/10
+  res: HD
+  color: primary
+  url: /ambulance-(2022)
+
+- title: The Batman (2022)
+  cover: https://upload.wikimedia.org/wikipedia/id/5/54/The_Batman_%28film%29_poster.jpeg
+  tgl: 13 March 2022
+  midb: 8,1/10
+  res: HD
+  color: primary
+  url: /the-batman-(2022)

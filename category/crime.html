@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="posts">
+{% for crm in site.data.crime %}
+    <ion-card href="{{ site.baseurl }}{{ crm.url }}" class="post cover" style="background-image: url({{ crm.cover }});">
+<ion-badge class="badge" color="{{post.color}}">{{ crm.res }}</ion-badge>
+    <ion-card-subtitle class="title">
+<div class="separator"></div>
+      <span style="padding: 5px 3px;color:#fff;">{{ crm.title }}</span>
+      <div class="entry">
+<div class="flex-between" data-content-feature="2">
+<div class="fG8Fp">{{ crm.tgl }}</div> 
+<g-review-stars aria-hidden="true">
+<span style="width:33px"></span>
+<span><ion-icon sloat="start" name="star" style="color: #ffce00;"></ion-icon> {{ crm.midb }}</span></g-review-stars></div>
+      </div>
+    </ion-card-subtitle>
+    </ion-card>
+  {% endfor %}
+</div>

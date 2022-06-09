@@ -1,0 +1,120 @@
+<script>
+  const cardModal = document.querySelector('#waMe');
+  
+  cardModal.swipeToClose = true;
+  cardModal.presentingElement = document.querySelector('ion-app');
+
+async function dismissMe() {
+  await cardModal.dismiss({
+    'dismissed': true
+  });
+}
+</script>
+    {% if page.title %}
+<script>
+      const button = document.querySelector('popup');
+      button.addEventListener('click', handleButtonClick);
+
+      async function handleButtonClick() {
+        const alert = await alertController.create({
+          header: 'PERHATIAN...!',
+          message: 'Disarankan Menggunakan <b>AdBlock Plus</b>, Untuk Menonton Lebih Nyaman Tanpa Iklan.',
+          buttons: ['OKE'],
+        });
+
+        await alert.present();
+      }
+</script>
+<script>
+      const buttonPC = document.querySelector('popupPC');
+      buttonPC.addEventListener('click', handleButtonPcClick);
+
+      async function handleButtonPcClick() {
+        const alert = await alertController.create({
+          header: 'PERHATIAN...!',
+          message: 'Disarankan Menggunakan <b>AdBlock Plus</b>, Untuk Menonton Lebih Nyaman Tanpa Iklan.',
+          buttons: ['OKE'],
+        });
+
+        await alert.present();
+      }
+</script>
+    {% endif %}
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<script>
+var elem = document.getElementById("myvideo");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+<script>
+ function playMe(play) {
+        var playBtn = document.getElementById('playBtn')
+        var stopBtn = document.getElementById('stopBtn')
+        var marq = document.getElementById('marq')
+        var screenMbl = document.getElementById('screenMbl')
+
+        if(play) {
+            stopBtn.style.display = "block"
+            playBtn.style.display = "none"
+            marq.style.display = "block"
+            screenMbl.style.display = "none"
+        } else {
+            playBtn.style.display = "none"
+            stopBtn.style.display = "block"
+            marq.style.display = "none"
+            screenMbl.style.display = "block"
+        }
+    }
+
+function playMe(play) {
+    var playBtn = document.getElementById('playBtn')
+    var stopBtn = document.getElementById('stopBtn')
+    var marq = document.getElementById('marq')
+    var screenMbl = document.getElementById('screenMbl')
+
+    if(play) {
+        stopBtn.style.display = "block"
+        playBtn.style.display = "none" 
+        marq.style.display = "none"
+        screenMbl.style.display = "block"
+    } else {
+        stopBtn.style.display = "none"
+        playBtn.style.display = "block"
+        marq.style.display = "block"
+        screenMbl.style.display = "none"
+    }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    {% include analytics.html %}
+<script src="{{ site.baseurl }}/js/isDark.js"></script>
+
