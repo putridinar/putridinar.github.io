@@ -149,7 +149,7 @@
             <style>.sticky{position: fixed;top: 0;width: 100%}ion-toolbar.sticky{position: -webkit-sticky;/* Safari */position: sticky;top: 0;box-shadow: 0px 2px 3px -1px #737373c4;}</style>
       <ion-header class="page-header" translucent>
         <ion-toolbar>
-          <ion-title color="primary">Movie Stream</ion-title><ion-buttons slot="end"><ion-button title="download AdBlock Plus" color="primary" href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb" target="_blank"><ion-icon class="pc-mode" slot="icon-only" name="extension-puzzle"></ion-icon></ion-button></ion-buttons><ion-buttons slot="end"><ion-button color="primary" title="Request Film" id="wa-button"><ion-icon slot="icon-only" color="secondary" name="paper-plane"></ion-icon></ion-button></ion-buttons>
+          <ion-title color="primary">Movie Stream</ion-title><ion-buttons slot="end"><ion-button title="login" color="primary" href="/login"><ion-icon slot=icon-only name="person"></ion-icon></ion-button></ion-buttons><ion-buttons class="pc-mode" slot="end"><ion-button title="download AdBlock Plus" color="primary" href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb" target="_blank"><ion-icon slot="icon-only" name="extension-puzzle"></ion-icon></ion-button></ion-buttons><ion-buttons slot="end"><ion-button color="primary" title="Request Film" id="wa-button"><ion-icon slot="icon-only" color="secondary" name="paper-plane"></ion-icon></ion-button></ion-buttons>
         </ion-toolbar>
       </ion-header>
 <ion-toolbar class="sticky" id="myHeader">
@@ -515,13 +515,14 @@ function playOnPC(play) {
         <div class="container" id="skeleton">
     
     
-          <ion-list-header class="page-header" translucent>
+          <ion-list-header class="page-header" style="display:block;padding-left:0;border-radius:5px" translucent>
         <ion-toolbar>
             <ion-skeleton-text animated style="width: 80px"></ion-skeleton-text>
             <ion-skeleton-text animated style="width: 280px"></ion-skeleton-text>
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
         </ion-toolbar>
           </ion-list-header>
-<div class=" flex" style="margin-top: 5%;">
+<div class=" flex" style="margin-top: 4%;">
 <div class="post-vid">
 <ion-card no-padding>
 <div class="video-container">

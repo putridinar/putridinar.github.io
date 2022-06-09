@@ -4,7 +4,7 @@ layout: default
 
 <div class="posts post-fix">
   {% for post in site.posts %}
-    <ion-card href="{{ site.baseurl }}{{ post.url }}" class="post cover" style="background-image: url({{ post.img }});">
+    <ion-card onclick="nonton{{forloop.index}}()" class="post cover" style="background-image: url({{ post.img }});cursor:pointer;">
 <ion-badge class="badge" color="{{post.color}}">{{post.res}}</ion-badge>
     <ion-card-subtitle class="title">
 <div class="separator"></div>
@@ -18,5 +18,11 @@ layout: default
       </div>
     </ion-card-subtitle>
     </ion-card>
+
+<script>
+function nonton{{forloop.index}}() {
+  location.replace("{{ site.baseurl }}{{ post.url }}")
+}
+</script>
   {% endfor %}
 </div>

@@ -1,0 +1,95 @@
+---
+layout: none
+---
+<html>
+<head>
+<title>Login page</title>
+    {% include isihead.html %}
+<style>
+.loginPage {
+    max-width: 450px;
+    width: 90%;
+    margin: auto;
+    height: 350px;
+    margin-top: 6%;
+}
+.btn-login{
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 0px 10px -3px #333d;
+    background-color: #3880ff;
+    color: #fff;
+}
+.btn-cancel{
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 0px 10px -3px #333d;
+    background-color: #eba844;
+    color: #fff;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.text-member {
+    text-align: center;
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
+}
+.margin-center, .text-center{margin:auto;}
+@media screen and (max-width: 747px) {
+.loginPage {margin-top:25%}
+}
+</style>
+</head>
+<body>
+<ion-app>
+<ion-content>
+<ion-card class="loginPage">
+<ion-card-header>
+        <ion-avatar class="margin-center">
+          <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+<ion-label>
+<h1 class="text-member">Login Member</h1>
+</ion-label>
+</ion-card-header>
+<form name="login">
+<ion-item>
+  <ion-label position="fixed">Username</ion-label>
+<ion-input type="text" name="userid"/>
+</ion-item>
+<ion-item>
+  <ion-label position="fixed">Password</ion-label>
+<ion-input type="password" name="pswrd"/>
+</ion-item>
+<ion-toolbar class="no-padding">
+<div class="flex">
+<input class="btn-login" type="button" onclick="check(this.form)" value="Login"/>
+<input class="btn-cancel" type="reset" onclick="history.back()" value="Cancel"/>
+</div>
+<ion-toolbar>
+</form>
+</ion-card>
+</ion-content>
+</ion-app>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
+  {
+    window.open('target.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+</body>
+</html>
