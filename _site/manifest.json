@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Movie Streaming",
+  "background_color": "#000",
+  "theme_color": "#00a880",
+  "start_url": "/",
+  "display": "standalone",
+  "description": "Kumpulan Streaming Film Bioskop Terbaru, GRATIS...",
+  "icons": [{
+    "src": "/favicon/maskable_icon.png",
+    "sizes":"any",
+    "type": "image/png",
+    "purpose": "any maskable"
+    },
+    {
+    "src": "/favicon/maskable_icon_x512.png",
+    "sizes":"512x512",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }]
+}

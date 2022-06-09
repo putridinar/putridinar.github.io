@@ -57,12 +57,8 @@ sass:
 
 # Use the following plug-ins
 gems:
-  - jekyll-paginate
   - jekyll-sitemap 
   - jekyll-feed 
-
-paginate: 14
-paginate_path: '/page:num'
 
 # Exclude these files from your production _site
 exclude:

@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="posts post-fix">
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
     <ion-card href="{{ site.baseurl }}{{ post.url }}" class="post cover" style="background-image: url({{ post.img }});">
 <ion-badge class="badge" color="{{post.color}}">{{post.res}}</ion-badge>
     <ion-card-subtitle class="title">
@@ -20,4 +20,3 @@ layout: default
     </ion-card>
   {% endfor %}
 </div>
-            {% include paginator.html %}
