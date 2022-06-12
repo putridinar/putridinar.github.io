@@ -25,6 +25,7 @@ registerRoute(
 )
 
 workbox.precaching.precacheAndRoute([
+  { url: '/jurasic-world-dominion-(2022)', revision: '2022-06-10' },
   { url: '/Top-Gun-Maverick(2022)', revision: '2022-05-29' },
   { url: '/doctor-strange-in-the-multiverse-of-madness-(2022)', revision: '2022-05-04' },
   { url: '/memory-(2022)', revision: '2022-04-28' },
@@ -38,10 +39,9 @@ workbox.precaching.precacheAndRoute([
   { url: '/the-adam-project-(2022)', revision: '2022-03-12' },
   { url: '/uncharted-(2022)', revision: '2022-02-20' },
   { url: '/moonfall-(2022)', revision: '2022-02-06' },
-  { url: '/spider-man-no-way-home-(2021)', revision: '2021-12-15' },
-  { url: '/', revision: '202206091959' },
-  { url: '/login', revision: '202206091959' },
-  { url: '/style.css', revision: '202206091959' }
+  { url: '/', revision: '202206130331' },
+  { url: '/login', revision: '202206130331' },
+  { url: '/style.css', revision: '202206130331' }
 ])
 
 registerRoute(
