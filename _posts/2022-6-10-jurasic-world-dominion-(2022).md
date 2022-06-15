@@ -1,7 +1,7 @@
 ---
 layout: post
-dur: 120M1560S
 title: Jurassic World Dominion (2022)
+dur: 120M1560S
 img: https://androidbutut.my.id/jurasic-world-dominion/img/jwd.jpg
 cover1: https://androidbutut.my.id/jurasic-world-dominion/img/
 movie1: https://androidbutut.my.id/jurasic-world-dominion/

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Death Race - Beyond Anarchy (2018)
+dur: 60M3060S
 img: https://images-na.ssl-images-amazon.com/images/S/pv-target-images/6bca2bb04195bc6a6102fe44bb10ad7c0f9fc751d96c22f5a6e376fc318e9f58._RI_V_TTW_.jpg
 cover1: https://androidbutut.my.id/death-race-2018/img/
 movie1: https://androidbutut.my.id/death-race-2018/

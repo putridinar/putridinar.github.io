@@ -39,9 +39,9 @@ workbox.precaching.precacheAndRoute([
   { url: '/the-adam-project-(2022)', revision: '2022-03-12' },
   { url: '/uncharted-(2022)', revision: '2022-02-20' },
   { url: '/moonfall-(2022)', revision: '2022-02-06' },
-  { url: '/', revision: '202206130331' },
-  { url: '/login', revision: '202206130331' },
-  { url: '/style.css', revision: '202206130331' }
+  { url: '/', revision: '202206150820' },
+  { url: '/login', revision: '202206150820' },
+  { url: '/style.css', revision: '202206150820' }
 ])
 
 registerRoute(

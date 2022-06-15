@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sonic the Hedgehog 2 (2022)
+dur: 120M120S
 img: https://cinemags.co.id/wp-content/uploads/2022/03/sonic-the-hedgehog-2-poster.jpg
 cover1: https://androidbutut.my.id/sonic-the-hedgehog-2/img/
 movie: https://androidbutut.my.id/sonic-the-hedgehog-2/

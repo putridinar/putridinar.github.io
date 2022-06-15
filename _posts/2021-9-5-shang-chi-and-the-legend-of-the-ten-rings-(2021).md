@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Shang-Chi and the Legend of the Ten Rings (2021)
+dur: 120M720S
 img: https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg
 cover1: https://androidbutut.my.id/shang-chi/img/
 movie1: https://short.ink/nZ1zEGb3-

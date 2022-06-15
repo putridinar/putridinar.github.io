@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Adam Project (2022)
+dur: 60M2760S
 img: https://www.layar.id/wp-content/uploads/2022/03/The-Adam-Project.jpg
 cover1: https://androidbutut.my.id/the-adam-project/img/
 movie1: https://short.ink/9WPRP4PnW
