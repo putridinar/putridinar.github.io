@@ -3,7 +3,7 @@ layout: post
 title: Spider-Man - No Way Home (2021)
 dur: 120M1680S
 img: https://www.themoviedb.org/t/p/original/oU2lDZX51WoGEEZ6OrSWoZ2ar8z.jpg
-cover1: https://androidbutut.my.id/spiderman-nowayhome/img/
+cover1: https://sendaljepit.b-cdn.net/spiderman-nowayhome/img/
 movie1: https://short.ink/TT_20yRmt
 movie: https://daffa-adr.my.id/v/4xry65izq-jr-03y
 dl: https://daffa-adr.my.id/f/4xry65izq-jr-03y

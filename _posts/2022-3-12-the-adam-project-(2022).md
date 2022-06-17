@@ -3,7 +3,7 @@ layout: post
 title: The Adam Project (2022)
 dur: 60M2760S
 img: https://www.layar.id/wp-content/uploads/2022/03/The-Adam-Project.jpg
-cover1: https://androidbutut.my.id/the-adam-project/img/
+cover1: https://sendaljepit.b-cdn.net/the-adam-project/img/
 movie1: https://short.ink/9WPRP4PnW
 movie: https://daffa-adr.my.id/v/61m8dyh02-xe-z05
 dl: https://daffa-adr.my.id/f/61m8dyh02-xe-z05

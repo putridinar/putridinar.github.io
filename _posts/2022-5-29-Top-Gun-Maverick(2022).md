@@ -3,7 +3,7 @@ layout: post
 title: Top Gun - Maverick (2022)
 dur: 120M180s
 img: https://m.media-amazon.com/images/M/MV5BMmIwZDMyYWUtNTU0ZS00ODJhLTg2ZmEtMTk5ZmYzODcxODYxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg
-cover1: https://androidbutut.my.id/topgun-2/img/index.html
+cover1: https://sendaljepit.b-cdn.net/topgun-2/img/index.html
 movie1: https://short.ink/RRQriS_-b
 movie: https://daffa-adr.my.id/v/nz71lkh2nzy-3wr0
 dl: https://daffa-adr.my.id/f/nz71lkh2nzy-3wr0
