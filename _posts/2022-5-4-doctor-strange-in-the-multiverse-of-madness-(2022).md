@@ -3,7 +3,7 @@ layout: post
 title: Doctor Strange in the Multiverse of Madness (2022)
 dur: 60M3240S
 img: https://assets.promediateknologi.com/crop/9x17:687x950/x/photo/2022/02/15/38964766.jpg
-cover1: https://sendaljepit.b-cdn.net/dr-strange-2/img/
+cover1: https://sendaljepit.masuk.id/dr-strange-2/img/
 movie1: https://short.ink/M5_WU_B4t
 movie: https://daffa-adr.my.id/v/l14rlphn8250gl18
 dl: https://daffa-adr.my.id/f/l14rlphn8250gl18
