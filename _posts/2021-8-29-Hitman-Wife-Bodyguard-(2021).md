@@ -3,8 +3,8 @@ layout: post
 title: Hitman's Wife's Bodyguard (2021)
 dur: 60M2400S
 img: https://media.pathe.nl/nocropthumb/620x955/gfx_content/other/api/filmdepot/v1/movie/download/28546_137087_ps_sd-high.jpg
-cover1: https://sendaljepit.b-cdn.net/the-hitmans-wifes-bodyguard-(2021)/img/
-movie1: https://sendaljepit.b-cdn.net/the-hitmans-wifes-bodyguard-(2021)/
+cover1: https://sendaljepit.masuk.id/the-hitmans-wifes-bodyguard-(2021)/img/
+movie1: https://sendaljepit.masuk.id/the-hitmans-wifes-bodyguard-(2021)/
 movie: https://daffa-adr.my.id/v/xm08q-a57xlqr1pw
 dl: https://daffa-adr.my.id/f/xm08q-a57xlqr1pw
 res: HD

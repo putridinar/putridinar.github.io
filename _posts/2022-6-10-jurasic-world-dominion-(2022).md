@@ -2,9 +2,9 @@
 layout: post
 title: Jurassic World Dominion (2022)
 dur: 120M1560S
-img: https://sendaljepit.b-cdn.net/jurasic-world-dominion/img/jwd.jpg
-cover1: https://sendaljepit.b-cdn.net/jurasic-world-dominion/img/
-movie1: https://sendaljepit.b-cdn.net/jurasic-world-dominion/
+img: https://sendaljepit.masuk.id/jurasic-world-dominion/img/jwd.jpg
+cover1: https://sendaljepit.masuk.id/jurasic-world-dominion/img/
+movie1: https://sendaljepit.masuk.id/jurasic-world-dominion/
 movie: https://daffa-adr.my.id/v/z6-nqyijq35151mz
 dl: https://daffa-adr.my.id/f/z6-nqyijq35151mz
 res: HDCAM

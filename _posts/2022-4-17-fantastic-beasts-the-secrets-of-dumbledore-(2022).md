@@ -3,7 +3,7 @@ layout: post
 title: Fantastic Beasts (The Secrets of Dumbledore)-(2022)
 dur: 120M1320S
 img: https://www.themoviedb.org/t/p/original/fHfcTRBx2jNMiwSJd2m2ehAyrnh.jpg
-cover1: https://sendaljepit.b-cdn.net/fantastic-beasts/img/
+cover1: https://sendaljepit.masuk.id/fantastic-beasts/img/
 movie1: https://short.ink/AIVkyhyIE
 movie: https://daffa-adr.my.id/v/z6-nqyijq8-dxkgn
 dl: https://daffa-adr.my.id/f/k3n0lrb3xd-w86xn

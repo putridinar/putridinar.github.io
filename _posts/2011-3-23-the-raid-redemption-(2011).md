@@ -2,9 +2,9 @@
 layout: post
 title: The Raid - Redemption (2011)
 dur: 60M2460S
-img: https://sendaljepit.b-cdn.net/the-raid-redemption/img/theraid1.jpg
-cover1: https://sendaljepit.b-cdn.net/the-raid-redemption/img/
-movie1: https://sendaljepit.b-cdn.net/the-raid-redemption/
+img: https://sendaljepit.masuk.id/the-raid-redemption/img/theraid1.jpg
+cover1: https://sendaljepit.masuk.id/the-raid-redemption/img/
+movie1: https://sendaljepit.masuk.id/the-raid-redemption/
 movie: https://daffa-adr.my.id/v/w0dxq-iny18ydpzx
 dl: https://daffa-adr.my.id/f/w0dxq-iny18ydpzx
 res: HD
