@@ -5,17 +5,17 @@ dur: 60M3240S
 img: https://assets.promediateknologi.com/crop/9x17:687x950/x/photo/2022/02/15/38964766.jpg
 cover1: https://sendaljepit.b-cdn.net/dr-strange-2/img/
 movie1: https://short.ink/M5_WU_B4t
-movie: https://daffa-adr.my.id/v/p6rze-im6l23zy-j
-dl: https://daffa-adr.my.id/f/p6rze-im6l23zy-j
-res: CAM
-color: danger
+movie: https://daffa-adr.my.id/v/l14rlphn8250gl18
+dl: https://daffa-adr.my.id/f/l14rlphn8250gl18
+res: HD
+color: primary
 tgl: 8 Mey 2022
 midb: 7,3/10
 tags: Action, Adventure, Fantasy, Horror, Sci-Fi
 categories: [Action, Adventure, Fantasy, Horror, Sci-Fi]
 director: Sam Raimi
 actor: Benedict Cumberbatch
-ket: Video Masih Berkualitas Rendah / (CAM)
+ket: 
 cast:
  - ava: https://m.media-amazon.com/images/M/MV5BOTUxNDY2OWQtZjcwOC00NmZmLThjMzAtYTNiZDNiNzYzNTQ2XkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_SY100_CR69,0,100,100_AL_.jpg
    nama: Benedict Cumberbatch
