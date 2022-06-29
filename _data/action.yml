@@ -4,7 +4,7 @@
   midb: 8,7/10
   res: CAM
   color: danger
-  url: /Top-Gun-Maverick(2022)
+  url: /movie/Top-Gun-Maverick(2022)
 
 - title: Doctor Strange in the Multiverse of Madness (2022)
   cover: https://assets.promediateknologi.com/crop/9x17:687x950/x/photo/2022/02/15/38964766.jpg
@@ -12,7 +12,7 @@
   midb: 7,3/10
   res: CAM
   color: danger
-  url: /doctor-strange-in-the-multiverse-of-madness-(2022)
+  url: /movie/doctor-strange-in-the-multiverse-of-madness-(2022)
 
 - title: The Lost City (2022)
   cover: https://m.media-amazon.com/images/M/MV5BMmIwYzFhODAtY2I1YS00ZDdmLTkyYWQtZjI5NDIwMDc2MjEyXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg
@@ -20,7 +20,7 @@
   midb: 6,2/10
   res: HD
   color: primary
-  url: /the-lost-city-(2022)
+  url: /movie/the-lost-city-(2022)
 
 - title: Memory (2022)
   cover: https://cinemags.co.id/wp-content/uploads/2022/05/memory.jpg
@@ -28,7 +28,7 @@
   midb: 5,6/10
   res: HD
   color: primary
-  url: /memory-(2022)
+  url: /movie/memory-(2022)
 
 - title: Ambulance (2022)
   cover: https://basenaija.com/wp-content/uploads/2022/04/deYak0ykNP3.jpg
@@ -36,7 +36,7 @@
   midb: 6,2/10
   res: HD
   color: primary
-  url: /ambulance-(2022)
+  url: /movie/ambulance-(2022)
 
 - title: Fantastic Beasts (The Secrets of Dumbledore)-(2022)
   cover: https://www.themoviedb.org/t/p/original/fHfcTRBx2jNMiwSJd2m2ehAyrnh.jpg
@@ -44,7 +44,7 @@
   midb: 6,4/10
   res: HD
   color: primary
-  url: /fantastic-beasts-the-secrets-of-dumbledore-(2022)
+  url: /movie/fantastic-beasts-the-secrets-of-dumbledore-(2022)
 
 - title: Morbius-(2022)
   cover: https://cinemags.org/wp-content/uploads/2021/12/Morbius.jpg
@@ -52,7 +52,7 @@
   midb: 5,2/10
   res: HD
   color: primary
-  url: /morbius-(2022)
+  url: /movie/morbius-(2022)
 
 - title: Sonic the Hedgehog 2 (2022)
   cover: https://dl.kaskus.id/pbs.twimg.com/media/FNmmInAVsAQip2g?format=jpg
@@ -60,7 +60,7 @@
   midb: 5,2/10
   res: HD
   color: primary
-  url: /sonic-the-hedgehog-2-(2022)
+  url: /movie/sonic-the-hedgehog-2-(2022)
 
 - title: The Adam Project (2022)
   cover: https://www.layar.id/wp-content/uploads/2022/03/The-Adam-Project.jpg
@@ -68,7 +68,7 @@
   midb: 6,7/10
   res: HD
   color: primary
-  url: /the-adam-project-(2022)
+  url: /movie/the-adam-project-(2022)
 
 - title: Sonic the Hedgehog 2 (2022)
   cover: https://dl.kaskus.id/pbs.twimg.com/media/FNmmInAVsAQip2g?format=jpg
@@ -76,7 +76,7 @@
   midb: 5,2/10
   res: HD
   color: primary
-  url: /sonic-the-hedgehog-2-(2022)
+  url: /movie/sonic-the-hedgehog-2-(2022)
 
 - title: The Batman (2022)
   cover: https://upload.wikimedia.org/wikipedia/id/5/54/The_Batman_%28film%29_poster.jpeg
@@ -84,7 +84,7 @@
   midb: 8,1/10
   res: HD
   color: primary
-  url: /the-batman-(2022)
+  url: /movie/the-batman-(2022)
 
 - title: Uncharted (2022)
   cover: https://m.media-amazon.com/images/M/MV5BMWEwNjhkYzYtNjgzYy00YTY2LThjYWYtYzViMGJkZTI4Y2MyXkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_.jpg
@@ -92,7 +92,7 @@
   midb: 6,4/10
   res: HD
   color: primary
-  url: /uncharted-(2022)
+  url: /movie/uncharted-(2022)
 
 - title: MoonFall (2022)
   cover: https://lsf.go.id/wp-content/uploads/2022/01/moonfal_onesheet_page-0001-350x520.jpg
@@ -100,13 +100,13 @@
   midb: 5,2/10
   res: HD
   color: primary
-  url: /moonfall-(2022)
+  url: /movie/moonfall-(2022)
 
 - title: Spider-Man - No Way Home (2021)
   cover: https://www.themoviedb.org/t/p/original/oU2lDZX51WoGEEZ6OrSWoZ2ar8z.jpg
   tgl: 19 Des 2021
   midb: 7,1/10
-  url: /spider-man-no-way-home-(2021)
+  url: /movie/spider-man-no-way-home-(2021)
 
 - title: Venom - Let There Be Carnage (2021)
   cover: https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2021/09/30/1085146066.jpg
@@ -114,7 +114,7 @@
   midb: 5,9/10
   res: HD
   color: primary
-  url: /venom_let-there-be-carnage-(2021)
+  url: /movie/venom_let-there-be-carnage-(2021)
 
 - title: Shang-Chi and the Legend of the Ten Rings (2021)
   cover: https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg
@@ -122,7 +122,7 @@
   midb: 7,4/10
   res: HD
   color: primary
-  url: /shang-chi-and-the-legend-of-the-ten-rings-(2021)
+  url: /movie/shang-chi-and-the-legend-of-the-ten-rings-(2021)
 
 - title: Free Guy (2021)
   cover: https://lumiere-a.akamaihd.net/v1/images/p_20cs_freeguy_homeent_21930_49e74453.jpeg?region=0%2C0%2C540%2C810
@@ -130,7 +130,7 @@
   midb: 7,1/10
   res: HD
   color: primary
-  url: /free-guy-(2021)
+  url: /movie/free-guy-(2021)
 
 - title: F9 Fast & Furious 9 (2021)
   cover: https://static.onecms.io/wp-content/uploads/sites/20/2020/01/ff9.jpg
@@ -138,6 +138,6 @@
   midb: 5,2/10
   res: HD
   color: primary
-  url: /f9-(2021)
+  url: /movie/f9-(2021)
 
 

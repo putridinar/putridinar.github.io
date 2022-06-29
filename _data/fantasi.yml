@@ -4,7 +4,7 @@
   midb: 7,3/10
   res: CAM
   color: danger
-  url: /doctor-strange-in-the-multiverse-of-madness-(2022)
+  url: /movie/doctor-strange-in-the-multiverse-of-madness-(2022)
 
 - title: Fantastic Beasts (The Secrets of Dumbledore)-(2022)
   cover: https://www.themoviedb.org/t/p/original/fHfcTRBx2jNMiwSJd2m2ehAyrnh.jpg
@@ -12,7 +12,7 @@
   midb: 6,4/10
   res: HD
   color: primary
-  url: /fantastic-beasts-the-secrets-of-dumbledore-(2022)
+  url: /movie/fantastic-beasts-the-secrets-of-dumbledore-(2022)
 
 - title: Sonic the Hedgehog 2 (2022)
   cover: https://dl.kaskus.id/pbs.twimg.com/media/FNmmInAVsAQip2g?format=jpg
@@ -20,7 +20,7 @@
   midb: 5,2/10
   res: HD
   color: primary
-  url: /sonic-the-hedgehog-2-(2022)
+  url: /movie/sonic-the-hedgehog-2-(2022)
 
 - title: Spider-Man - No Way Home (2021)
   cover: https://www.themoviedb.org/t/p/original/oU2lDZX51WoGEEZ6OrSWoZ2ar8z.jpg
@@ -28,7 +28,7 @@
   midb: 7,1/10
   res: HD
   color: primary
-  url: /spider-man-no-way-home-(2021)
+  url: /movie/spider-man-no-way-home-(2021)
 
 - title: SHANG-CHI AND THE LEGEND OF THE TEN RINGS (2021)
   cover: https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg
@@ -36,7 +36,7 @@
   midb: 7,4/10
   res: HD
   color: primary
-  url: /shang-chi-and-the-legend-of-the-ten-rings-(2021)
+  url: /movie/shang-chi-and-the-legend-of-the-ten-rings-(2021)
 
 - title: Free Guy (2021)
   cover: https://lumiere-a.akamaihd.net/v1/images/p_20cs_freeguy_homeent_21930_49e74453.jpeg?region=0%2C0%2C540%2C810
@@ -44,4 +44,4 @@
   midb: 7,1/10
   res: HD
   color: primary
-  url: /free-guy-(2021)
+  url: /movie/free-guy-(2021)

@@ -4,7 +4,7 @@
   midb: 6,2/10
   res: HD
   color: primary
-  url: /the-lost-city-(2022)
+  url: /movie/the-lost-city-(2022)
 
 - title: Sonic the Hedgehog 2 (2022)
   cover: https://dl.kaskus.id/pbs.twimg.com/media/FNmmInAVsAQip2g?format=jpg
@@ -12,7 +12,7 @@
   midb: 5,2/10
   res: HD
   color: primary
-  url: /sonic-the-hedgehog-2-(2022)
+  url: /movie/sonic-the-hedgehog-2-(2022)
 
 - title: The Adam Project (2022)
   cover: https://www.layar.id/wp-content/uploads/2022/03/The-Adam-Project.jpg
@@ -20,7 +20,7 @@
   midb: 6,7/10
   res: HD
   color: primary
-  url: /the-adam-project-(2022)
+  url: /movie/the-adam-project-(2022)
 
 - title: Free Guy (2021)
   cover: https://lumiere-a.akamaihd.net/v1/images/p_20cs_freeguy_homeent_21930_49e74453.jpeg?region=0%2C0%2C540%2C810
@@ -28,4 +28,4 @@
   midb: 7,1/10
   res: HD
   color: primary
-  url: /free-guy-(2021)
+  url: /movie/free-guy-(2021)

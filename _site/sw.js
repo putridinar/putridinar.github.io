@@ -25,23 +25,23 @@ registerRoute(
 )
 
 workbox.precaching.precacheAndRoute([
-  { url: '/jurasic-world-dominion-(2022)', revision: '2022-06-10' },
-  { url: '/Top-Gun-Maverick(2022)', revision: '2022-05-29' },
-  { url: '/doctor-strange-in-the-multiverse-of-madness-(2022)', revision: '2022-05-04' },
-  { url: '/memory-(2022)', revision: '2022-04-28' },
-  { url: '/ambulance-(2022)', revision: '2022-04-22' },
-  { url: '/fantastic-beasts-the-secrets-of-dumbledore-(2022)', revision: '2022-04-17' },
-  { url: '/the-lost-city-(2022)', revision: '2022-04-14' },
-  { url: '/morbius-(2022)', revision: '2022-04-03' },
-  { url: '/sonic-the-hedgehog-2-(2022)', revision: '2022-03-30' },
-  { url: '/the-cellar-(2022)', revision: '2022-03-25' },
-  { url: '/the-batman-(2022)', revision: '2022-03-13' },
-  { url: '/the-adam-project-(2022)', revision: '2022-03-12' },
-  { url: '/uncharted-(2022)', revision: '2022-02-20' },
-  { url: '/moonfall-(2022)', revision: '2022-02-06' },
-  { url: '/', revision: '202206150820' },
-  { url: '/login', revision: '202206150820' },
-  { url: '/style.css', revision: '202206150820' }
+  { url: '/movie/jurasic-world-dominion-(2022)', revision: '2022-06-10' },
+  { url: '/movie/Top-Gun-Maverick(2022)', revision: '2022-05-29' },
+  { url: '/movie/doctor-strange-in-the-multiverse-of-madness-(2022)', revision: '2022-05-04' },
+  { url: '/movie/memory-(2022)', revision: '2022-04-28' },
+  { url: '/movie/ambulance-(2022)', revision: '2022-04-22' },
+  { url: '/movie/fantastic-beasts-the-secrets-of-dumbledore-(2022)', revision: '2022-04-17' },
+  { url: '/movie/the-lost-city-(2022)', revision: '2022-04-14' },
+  { url: '/movie/morbius-(2022)', revision: '2022-04-03' },
+  { url: '/movie/sonic-the-hedgehog-2-(2022)', revision: '2022-03-30' },
+  { url: '/movie/the-cellar-(2022)', revision: '2022-03-25' },
+  { url: '/movie/the-batman-(2022)', revision: '2022-03-13' },
+  { url: '/movie/the-adam-project-(2022)', revision: '2022-03-12' },
+  { url: '/movie/uncharted-(2022)', revision: '2022-02-20' },
+  { url: '/movie/moonfall-(2022)', revision: '2022-02-06' },
+  { url: '/', revision: '202206290708' },
+  { url: '/login', revision: '202206290708' },
+  { url: '/style.css', revision: '202206290708' }
 ])
 
 registerRoute(

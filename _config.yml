@@ -6,7 +6,7 @@ title: Movie Stream – Nonton pilem geratis
 
 description: Kumpulan Streaming Film Bioskop Terbaru, GRATIS...
 
-avatar: https://cybertecz.in/wp-content/uploads/2019/10/free-movie-streaming-sites.jpg
+avatar: /images/free-movie-streaming.jpg
 
 disqus:
 
@@ -18,7 +18,7 @@ baseurl: ""
 
 appID-one: 471818d4-b9e8-487d-9041-15cef91e6b84
 
-permalink: /:title
+permalink: /movie/:title
 
 collections:
   tags:

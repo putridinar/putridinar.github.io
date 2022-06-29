@@ -4,7 +4,7 @@
   midb: 7,3/10
   res: CAM
   color: danger
-  url: /doctor-strange-in-the-multiverse-of-madness-(2022)
+  url: /movie/doctor-strange-in-the-multiverse-of-madness-(2022)
 
 - title: Morbius (2022)
   cover: https://cinemags.org/wp-content/uploads/2021/12/Morbius.jpg
@@ -12,7 +12,7 @@
   midb: 5,2/10
   res: HD
   color: primary
-  url: /morbius-(2022)
+  url: /movie/morbius-(2022)
 
 - title: The Cellar (2022)
   cover: https://thebloggingbanshee.files.wordpress.com/2022/04/mv5bmzdmm2jinwqtyje0zs00nmmxlthimtitnzuxnzq5njjjzdi2xkeyxkfqcgdeqxvymzqwmty2nzk40._v1_fmjpg_ux1000_.jpg
@@ -20,4 +20,4 @@
   midb: 5,3/10
   res: HD
   color: primary
-  url: /the-cellar-(2022)
+  url: /movie/the-cellar-(2022)
