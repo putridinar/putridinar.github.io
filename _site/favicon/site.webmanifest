@@ -1,0 +1,28 @@
+{
+    "name": "Movie Stream",
+    "short_name": "Movie Streaming",
+    "icons": [
+        {
+            "src": "/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/favicon/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+        "src": "/favicon/maskable_icon_x512.png",
+        "sizes":"512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#dfdfdf",
+    "background_color": "#dfdfdf",
+    "start_url": "/",
+    "display": "standalone"
+}
