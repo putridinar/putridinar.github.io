@@ -6,7 +6,7 @@ const { CacheableResponse } = workbox.cacheableResponse;
 
 workbox.core.setCacheNameDetails({
   prefix: 'http://localhost:4000',
-  suffix: '2022-06'
+  suffix: '2022-07'
 });
 
 registerRoute(
@@ -25,6 +25,7 @@ registerRoute(
 )
 
 workbox.precaching.precacheAndRoute([
+  { url: '/movie/thor-love-and-thunder-(2022)', revision: '2022-07-10' },
   { url: '/movie/jurasic-world-dominion-(2022)', revision: '2022-06-10' },
   { url: '/movie/Top-Gun-Maverick(2022)', revision: '2022-05-29' },
   { url: '/movie/doctor-strange-in-the-multiverse-of-madness-(2022)', revision: '2022-05-04' },
@@ -38,10 +39,9 @@ workbox.precaching.precacheAndRoute([
   { url: '/movie/the-batman-(2022)', revision: '2022-03-13' },
   { url: '/movie/the-adam-project-(2022)', revision: '2022-03-12' },
   { url: '/movie/uncharted-(2022)', revision: '2022-02-20' },
-  { url: '/movie/moonfall-(2022)', revision: '2022-02-06' },
-  { url: '/', revision: '202206290708' },
-  { url: '/login', revision: '202206290708' },
-  { url: '/style.css', revision: '202206290708' }
+  { url: '/', revision: '202207100755' },
+  { url: '/login', revision: '202207100755' },
+  { url: '/style.css', revision: '202207100755' }
 ])
 
 registerRoute(

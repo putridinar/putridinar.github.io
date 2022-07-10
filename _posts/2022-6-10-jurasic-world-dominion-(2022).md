@@ -7,8 +7,8 @@ cover1: https://sendaljepit.masuk.id/jurasic-world-dominion/img/
 movie1: https://sendaljepit.masuk.id/jurasic-world-dominion/
 movie: https://daffa-adr.my.id/v/z6-nqyijq35151mz
 dl: https://daffa-adr.my.id/f/z6-nqyijq35151mz
-res: HDCAM
-color: danger
+res: HD
+color: primary
 tgl: 10 Jun 2022
 midb: 6,0/10
 tags: Adventure, Thriller, Sci-Fi
