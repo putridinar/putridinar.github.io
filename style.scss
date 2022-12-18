@@ -243,6 +243,7 @@ nav {
 .posts {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 60px;
 
     @include mobile {
     justify-content: space-between;}
@@ -434,6 +435,11 @@ nav {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
+}
+
+.fixed-foot {
+  position: fixed;
+  bottom: 0;
 }
 
 footer {
