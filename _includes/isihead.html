@@ -69,7 +69,7 @@
   "description": "{{ page.excerpt| strip_html }}",
   "thumbnailUrl": "{{ page.img }}",
   "uploadDate": "{{ page.date | date_to_xmlschema }}",
-  "contentUrl": "https://lalajo.moviesstream.workers.dev/ambulance-(2022)",
+  "contentUrl": "{{site.url}}{{page.url}}",
   "duration": "{{page.dur}}",
   "expires": "0000-00-00T00:00:00.000Z",
   "publication": {
@@ -78,7 +78,7 @@
     "startDate": "0000-00-00T00:00:00.000Z",
     "endDate": "0000-00-00T00:00:00.000Z"
   },
-  "embedUrl": "https://lalajo.moviesstream.workers.dev/ambulance-(2022)",
+  "embedUrl": "{{site.url}}{{page.url}}",
   "genre": "{{page.tags}}",
   "headline": "{{page.title}}",
   "keywords": "{{page.title}}",

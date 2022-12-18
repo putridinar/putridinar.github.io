@@ -33,7 +33,7 @@ workbox.precaching.precacheAndRoute([
   {% endfor -%}
   { url: '/', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
   { url: '/login', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' },
-  { url: '/style.scss', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' }
+  { url: '/style.css', revision: '{{ site.time | date: "%Y%m%d%H%M" }}' }
 ])
 
 registerRoute(
@@ -46,6 +46,6 @@ registerRoute(
 );
 
 registerRoute(
-  /\/(images|favicon|scss)/,
+  /\/(images|favicon|css)/,
   new CacheFirst()
 );
