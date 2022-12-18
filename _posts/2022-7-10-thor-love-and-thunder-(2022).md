@@ -7,8 +7,8 @@ cover1: https://sendaljepit.masuk.id/thor-love-and-thunder/img/
 movie1: https://sendaljepit.masuk.id/thor-love-and-thunder/
 movie: https://daffa-adr.my.id/v/2p1l3yf242260kzl
 dl: https://daffa-adr.my.id/f/2p1l3yf242260kzl
-res: HDCAM
-color: danger
+res: HD
+color: primary
 tgl: 10 July 2022
 midb: 7,0/10
 tags: Adventure, Thriller, Sci-Fi
