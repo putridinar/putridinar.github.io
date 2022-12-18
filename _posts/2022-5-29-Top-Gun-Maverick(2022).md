@@ -15,7 +15,7 @@ tags: Action, Drama
 categories: [Action, Drama]
 director: Joseph Kosinski
 actor: Tom Cruise
-ket: Video Masih Berkualitas Rendah / (CAM)
+ket: 
 cast:
  - ava: https://m.media-amazon.com/images/M/MV5BNDQ0NDQ0NGItN2JiMC00OGQ1LWEzMTgtNzkyMmQyYTg2ODJkXkEyXkFqcGdeQXVyNjczOTE0MzM@._V1_SY100_CR25,0,100,100_AL_.jpg
    nama: Tom Cruise
