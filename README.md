@@ -1,1 +1,1 @@
-## [Nonton Pilem Geratis](https://movie.onthewifi.com)
+## [Nonton Pilem Geratis](https://putridinar.github.io)
