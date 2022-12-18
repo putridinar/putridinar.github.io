@@ -7,8 +7,8 @@ cover1: https://sendaljepit.masuk.id/topgun-2/img/index.html
 movie1: https://short.ink/RRQriS_-b
 movie: https://daffa-adr.my.id/v/nz71lkh2nzy-3wr0
 dl: https://daffa-adr.my.id/f/nz71lkh2nzy-3wr0
-res: CAM
-color: danger
+res: HD
+color: primary
 tgl: 29 Mey 2022
 midb: 8,7/10
 tags: Action, Drama
