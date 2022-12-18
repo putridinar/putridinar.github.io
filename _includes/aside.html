@@ -2,13 +2,13 @@
 <ion-card class="flex-in">
 <img class="img-side" src="{{page.img}}" />
 <ion-card-content>
-<ion-note>Judul Film: {{page.title}}</ion-note>
+<ion-note><b>Judul Film:</b> {{page.title}}</ion-note>
 <br/>
-<ion-note>Skor: {{page.midb}}</ion-note>
+<ion-note><b>Skor:</b> {{page.midb}}</ion-note>
 <br/>
-<ion-note>Terbit: {{page.tgl}}</ion-note>
+<ion-note><b>Terbit:</b> {{page.tgl}}</ion-note>
 <br/>
-<ion-note>Genre: 
+<ion-note><b>Genre:</b> 
     {% if post %}
     {% assign categories = post.categories %}
     {% else %}
@@ -19,9 +19,9 @@
     {% unless forloop.last %},{% endunless %}
     {% endfor %}</ion-note>
 <br/>
-<ion-note>Director: {{page.director}}</ion-note>
+<ion-note><b>Director:</b> {{page.director}}</ion-note>
 <br/>
-<ion-note>Actor: {{page.actor}}</ion-note>
+<ion-note><b>Actor:</b> {{page.actor}}</ion-note>
 </ion-card-content>
 </ion-card>
 <ion-accordion-group>
