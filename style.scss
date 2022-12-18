@@ -165,7 +165,8 @@ img {
 
   @include mobile {
     float: none;
-    width: 100%;}
+    width: 100%;
+    margin-bottom: 60px;}
 }
 
 .entry{padding:8px;padding-top:8px!important;font-size:10px;color:#fff;}
