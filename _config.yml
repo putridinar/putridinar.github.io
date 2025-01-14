@@ -51,6 +51,8 @@ baseurl: ""
 # !! You don't need to change any of the configuration flags below !!
 #
 
+paginate: 6
+
 markdown: kramdown
 highlighter: pygments
 permalink: /:title/
