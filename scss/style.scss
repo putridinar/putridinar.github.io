@@ -258,7 +258,7 @@ nav {
 
 .card-posts {
   diplay: grid;
-  geid-gap: 20px;
+  gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   @include mobile { grid-template-columns: 1fr; }
 }
