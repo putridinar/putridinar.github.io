@@ -40,6 +40,13 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 }
+
+.card-posts {
+  diplay: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include mobile { grid-template-columns: 1fr; }
+}
   
 h1 {  
   font-weight: 400;
@@ -254,13 +261,6 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
-}
-
-.card-posts {
-  diplay: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  @include mobile { grid-template-columns: 1fr; }
 }
 
 .wrapper-footer {
