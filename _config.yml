@@ -52,6 +52,7 @@ baseurl: ""
 #
 
 paginate: 6
+paginate_path: "/page:num/"
 
 markdown: kramdown
 highlighter: pygments
