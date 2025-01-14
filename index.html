@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="container mx-auto card-posts">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
   <div class="card">
     <img src="{{ site.baseurl }}/{{ post.img }}" class="card-img-top" alt="{{ post.title }}">
     <div class="card-body">
