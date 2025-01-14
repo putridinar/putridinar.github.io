@@ -39,7 +39,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: www.jekyllnow.com
+url: https://blogsputri.vercel.app
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -60,7 +60,8 @@ version: v1.0.0
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  sass_dir: assets/sass
+  style: :compressed # You might prefer to minify using :compressed
 
 # Use the following plug-ins
 plugins:
