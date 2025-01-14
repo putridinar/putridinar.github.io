@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Markdown Style Guide
+img: images/jekyll-boilerplate.jpg
 ---
 
 This is a demo of all styled elements in Jekyll Now.
