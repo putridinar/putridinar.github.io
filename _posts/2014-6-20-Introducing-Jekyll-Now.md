@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introducing Jekyll Now
-img: images/placeholder.jpg
+img: images/img.png
 ---
 
 [Jekyll](http://github.com/jekyll/jekyll) is a static site generator that's perfect for GitHub hosted blogs.
