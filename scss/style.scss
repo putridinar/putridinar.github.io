@@ -256,6 +256,13 @@ nav {
   }
 }
 
+.card-post {
+  diplay: grid;
+  geid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include mobile { grid-template-columns: 1fr; }
+}
+
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
