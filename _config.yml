@@ -70,6 +70,7 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Exclude these files from your production _site
 exclude:
