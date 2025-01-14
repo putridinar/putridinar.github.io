@@ -9,7 +9,7 @@ layout: default
     <div class="card-body">
       <h5 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
       <p class="card-text">
-        {{ post.content | strip_html | strip | truncate: 100 }}&#x02026;</p>
+        {{ post.content | strip_html | strip | truncate: 100 }}</p>
     </div>
     <div class="card-footer">
       <small class="text-body-secondary">Last updated {{ post.date | date: "%B %e, %Y" }}</small>
