@@ -2,15 +2,18 @@
 layout: default
 ---
 
-<div class="posts">
+<div class="card-group">
   {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.content | strip_html | strip | truncate: 100 }}&#x02026;
-      </div>
-    </article>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h5>
+      <p class="card-text">
+        {{ post.content | strip_html | strip | truncate: 100 }}&#x02026;</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-body-secondary">Last updated 3 mins ago</small>
+    </div>
+  </div>
   {% endfor %}
 </div>
