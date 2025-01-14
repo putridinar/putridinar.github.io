@@ -12,7 +12,7 @@ layout: default
         {{ post.content | strip_html | strip | truncate: 100 }}&#x02026;</p>
     </div>
     <div class="card-footer">
-      <small class="text-body-secondary">Last updated 3 mins ago</small>
+      <small class="text-body-secondary">Last updated {{ page.date | date: "%B %e, %Y" }}</small>
     </div>
   </div>
   {% endfor %}
