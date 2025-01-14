@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markdown Style Guide
-img: images/placeholder.jpg
+img: images/img.png
 ---
 
 This is a demo of all styled elements in Jekyll Now.
