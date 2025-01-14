@@ -20,20 +20,25 @@ layout: default
 
 
 <!-- Pagination links -->
-<div class="pagination">
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li class="page-item">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">
-      Previous
-    </a>
+      <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
   {% else %}
-    <span class="previous">Previous</span>
+    </li>
   {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
+    <li class="page-item">{{ paginator.page }} of {{ paginator.total_pages }}</li>
+    <li class="page-item">
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Next</a>
+      <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl }}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
   {% else %}
-    <span class="next ">Next</span>
+    </li>
   {% endif %}
-</div>
+  </ul>
+</nav>
