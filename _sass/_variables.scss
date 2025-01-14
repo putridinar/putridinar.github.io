@@ -27,3 +27,10 @@ $georgia: Georgia, serif;
 }
 
 a { text-decoration: none !important; }
+
+.card-posts {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include mobile { grid-template-columns: 1fr; grid-gap: 10px; }
+}
