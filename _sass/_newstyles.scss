@@ -15,5 +15,6 @@
 }
 
 .sticky + .content {
-  padding-top: 110px;
+  @include mobile {
+  padding-top: 110px; }
 }
