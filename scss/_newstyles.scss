@@ -6,13 +6,15 @@
   @include mobile { grid-template-columns: 1fr; grid-gap: 10px; }
 }
 
+.stickhead {
+ height: 180px;
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+ }
 }
-
 .sticky + .content {
   padding-top: 110px;
 }
