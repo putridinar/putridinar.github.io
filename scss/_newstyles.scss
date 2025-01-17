@@ -7,8 +7,12 @@
 }
 
 .stickhead {
- height: 60px;
-}
+  @include mobile {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;}
+ }
 .sticky {
   position: fixed;
   top: 0;
