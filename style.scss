@@ -233,7 +233,9 @@ nav {
     letter-spacing: 1px;
 
     @include mobile {
-      margin: 0 10px;
+      margin: auto;
+      display: flex;
+      gap: 20px;
       color: $blue;
     }
   }
