@@ -7,10 +7,12 @@
 }
 
 .stickhead {
+  @include mobile {
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;}
+ }
 .sticky {
   @include mobile {
   background: $white;
