@@ -57,4 +57,19 @@
   h1, h2, h3, h4, h5, h6,a, p, li, small, span, .btn, label, .form-control {
     @extend %loading-skeleton;
   }
+
+    @-webkit-keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+         }
+         
+         @keyframes fadeOut {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+         }
+         
+         .fadeOut {
+            -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+         }
 }
