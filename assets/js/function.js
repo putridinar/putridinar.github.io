@@ -1,7 +1,6 @@
 ---
 ---
 
-<script>
 function onLoadSkeleton() {
   const skeletonEl = document.getElementById('skeleton');
   const dataEl = document.getElementById('myBlog');
@@ -10,4 +9,3 @@ function onLoadSkeleton() {
     dataEl.style.display = 'grid';
   }, 2500);
 }
-</script>
