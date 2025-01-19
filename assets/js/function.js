@@ -1,6 +1,3 @@
----
----
-
 function onLoadSkeleton() {
   const skeletonEl = document.getElementById('skeleton');
   const dataEl = document.getElementById('myBlog');
