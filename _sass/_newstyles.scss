@@ -54,11 +54,7 @@
   img {
     filter: grayscale(100) contrast(0%) brightness(1.8);
   }
-  h1, h2, h3, h4, h5, h6,a,
-  p, li,
-  .btn,
-  label,small,
-  .form-control {
+  h1, h2, h3, h4, h5, h6,a, p, li, .btn, label, small, .form-control {
     @extend %loading-skeleton;
   }
 }
