@@ -4,6 +4,17 @@
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   @include mobile { grid-template-columns: 1fr; grid-gap: 10px; }
+  .card .img-card {
+        object-fit: cover;
+        max-height: 280px;
+        height: 100%;
+        width: 100%;
+        object-position: center;
+        opacity: 1;
+        display: block;
+        width: 100%;
+        transition: .5s ease;
+        backface-visibility: hidden; }
 }
 
 .stickhead {
