@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bahaya Slot Online: Mengungkap Sisi Gelap Permainan yang Menggiurkan
-img: /images/img.png
+img: /images/file-KPqj9TCV6fwHP3KU3RbK5v.webp
 ---
 
 
