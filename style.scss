@@ -223,7 +223,9 @@ nav {
   @include mobile {
     float: none !important;
     margin: auto;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
     font-size: 16px;
   }
 
@@ -235,7 +237,8 @@ nav {
     letter-spacing: 1px;
 
     @include mobile {
-      margin: 10px !important;
+      margin-left: 0 !important;
+      
       display: flex;
       gap: 10px;
       color: $blue;
