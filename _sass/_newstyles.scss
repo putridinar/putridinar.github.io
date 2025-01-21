@@ -9,8 +9,7 @@
 .stickhead {
   @include mobile {
   height: 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: -10px;}
