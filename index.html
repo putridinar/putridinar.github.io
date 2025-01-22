@@ -7,7 +7,7 @@ layout: default
   <div class="card shadow-sm">
     <img src="{{ site.baseurl }}{{ post.img }}" class="img-card card-img-top" alt="{{ post.title }}">
     <div class="card-body">
-      <h5 class="card-title space-betwen"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | strip_html | strip | truncate: 22 }} Read</a></h5>
+      <h5 class="card-title d-flex justify-content-between"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | strip_html | strip | truncate: 22 }} Read</a></h5>
       <p class="card-text">
         {{ post.content | strip_html | strip | truncate: 100 }}</p>
     </div>
