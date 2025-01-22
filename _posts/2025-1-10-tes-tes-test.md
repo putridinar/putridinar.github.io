@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Markdown Style Guide
+title: Test Blog
 img: /images/img.png
 ---
 
