@@ -51,7 +51,19 @@ baseurl: ""
 # !! You don't need to change any of the configuration flags below !!
 #
 
-markdown: redcarpet
+# auth
+
+SITE_KEY:
+API_KEY: AIzaSyDUIngXq4cj7XMx6RSOEiNj-aWSjhk0FZ4
+AUTH_DOMAIN: lalajo-bokep.firebaseapp.com
+DATABASE_URL:
+PROJECT_ID=lalajo-bokep
+STORAGE_BUCKET: lalajo-bokep.firebasestorage.app
+SENDER_ID: 243575604544
+APP_ID: 1:243575604544:web:5c161c68407947a0b8e6a5
+MEASUREMENT_ID: G-QMRXFDSLDN
+
+markdown: kramdawn
 highlighter: pygments
 permalink: /:title/
 
