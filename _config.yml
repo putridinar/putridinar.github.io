@@ -63,7 +63,7 @@ SENDER_ID: 243575604544
 APP_ID: 1:243575604544:web:5c161c68407947a0b8e6a5
 MEASUREMENT_ID: G-QMRXFDSLDN
 
-markdown: kramdawn
+markdown: kramdown
 highlighter: pygments
 permalink: /:title/
 
