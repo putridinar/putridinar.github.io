@@ -3,7 +3,7 @@
   
 {% include head.html %}
 
- <body onload="onLoadSkeleton()">
+ <body {% if page.url == '/' %} onload="onLoadSkeleton()"{% endif %}>
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix shadow rounded-bottom">
