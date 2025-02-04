@@ -117,6 +117,9 @@ img {
   background-position: center;
   border-radius: 15px;
   box-shadow: 4px 8px 8px -5px #000;
+  @include mobile {
+    height: 230px;
+  }
 }
 
 // Fixes images in popup boxes from Google Translate
