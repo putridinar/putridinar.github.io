@@ -267,6 +267,13 @@ nav {
     color: $gray;
     font-size: 22px;
     font-style: italic;
+    .img-post {
+      height: 400px;
+      object-fit: cover;
+      background-position: center;
+      border-radius: 15px;
+      box-shadow: 4px 8px 8px -5px #000;
+    }
   }
 
   .comments {
