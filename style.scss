@@ -252,13 +252,14 @@ nav {
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
-  img .img-post {
-    height: 400px;
-    object-fit: cover;
-    background-position: center;
-    border-radius: 15px;
-    box-shadow: 4px 8px 8px -5px #000;
-  }
+}
+
+img .img-post {
+  height: 400px;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 4px 8px 8px -5px #000;
 }
 
 .posts > .post:last-child {
