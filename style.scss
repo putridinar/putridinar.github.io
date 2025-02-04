@@ -254,20 +254,21 @@ nav {
   border-bottom: 1px solid $lightGray;
 }
 
-img .img-post {
-  height: 400px;
-  object-fit: cover;
-  background-position: center;
-  border-radius: 15px;
-  box-shadow: 4px 8px 8px -5px #000;
-}
-
 .posts > .post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
 
 .post {
+
+  img .img-post {
+    height: 400px;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 4px 8px 8px -5px #000;
+  }
+  
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
