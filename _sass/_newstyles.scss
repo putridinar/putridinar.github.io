@@ -15,6 +15,14 @@
         backface-visibility: hidden; }
 }
 
+img .img-post {
+  height: 400px;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 4px 8px 8px -5px #000;
+}
+
 .stickhead {
   @include mobile {
   height: 60px;
