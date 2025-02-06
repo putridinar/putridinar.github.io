@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Akhir Dunia, Kemungkinan Yang Menanti
-img: /images/img.png
+img: /images/file-NaGsqWBSHfHL5knwj2d4wv.webp
 ---
 
 Akhir Dunia: Mitos, Ilmiah, dan Kemungkinan yang Menanti
