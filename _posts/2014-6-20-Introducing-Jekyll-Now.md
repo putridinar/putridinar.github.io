@@ -1,40 +1,78 @@
 ---
 layout: post
-title: Introducing Jekyll Now
+title: Akhir Dunia, Kemungkinan Yang Menanti
 img: /images/img.png
 ---
 
-[Jekyll](http://github.com/jekyll/jekyll) is a static site generator that's perfect for GitHub hosted blogs.
+Akhir Dunia: Mitos, Ilmiah, dan Kemungkinan yang Menanti
 
-[Jekyll Now](http://github.com/barryclark/jekyll-now) makes it easier to create a Jekyll blog, by eliminating a lot of the up front setup.
+Pendahuluan
 
-- You don't need to touch the command line
-- You don't need to install/configure ruby, rvm/rbenv, ruby gems :relaxed:
-- You don't need to install runtime dependancies like markdown processors, Pygments, etc
-- It's easy to try out, you can just delete your forked repository if you don't like it
-- In a few minutes you'll be set up with a minimal, responsive blog just like this one—giving you more time to spend on making your blog awesome!
+Sejak zaman dahulu, manusia telah bertanya-tanya tentang akhir dunia. Berbagai mitologi, agama, dan teori ilmiah telah mencoba meramalkan bagaimana kehidupan di Bumi akan berakhir. Beberapa percaya bahwa kiamat akan datang dalam bentuk bencana besar, sementara yang lain melihatnya sebagai transisi menuju era baru. Tapi, apakah benar-benar ada akhir bagi dunia? Jika iya, bagaimana itu bisa terjadi?
 
-## Create your blog in 30 seconds!
 
-![Initial setup of Jekyll Now]({{ site.baseurl }}/images/step1.gif "Initial setup of Jekyll Now")
+---
 
-## Jekyll Now Features
+Prediksi Akhir Dunia dalam Mitologi dan Agama
 
-✓ _Command-line free fork-first workflow_, using GitHub.com to create, customize and post to your blog  
-✓ Fully responsive and mobile optimized base theme  
-✓ Sass/Coffeescript support using Jekyll 2.0  
-✓ Free hosting on your GitHub Pages user site  
-✓ Markdown blogging  
-✓ Syntax highlighting  
-✓ Disqus commenting  
-✓ Google Analytics integration  
-✓ SVG social icons for your footer  
-✓ 3 http requests, including your avatar  
+Banyak peradaban kuno memiliki cerita tentang akhir dunia:
 
-✘ No installing dependancies  
-✘ No need to set up local development  
-✘ No configuring plugins  
-✘ No need to spend time on theming  
-✘ More time to code other things ... wait ✓! 
+1. Norse Ragnarok – Dalam mitologi Nordik, Ragnarok adalah perang besar yang menyebabkan kehancuran para dewa dan dunia yang tenggelam dalam kegelapan sebelum lahir kembali.
 
-[Quick Start walkthrough on the Jekyll Now GitHub repository](http://github.com/barryclark/jekyll-now#quick-start).
+
+2. Kiamat dalam Islam & Kristen – Kedua agama ini menggambarkan Hari Kiamat sebagai waktu ketika manusia diadili, dan dunia seperti yang kita kenal akan berakhir.
+
+
+3. Ramalan Suku Maya – Kalender Maya sempat dikaitkan dengan prediksi akhir dunia pada tahun 2012, meskipun itu lebih merupakan kesalahpahaman modern daripada ramalan asli mereka.
+
+
+
+
+---
+
+Kemungkinan Ilmiah Tentang Akhir Dunia
+
+Ilmu pengetahuan menawarkan beberapa skenario realistis tentang bagaimana dunia bisa berakhir:
+
+1. Tabrakan Asteroid
+
+Seperti yang menyebabkan kepunahan dinosaurus, asteroid besar bisa menghantam Bumi dan menciptakan bencana global. NASA dan lembaga antariksa lainnya terus memantau langit untuk mendeteksi ancaman ini.
+
+2. Perubahan Iklim Ekstrem
+
+Pemanasan global bisa menyebabkan naiknya permukaan air laut, badai besar, dan kepunahan massal spesies. Jika manusia tidak segera bertindak, planet ini bisa menjadi tempat yang tidak layak huni.
+
+3. Perang Nuklir
+
+Konflik berskala besar dengan senjata nuklir bisa memicu "musim dingin nuklir," di mana debu dan radiasi menutupi atmosfer, menyebabkan kehancuran ekosistem dunia.
+
+4. Letusan Supervolcano
+
+Gunung berapi super seperti Yellowstone di AS bisa meletus dan menyelimuti dunia dalam abu vulkanik, menghalangi sinar matahari selama bertahun-tahun dan menyebabkan kelaparan global.
+
+5. Kematian Matahari
+
+Dalam miliaran tahun mendatang, matahari akan kehabisan bahan bakar dan berubah menjadi raksasa merah, menghancurkan planet-planet terdekat termasuk Bumi.
+
+
+---
+
+Bagaimana Kita Bisa Bertahan?
+
+Meskipun ancaman ini mengerikan, umat manusia telah menemukan cara untuk mengatasinya:
+
+Misi luar angkasa untuk mencari planet baru yang layak huni, seperti Mars.
+
+Teknologi energi terbarukan untuk mengurangi dampak perubahan iklim.
+
+Deteksi asteroid agar kita bisa mengalihkan jalurnya sebelum menghantam Bumi.
+
+
+Masa depan masih belum pasti, tetapi manusia selalu punya harapan untuk bertahan dan berkembang.
+
+
+---
+
+Kesimpulan
+
+Akhir dunia bisa datang dalam banyak bentuk, baik dari mitologi maupun sains. Namun, selama kita terus maju dalam teknologi dan ilmu pengetahuan, harapan untuk bertahan selalu ada. Kiamat bukanlah akhir segalanya—mungkin itu hanya awal dari sesuatu yang baru.
