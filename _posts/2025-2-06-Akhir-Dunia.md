@@ -34,23 +34,23 @@ Kemungkinan Ilmiah Tentang Akhir Dunia
 
 Ilmu pengetahuan menawarkan beberapa skenario realistis tentang bagaimana dunia bisa berakhir:
 
-1. Tabrakan Asteroid
+* Tabrakan Asteroid
 
 Seperti yang menyebabkan kepunahan dinosaurus, asteroid besar bisa menghantam Bumi dan menciptakan bencana global. NASA dan lembaga antariksa lainnya terus memantau langit untuk mendeteksi ancaman ini.
 
-2. Perubahan Iklim Ekstrem
+* Perubahan Iklim Ekstrem
 
 Pemanasan global bisa menyebabkan naiknya permukaan air laut, badai besar, dan kepunahan massal spesies. Jika manusia tidak segera bertindak, planet ini bisa menjadi tempat yang tidak layak huni.
 
-3. Perang Nuklir
+* Perang Nuklir
 
 Konflik berskala besar dengan senjata nuklir bisa memicu "musim dingin nuklir," di mana debu dan radiasi menutupi atmosfer, menyebabkan kehancuran ekosistem dunia.
 
-4. Letusan Supervolcano
+* Letusan Supervolcano
 
 Gunung berapi super seperti Yellowstone di AS bisa meletus dan menyelimuti dunia dalam abu vulkanik, menghalangi sinar matahari selama bertahun-tahun dan menyebabkan kelaparan global.
 
-5. Kematian Matahari
+* Kematian Matahari
 
 Dalam miliaran tahun mendatang, matahari akan kehabisan bahan bakar dan berubah menjadi raksasa merah, menghancurkan planet-planet terdekat termasuk Bumi.
 
