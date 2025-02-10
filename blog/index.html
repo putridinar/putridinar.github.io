@@ -47,7 +47,8 @@ ${post.title}</a></h5>
     <div class="card-footer">
       <small class="text-body-secondary"><span>Last updated ${post.date}</span></small>
     </div>
-  </div>`).join("");
+  </div>
+      `).join("");
     } catch (error) {
         console.error("Error fetching posts:", error);
         alert(`Error fetching posts: ${error.message}`);
