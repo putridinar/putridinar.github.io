@@ -33,6 +33,21 @@ permalink: /blog
         }
 
         postsContainer.innerHTML = data.posts.map(post => `
+  <div class="card shadow-sm">
+    <img src="{{ site.baseurl }}${post.img}" class="lazy img-card card-img-top" alt="${post.title}">
+    <div class="card-body">
+<div class="d-flex justify-content-between">
+      <h5 class="card-title">
+${post.title}</h5>
+<a href="{{ site.baseurl }}${post.url}"><h3>Read</h3></a>
+</div>
+      <p class="card-text">
+        ${post.excerpt}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-body-secondary"><span>Last updated ${post.date}</span></small>
+    </div>
+  </div>
             <div class="post">
                 <h2><a href="${post.url}">${post.title}</a></h2>
                 <p>${post.excerpt}</p>
