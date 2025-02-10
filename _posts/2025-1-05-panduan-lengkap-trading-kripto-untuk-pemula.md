@@ -2,6 +2,7 @@
 layout: post
 title: Panduan Lengkap Trading Kripto untuk Pemula
 img: /images/file-LJAN8HoMDzxxsPeNNmpE72.webp
+desc: Trading cryptocurrency telah menjadi salah satu tren investasi yang berkembang pesat dalam beberapa tahun terakhir.
 ---
 
 Panduan Lengkap Trading Kripto untuk Pemula
