@@ -2,6 +2,7 @@
 layout: post
 title: Kopi Hitam Manfaat
 img: /images/file-C8cYrdfH2FtMCUa4D5KuDq.webp
+desc: Kopi hitam adalah salah satu minuman paling populer di dunia. Banyak orang menikmatinya untuk meningkatkan energi, mengatasi kantuk, atau sekadar menikmati rasanya.
 ---
 
 Kopi Hitam: Manfaat dan Dampak Negatifnya
