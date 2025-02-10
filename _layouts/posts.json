@@ -2,11 +2,11 @@
   "posts": [
     {% for post in site.posts %}
       {
-        "title": "{{ post.title | escape }}",
+        "title": "{{ post.title }}",
         "url": "{{ post.url }}",
         "img": "{{ post.img }}",
         "date": "{{ post.date | date: '%Y-%m-%d' }}",
-        "excerpt": "{{ post.excerpt | strip_html | strip_newlines }}"
+        "excerpt": "{{ post.content | strip_html | strip_newlines }}"
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
