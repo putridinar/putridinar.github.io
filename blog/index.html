@@ -47,13 +47,7 @@ ${post.title}</a></h5>
     <div class="card-footer">
       <small class="text-body-secondary"><span>Last updated ${post.date}</span></small>
     </div>
-  </div>
-            <div class="post">
-                <h2><a href="${post.url}">${post.title}</a></h2>
-                <p>${post.description}</p>
-                <small>${post.date}</small>
-            </div>
-        `).join("");
+  </div>`).join("");
     } catch (error) {
         console.error("Error fetching posts:", error);
         alert(`Error fetching posts: ${error.message}`);
