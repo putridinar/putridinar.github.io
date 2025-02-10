@@ -4,7 +4,9 @@ permalink: /blog
 ---
 
     
+<div class="container mx-auto card-posts">
     <div id="posts"></div>
+</div>
 
     <script>
         async function fetchPosts() {
@@ -29,7 +31,6 @@ permalink: /blog
         }
 
         postsContainer.innerHTML = data.posts.map(post => `  
-<div class="container mx-auto card-posts">
   <div class="card shadow-sm">
     <img src="{{ site.baseurl }}${post.img}" class="lazy img-card card-img-top" alt="${post.title}">
     <div class="card-body">
@@ -45,7 +46,6 @@ ${post.title}</a></h5>
       <small class="text-body-secondary"><span>Last updated ${post.date}</span></small>
     </div>
   </div>
- </div>
       `).join("");
     } catch (error) {
         console.error("Error fetching posts:", error);
