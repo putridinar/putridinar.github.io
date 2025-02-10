@@ -84,6 +84,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
 
+include: ["posts.json"]
+
 # Exclude these files from your production _site
 exclude:
     - Gemfile
