@@ -1,4 +1,7 @@
-
+---
+layout: none
+permalink: posts.json
+---
 {
   "posts": [
     {% for post in site.posts %}
