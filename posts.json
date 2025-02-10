@@ -9,6 +9,7 @@ permalink: posts.json
         "title": "{{ post.title }}",
         "url": "{{ post.url }}",
         "img": "{{ post.img }}",
+        "description": "{{ post.desc }}",
         "date": "{{ post.date | date: '%Y-%m-%d' }}",
         "excerpt": "{{ post.content | strip_html | strip_newlines }}"
       }
