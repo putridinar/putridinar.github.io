@@ -2,6 +2,7 @@
 layout: post
 title: Akhir Dunia, Kemungkinan Yang Menanti
 img: /images/file-NaGsqWBSHfHL5knwj2d4wv.webp
+desc: Sejak zaman dahulu, manusia telah bertanya-tanya tentang akhir dunia. Berbagai mitologi, agama, dan teori ilmiah telah mencoba meramalkan bagaimana kehidupan di Bumi akan berakhir.
 ---
 
 Akhir Dunia: Mitos, Ilmiah, dan Kemungkinan yang Menanti
