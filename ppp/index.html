@@ -48,7 +48,7 @@
             const loading = document.getElementById("loading");
 
             // Ambil data dari JSON Jekyll
-            fetch("/assets/posts.json")
+            fetch("/_data/posts.json")
                 .then(response => response.json())
                 .then(posts => {
                     // Buat daftar post dengan tombol
