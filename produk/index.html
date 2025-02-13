@@ -40,11 +40,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
             const postList = document.getElementById("post-list");
 
             // Ambil data dari JSON
-            fetch("/assets/data/produk.json")
+            fetch("/assets/posts.json")
                 .then(response => response.json())
                 .then(posts => {
                     postList.innerHTML = "";
@@ -53,10 +53,10 @@
                         card.className = "col-md-4 mb-4";
                         card.innerHTML = `
                             <div class="card h-100 shadow-sm">
-                                <img src="${post.image}" class="card-img-top" alt="${post.harga}">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">${post.harga}</h5>
-                                    <p class="card-text">${post.title.substring(0, 50)}...</p>
+                                <img src="${post.image}" class="card-img-top" alt="${post.title}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${post.title}</h5>
+                                    <p class="card-text">${post.content.substring(0, 50)}...</p>
                                     <button class="btn btn-primary btn-sm" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</button>
                                 </div>
                             </div>
@@ -70,22 +70,19 @@
         // Fungsi untuk menampilkan post di modal
         function showPost(postId) {
             document.getElementById("loading").classList.remove("d-none");
-    
-document.getElementById("post-image").classList.add("d-none");
-document.getElementById("post-harga").classList.add("d-none");
+            document.getElementById("post-image").classList.add("d-none");
+            document.getElementById("post-content").textContent = "";
 
-            fetch("/assets/data/produk.json")
+            fetch("/assets/posts.json")
                 .then(response => response.json())
                 .then(posts => {
                     const post = posts.find(p => p.id === postId);
                     if (post) {
-                        document.getElementById("postModalLabel").textContent = post.harga;
-document.getElementById("post-image").src = post.image;
-                       document.getElementById("post-image").classList.remove("d-none");
-                        document.getElementById("post-harga").textContent = post.harga;
-document.getElementById("post-harga").classList.remove("d-none");
+                        document.getElementById("postModalLabel").textContent = post.title;
+                        document.getElementById("post-image").src = post.image;
+                        document.getElementById("post-image").classList.remove("d-none");
+                        document.getElementById("post-content").textContent = post.content;
                         document.getElementById("loading").classList.add("d-none");
-
                     }
                 })
                 .catch(error => console.error("Gagal memuat detail post:", error));
