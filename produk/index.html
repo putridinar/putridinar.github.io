@@ -30,7 +30,7 @@
                         <p class="mt-2">Memuat data...</p>
                     </div>
                     <img id="post-image" class="img-fluid d-none mb-3" alt="Post Image">
-                    <p id="post-content" class="d-none"></p>
+                    <p id="post-harga" class="d-none"></p>
                 </div>
             </div>
         </div>
@@ -55,8 +55,8 @@
                             <div class="card h-100 shadow-sm">
                                 <img src="${post.image}" class="card-img-top" alt="${post.title}">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">${post.title}</h5>
-                                    <p class="card-text">${post.content.substring(0, 50)}...</p>
+                                    <h5 class="card-title">${post.harga}</h5>
+                                    <p class="card-text">${post.title.substring(0, 50)}...</p>
                                     <button class="btn btn-primary btn-sm" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</button>
                                 </div>
                             </div>
@@ -73,9 +73,9 @@
     
 document.getElementById("post-image").classList.add("d-none");
  
-document.getElementById("post-content").classList.remove("d-none");
+document.getElementById("post-harga").classList.remove("d-none");
 
-            fetch("/assets/posts.json")
+            fetch("/assets/data/produk.json")
                 .then(response => response.json())
                 .then(posts => {
                     const post = posts.find(p => p.id === postId);
@@ -83,7 +83,7 @@ document.getElementById("post-content").classList.remove("d-none");
                         document.getElementById("postModalLabel").textContent = post.title;
 document.getElementById("post-image").src = post.image;
                        document.getElementById("post-image").classList.remove("d-none");
-                        document.getElementById("post-content").textContent = post.content;
+                        document.getElementById("post-harga").textContent = post.content;
                         document.getElementById("loading").classList.add("d-none");
 
 document.getElementById("post-title").classList.add("d-none");
