@@ -27,30 +27,59 @@ document.getElementById("post-form").addEventListener("submit", function(event) 
         image: document.getElementById("image").value || "/images/img.png"
     };
 
-    fetch("https://api.github.com/repos/putridinar/putridinar.github.ioE/contents/assets/posts.json", {
+    // Tampilkan loading
+    const submitButton = event.target.querySelector("button");
+    submitButton.disabled = true;
+    submitButton.textContent = "Menambahkan...";
+
+    fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/assets/posts.json", {
         method: "GET",
         headers: {
             "Accept": "application/vnd.github.v3+json"
         }
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Gagal mengambil posts.json");
+        }
+        return response.json();
+    })
     .then(data => {
         const content = JSON.parse(atob(data.content));
         content.push(newPost);
 
-        fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/assets/posts.json", {
+        return fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/assets/posts.json", {
             method: "PUT",
             headers: {
-                "Authorization": "token {{site.env.acces_token}}",
-                "Accept": "application/vnd.github.v3+json"
+                "Authorization": `token {{site.env.access_token}}`,
+                "Accept": "application/vnd.github.v3+json",
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 message: "Menambahkan post baru",
                 content: btoa(JSON.stringify(content, null, 2)),
                 sha: data.sha
             })
-        }).then(() => alert("Post berhasil ditambahkan!"))
-          .catch(err => console.error("Gagal update JSON:", err));
+        });
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Gagal memperbarui posts.json");
+        }
+        return response.json();
+    })
+    .then(() => {
+        alert("Post berhasil ditambahkan!");
+        document.getElementById("post-form").reset();
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Terjadi kesalahan! Cek konsol untuk detail.");
+    })
+    .finally(() => {
+        // Kembalikan tombol submit
+        submitButton.disabled = false;
+        submitButton.textContent = "Tambah Post";
     });
 });
 </script>
