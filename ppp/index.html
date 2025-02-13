@@ -72,6 +72,7 @@
             document.getElementById("loading").classList.remove("d-none");
     
 document.getElementById("post-image").classList.add("d-none");
+document.getElementById("post-title").classList.remove("d-none"); 
 document.getElementById("post-content").classList.remove("d-none");
 
             fetch("/assets/posts.json")
@@ -81,7 +82,7 @@ document.getElementById("post-content").classList.remove("d-none");
                     if (post) {
                         document.getElementById("postModalLabel").textContent = post.title;
 document.getElementById("post-image").src = post.image;
-document.getElementById("post-title").classList.remove("d-none");                        document.getElementById("post-image").classList.remove("d-none");
+                       document.getElementById("post-image").classList.remove("d-none");
                         document.getElementById("post-content").textContent = post.content;
                         document.getElementById("loading").classList.add("d-none");
                     }
