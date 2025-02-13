@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post di Modal - Jekyll</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1>Daftar Post</h1>
+        <ul id="post-list" class="list-group"></ul>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="postModalLabel">Judul Post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="loading" class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">Memuat data...</p>
+                    </div>
+                    <p id="post-content" class="d-none"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const postList = document.getElementById("post-list");
+            const modalTitle = document.getElementById("postModalLabel");
+            const modalContent = document.getElementById("post-content");
+            const loading = document.getElementById("loading");
+
+            // Ambil data dari JSON Jekyll
+            fetch("/assets/posts.json")
+                .then(response => response.json())
+                .then(posts => {
+                    // Buat daftar post dengan tombol
+                    posts.forEach(post => {
+                        let li = document.createElement("li");
+                        li.className = "list-group-item d-flex justify-content-between align-items-center";
+                        li.innerHTML = `
+                            ${post.title}
+                            <button class="btn btn-primary btn-sm" data-id="${post.id}" data-bs-toggle="modal" data-bs-target="#postModal">Lihat</button>
+                        `;
+                        postList.appendChild(li);
+                    });
+
+                    // Event listener untuk menampilkan post di modal
+                    postList.addEventListener("click", function (e) {
+                        if (e.target.tagName === "BUTTON") {
+                            const postId = parseInt(e.target.getAttribute("data-id"));
+                            const post = posts.find(p => p.id === postId);
+
+                            // Tampilkan loading dan sembunyikan teks
+                            loading.classList.remove("d-none");
+                            modalContent.classList.add("d-none");
+
+                            setTimeout(() => {
+                                if (post) {
+                                    modalTitle.textContent = post.title;
+                                    modalContent.textContent = post.content;
+                                } else {
+                                    modalTitle.textContent = "Post Tidak Ditemukan";
+                                    modalContent.textContent = "Maaf, post yang Anda cari tidak tersedia.";
+                                }
+
+                                // Sembunyikan loading dan tampilkan teks
+                                loading.classList.add("d-none");
+                                modalContent.classList.remove("d-none");
+                            }, 1000); // Simulasi loading 1 detik
+                        }
+                    });
+                })
+                .catch(error => console.error("Gagal mengambil data:", error));
+        });
+    </script>
+
+</body>
+</html>
