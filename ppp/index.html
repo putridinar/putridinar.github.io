@@ -22,13 +22,14 @@
                     <h5 class="modal-title" id="postModalLabel">Judul Post</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body text-center">
                     <div id="loading" class="text-center">
                         <div class="spinner-border text-primary" role="status">
                             <span class="visually-hidden">Loading...</span>
                         </div>
                         <p class="mt-2">Memuat data...</p>
                     </div>
+                    <img id="post-image" class="img-fluid d-none mb-3" alt="Post Image">
                     <p id="post-content" class="d-none"></p>
                 </div>
             </div>
@@ -43,6 +44,7 @@
             const postList = document.getElementById("post-list");
             const modalTitle = document.getElementById("postModalLabel");
             const modalContent = document.getElementById("post-content");
+            const modalImage = document.getElementById("post-image");
             const loading = document.getElementById("loading");
 
             // Ambil data dari JSON Jekyll
@@ -66,20 +68,24 @@
                             const postId = parseInt(e.target.getAttribute("data-id"));
                             const post = posts.find(p => p.id === postId);
 
-                            // Tampilkan loading dan sembunyikan teks
+                            // Tampilkan loading dan sembunyikan teks/gambar
                             loading.classList.remove("d-none");
                             modalContent.classList.add("d-none");
+                            modalImage.classList.add("d-none");
 
                             setTimeout(() => {
                                 if (post) {
                                     modalTitle.textContent = post.title;
                                     modalContent.textContent = post.content;
+                                    modalImage.src = post.image;
+                                    modalImage.alt = post.title;
+                                    modalImage.classList.remove("d-none");
                                 } else {
                                     modalTitle.textContent = "Post Tidak Ditemukan";
                                     modalContent.textContent = "Maaf, post yang Anda cari tidak tersedia.";
                                 }
 
-                                // Sembunyikan loading dan tampilkan teks
+                                // Sembunyikan loading dan tampilkan teks/gambar
                                 loading.classList.add("d-none");
                                 modalContent.classList.remove("d-none");
                             }, 1000); // Simulasi loading 1 detik
