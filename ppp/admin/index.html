@@ -27,7 +27,7 @@ document.getElementById("post-form").addEventListener("submit", function(event) 
         image: document.getElementById("image").value || "/assets/default.jpg"
     };
 
-    fetch("https://api.github.com/repos/putridinar/putridinar.github.ioE/contents/_data/posts.json", {
+    fetch("https://api.github.com/repos/putridinar/putridinar.github.ioE/contents/assets/posts.json", {
         method: "GET",
         headers: {
             "Accept": "application/vnd.github.v3+json"
@@ -38,7 +38,7 @@ document.getElementById("post-form").addEventListener("submit", function(event) 
         const content = JSON.parse(atob(data.content));
         content.push(newPost);
 
-        fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/_data/posts.json", {
+        fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/assets/posts.json", {
             method: "PUT",
             headers: {
                 "Authorization": "token {{site.env.acces_token}}",
