@@ -72,8 +72,7 @@
             document.getElementById("loading").classList.remove("d-none");
     
 document.getElementById("post-image").classList.add("d-none");
- 
-document.getElementById("post-harga").classList.remove("d-none");
+document.getElementById("post-harga").classList.add("d-none");
 
             fetch("/assets/data/produk.json")
                 .then(response => response.json())
@@ -86,7 +85,7 @@ document.getElementById("post-image").src = post.image;
                         document.getElementById("post-harga").textContent = post.harga;
                         document.getElementById("loading").classList.add("d-none");
 
-document.getElementById("post-title").classList.add("d-none");
+document.getElementById("post-harga").classList.remove("d-none");
                     }
                 })
                 .catch(error => console.error("Gagal memuat detail post:", error));
