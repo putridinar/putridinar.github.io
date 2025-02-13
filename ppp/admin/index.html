@@ -38,7 +38,7 @@ document.getElementById("post-form").addEventListener("submit", function(event) 
         const content = JSON.parse(atob(data.content));
         content.push(newPost);
 
-        fetch("https://api.github.com/repos/USERNAME/REPO_NAME/contents/_data/posts.json", {
+        fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/_data/posts.json", {
             method: "PUT",
             headers: {
                 "Authorization": "token GITHUB_PERSONAL_ACCESS_TOKEN",
