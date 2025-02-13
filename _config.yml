@@ -83,6 +83,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-dotenv
 
 include: ["posts.json"]
 
