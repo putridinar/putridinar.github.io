@@ -54,7 +54,7 @@
                         card.innerHTML = `
                             <div class="card h-100 shadow-sm">
                                 <img src="${post.image}" class="card-img-top" alt="${post.title}">
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <h5 class="card-title">${post.title}</h5>
                                     <p class="card-text">${post.content.substring(0, 50)}...</p>
                                     <button class="btn btn-primary btn-sm" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</button>
