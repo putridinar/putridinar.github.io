@@ -1,5 +1,5 @@
 [
-    { "id": 1, "title": "Judul 1", "content": "Isi post pertama." },
-    { "id": 2, "title": "Judul 2", "content": "Isi post kedua." },
-    { "id": 3, "title": "Judul 3", "content": "Isi post ketiga." }
+    { "id": 1, "image": "/images/file-C8cYrdfH2FtMCUa4D5KuDq.webp", "title": "Judul post 1", "content": "Isi post pertama di _data/posts.json." },
+    { "id": 2, "image": "/images/file-C8cYrdfH2FtMCUa4D5KuDq.webp", "title": "Judul post 2", "content": "Isi post kedua di _data/posts.json." },
+    { "id": 3, "image": "/images/file-C8cYrdfH2FtMCUa4D5KuDq.webp", "title": "Judul post 3", "content": "Isi post ketiga di _data/posts.json." }
 ]
