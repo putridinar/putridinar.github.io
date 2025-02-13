@@ -70,6 +70,7 @@
 
                             // Tampilkan loading dan sembunyikan teks/gambar
                             loading.classList.remove("d-none");
+                            modalTitle.classList.add("d-none");
                             modalContent.classList.add("d-none");
                             modalImage.classList.add("d-none", "rounded");
 
@@ -88,6 +89,7 @@
                                 // Sembunyikan loading dan tampilkan teks/gambar
                                 loading.classList.add("d-none");
                                 modalContent.classList.remove("d-none");
+modalTitle.classList.remove("d-none");
                             }, 1000); // Simulasi loading 1 detik
                         }
                     });
