@@ -27,14 +27,31 @@ document.getElementById("post-form").addEventListener("submit", function(event) 
         image: document.getElementById("image").value || "/assets/default.jpg"
     };
 
-    fetch("https://your-project.firebaseio.com/posts.json", {
-        method: "POST",
-        body: JSON.stringify(newPost),
+    fetch("https://api.github.com/repos/putridinar/putridinar.github.ioE/contents/_data/posts.json", {
+        method: "GET",
         headers: {
-            "Content-Type": "application/json"
+            "Accept": "application/vnd.github.v3+json"
         }
-    }).then(() => alert("Post berhasil ditambahkan!"))
-      .catch(err => console.error("Gagal menambahkan post:", err));
+    })
+    .then(response => response.json())
+    .then(data => {
+        const content = JSON.parse(atob(data.content));
+        content.push(newPost);
+
+        fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/_data/posts.json", {
+            method: "PUT",
+            headers: {
+                "Authorization": "token {{site.env.acces_token}}",
+                "Accept": "application/vnd.github.v3+json"
+            },
+            body: JSON.stringify({
+                message: "Menambahkan post baru",
+                content: btoa(JSON.stringify(content, null, 2)),
+                sha: data.sha
+            })
+        }).then(() => alert("Post berhasil ditambahkan!"))
+          .catch(err => console.error("Gagal update JSON:", err));
+    });
 });
 </script>
 
