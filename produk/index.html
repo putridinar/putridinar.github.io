@@ -44,7 +44,7 @@
             const postList = document.getElementById("post-list");
 
             // Ambil data dari JSON
-            fetch("/assets/data/posts.json")
+            fetch("/assets/data/produk.json")
                 .then(response => response.json())
                 .then(posts => {
                     postList.innerHTML = "";
