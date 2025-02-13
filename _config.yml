@@ -56,7 +56,7 @@ baseurl: ""
 SITE_KEY:
 API_KEY: AIzaSyDUIngXq4cj7XMx6RSOEiNj-aWSjhk0FZ4
 AUTH_DOMAIN: lalajo-bokep.firebaseapp.com
-DATABASE_URL: 
+DATABASE_URL: https://lalajo-bokep-default-rtdb.asia-southeast1.firebasedatabase.app
 PROJECT_ID: lalajo-bokep
 STORAGE_BUCKET: lalajo-bokep.firebasestorage.app
 SENDER_ID: 243575604544
