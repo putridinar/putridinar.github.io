@@ -53,7 +53,7 @@
                         card.className = "col-md-4 mb-4";
                         card.innerHTML = `
                             <div class="card h-100 shadow-sm">
-                                <img src="${post.image}" class="card-img-top" alt="${post.title}">
+                                <img src="${post.image}" class="card-img-top" alt="${post.harga}">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">${post.harga}</h5>
                                     <p class="card-text">${post.title.substring(0, 50)}...</p>
@@ -79,7 +79,7 @@ document.getElementById("post-harga").classList.add("d-none");
                 .then(posts => {
                     const post = posts.find(p => p.id === postId);
                     if (post) {
-                        document.getElementById("postModalLabel").textContent = post.title;
+                        document.getElementById("postModalLabel").textContent = post.harga;
 document.getElementById("post-image").src = post.image;
                        document.getElementById("post-image").classList.remove("d-none");
                         document.getElementById("post-harga").textContent = post.harga;
