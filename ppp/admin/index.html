@@ -27,7 +27,7 @@ document.getElementById("post-form").addEventListener("submit", function(event) 
         image: document.getElementById("image").value || "/assets/default.jpg"
     };
 
-    fetch("https://api.github.com/repos/USERNAME/REPO_NAME/contents/_data/posts.json", {
+    fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/_data/posts.json", {
         method: "GET",
         headers: {
             "Accept": "application/vnd.github.v3+json"
