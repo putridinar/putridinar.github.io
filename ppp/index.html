@@ -71,7 +71,7 @@
         function showPost(postId) {
             document.getElementById("loading").classList.remove("d-none");
             document.getElementById("post-image").classList.add("d-none");
-            document.getElementById("post-content").textContent = "{post.content}";
+            document.getElementById("post-content").textContent = "post.content";
 
             fetch("/assets/posts.json")
                 .then(response => response.json())
