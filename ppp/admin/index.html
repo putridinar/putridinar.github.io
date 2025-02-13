@@ -16,5 +16,44 @@
     <button type="submit">Tambah Post</button>
 </form>
 
+<script>
+document.getElementById("post-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const newPost = {
+        id: Date.now(),
+        title: document.getElementById("title").value,
+        content: document.getElementById("content").value,
+        image: document.getElementById("image").value || "/assets/default.jpg"
+    };
+
+    fetch("https://api.github.com/repos/USERNAME/REPO_NAME/contents/_data/posts.json", {
+        method: "GET",
+        headers: {
+            "Accept": "application/vnd.github.v3+json"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const content = JSON.parse(atob(data.content));
+        content.push(newPost);
+
+        fetch("https://api.github.com/repos/USERNAME/REPO_NAME/contents/_data/posts.json", {
+            method: "PUT",
+            headers: {
+                "Authorization": "token GITHUB_PERSONAL_ACCESS_TOKEN",
+                "Accept": "application/vnd.github.v3+json"
+            },
+            body: JSON.stringify({
+                message: "Menambahkan post baru",
+                content: btoa(JSON.stringify(content, null, 2)),
+                sha: data.sha
+            })
+        }).then(() => alert("Post berhasil ditambahkan!"))
+          .catch(err => console.error("Gagal update JSON:", err));
+    });
+});
+</script>
+
 </body>
 </html>
