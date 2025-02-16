@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const postList = document.getElementById("post-list");
 
             // Ambil data dari JSON
-            fetch("/assets/posts.json")
+            fetch("/assets/data/produk.json")
                 .then(response => response.json())
                 .then(posts => {
                     postList.innerHTML = "";
