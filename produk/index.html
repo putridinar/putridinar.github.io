@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="card h-100 shadow-sm">
                                 <img src="${post.image}" class="card-img-top" alt="${post.title}">
                                 <div class="card-body">
-                                    <h5 class="card-title d-none">${post.title}</h5>
+                                    <h5 class="card-title">${post.title}</h5>
                                     <p class="card-text">${post.content.substring(0, 50)}...</p>
                                     <button class="btn btn-primary btn-sm" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</button>
                                 </div>
@@ -70,7 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Fungsi untuk menampilkan post di modal
         function showPost(postId) {
             document.getElementById("loading").classList.remove("d-none");             document.getElementById("post-image").classList.add("d-none");
-            document.getElementById("post-content").textContent = "";
+document.getElementById("postModalLabel").classList.add("d-none");
+document.getElementById("post-content").textContent = "";
 
             fetch("/assets/data/produk.json")
                 .then(response => response.json())
