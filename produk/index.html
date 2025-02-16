@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("loading").classList.remove("d-none");             document.getElementById("post-image").classList.add("d-none");
             document.getElementById("post-content").textContent = "";
 
-            fetch("/assets/posts.json")
+            fetch("/assets/data/produk.json")
                 .then(response => response.json())
                 .then(posts => {
                     const post = posts.find(p => p.id === postId);
