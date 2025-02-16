@@ -11,13 +11,13 @@ permalink: /
 <div class="d-flex justify-content-between">
       <h5 class="card-title">
 {{ post.title | strip_html | strip | truncate: 22 }}</h5>
-<a href="{{ site.baseurl }}{{ post.url }}"><h3>Read</h3></a>
 </div>
       <p class="card-text">
         {{ post.content | strip_html | strip | truncate: 100 }}</p>
     </div>
-    <div class="card-footer">
-      <small class="text-body-secondary"><span>Last updated {{ post.date | date: "%e-%m-%Y" }}</span></small>
+    <div class="card-footer d-flex justify-content-between">
+      <small class="text-body-secondary"><span>Posting {{ post.date | date: "%e-%m-%Y" }}</span>
+       <a href="{{ site.baseurl }}{{ post.url }}"><span class="fs-6">Baca</span></a></small>
     </div>
   </div>
   {% endfor %}
