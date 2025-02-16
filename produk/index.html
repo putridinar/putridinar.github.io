@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     posts.forEach(post => {
                         const card = document.createElement("div");
                         card.className = "col-md-4 mb-4 row row-cols-2";
-                        card.className = "col";
+                        card.className = "col mb-4";
                         card.innerHTML = `
                             <div class="card h-100 shadow-sm mb-2">
                                 <img src="${post.image}" class="card-img-top" alt="${post.title}">
