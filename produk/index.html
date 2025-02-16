@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="container mt-4 md-2">
+    <div class="container mt-4">
         <h1>Daftar Produk</h1>
         <div id="post-list" class="row"></div>
     </div>
@@ -50,8 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     postList.innerHTML = "";
                     posts.forEach(post => {
                         const card = document.createElement("div");
-                        card.className = "col-md-4 mb-4";
+                        card.className = "col-md-4 mb-4 row row-cols-2";
                         card.innerHTML = `
+    <div class="col">
                             <div class="card h-100 shadow-sm">
                                 <img src="${post.image}" class="card-img-top" alt="${post.title}">
                                 <div class="card-body">
@@ -60,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <button class="btn btn-primary btn-sm" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</button>
                                 </div>
                             </div>
+   </div>
                         `;
                         postList.appendChild(card);
                     });
