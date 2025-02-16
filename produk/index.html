@@ -19,7 +19,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="postModalLabel">Judul Post</h5>
+                    <h5 class="modal-title d-none" id="postModalLabel">Judul Post</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (post) {
 document.getElementById("loading").classList.add("d-none");
 document.getElementById("postModalLabel").textContent = post.title;
-document.getElementById("post-title").classList.remove("d-none");
+document.getElementById("postModalLabel").classList.remove("d-none");
 document.getElementById("post-image").src = post.image;
 document.getElementById("post-image").classList.remove("d-none");             document.getElementById("post-content").textContent = post.content;                        document.getElementById("post-content").classList.remove("d-none");
                     }
