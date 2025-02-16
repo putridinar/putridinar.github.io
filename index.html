@@ -15,8 +15,8 @@ permalink: /
       <p class="card-text">
         {{ post.content | strip_html | strip | truncate: 100 }}</p>
     </div>
-    <div class="card-footer d-flex justify-content-between">
-      <small class="text-body-secondary"><span>Posting {{ post.date | date: "%e-%m-%Y" }}</span>
+    <div class="card-footer">
+      <small class="text-body-secondary d-flex justify-content-between"><span>Posting {{ post.date | date: "%e-%m-%Y" }}</span>
        <a href="{{ site.baseurl }}{{ post.url }}"><span class="fs-6">Baca</span></a></small>
     </div>
   </div>
