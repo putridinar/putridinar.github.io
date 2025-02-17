@@ -1,12 +1,13 @@
+@use "mixins";
 
 .card-posts {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  @include mobile { grid-template-columns: 1fr; grid-gap: 10px; }
+  @include mixins.mobile { grid-template-columns: 1fr; grid-gap: 10px; }
   .card .img-card {
         object-fit: cover;
-        height: 280px;
+        height: 256px;
         width: 100%;
         object-position: center;
         opacity: 1;
@@ -24,7 +25,7 @@ img .img-post {
 }
 
 .stickhead {
-  @include mobile {
+  @include mixins.mobile {
   height: 60px;
   display: flex;
   align-items: center;
@@ -32,8 +33,8 @@ img .img-post {
   margin-bottom: -10px;}
  }
 .sticky {
-  @include mobile {
-  background: $white;
+  @include mixins.mobile {
+  background: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -41,7 +42,7 @@ img .img-post {
   z-index: 1; }
 }
 .sticky + .content {
-  @include mobile {
+  @include mixins.mobile {
   padding-top: 20px; }
 }
 

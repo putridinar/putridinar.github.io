@@ -1,0 +1,138 @@
+<script type="module">
+  //inisialisasi Firebase Realtime Database
+const firebaseConfig = {
+  apiKey: "AIzaSyDfZEKaggvi2SN4Jeyhc3XCeb4A1DJVmQE",
+  authDomain: "vems-olshop.firebaseapp.com",
+  databaseURL: "https://vems-olshop-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "vems-olshop",
+  storageBucket: "vems-olshop.firebasestorage.app",
+  messagingSenderId: "281544003271",
+  appId: "1:281544003271:web:1e1d6c0e66f0e4583638e2",
+  measurementId: "G-RGVXFFWN72"
+    };
+  
+  firebase.initializeApp(firebaseConfig);
+  
+  '{% if page.url == "/dashboard" %}'
+const signOutButton = document.getElementById('signOutButton');
+    function toggleUI() {
+    if (auth.currentUser) {
+    } else {
+      signOutButton.classList.add("hidden");
+      location.href = "{{site.baseurl}}/login";
+    }
+  }
+  '{% endif %}'
+  $('#signOutButton').click(() => {
+    firebase.auth().signOut().then(() => {
+      location.href = "{{site.baseurl}}/";
+    }).catch((error) => {
+      alert(error.message);
+    });
+  });
+  var database = firebase.database();
+  var auth = firebase.auth();
+  
+  //fungsi login
+  $('#loginButton').click(() => {
+    const email = $('#email').val();
+    const password = $('#password').val();
+    
+    // Autentikasi dengan email dan password
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Verifikasi peran admin
+        const uid = userCredential.user.uid;
+        const userRef = firebase.database().ref(`users/${uid}`);
+        userRef.once('value')
+          .then((snapshot) => {
+            const userData = snapshot.val();
+            if (userData.role === 'admin') {
+              // Alihkan ke halaman admin
+              window.location.href = '/dashboard';
+            } else {
+                // User bukan admin, arahkan kembali ke luar
+                window.location.href = '/';
+            }
+          })
+          .catch((error) => {
+            console.error(error);
+              Alert();
+          });
+      })
+      .catch((error) => {
+        console.error(error);
+              Alert();
+      });
+    
+    async function Alert() {
+      Alert();
+    }
+	
+  function showToast(message) {
+    // Periksa apakah toast sudah ada, jika belum buat elemen baru
+    let toastEl = document.getElementById("customToast");
+    if (!toastEl) {
+        // Buat elemen toast baru
+        toastEl = document.createElement("div");
+        toastEl.id = "customToast";
+        toastEl.className = "toast align-items-center position-fixed top-0 end-0 m-3";
+        toastEl.setAttribute("role", "alert");
+        toastEl.setAttribute("aria-live", "assertive");
+        toastEl.setAttribute("aria-atomic", "true");
+
+        toastEl.innerHTML = `
+          <div class="d-flex">
+            <div class="toast-body">
+              ${message}
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        `;
+
+        // Tambahkan ke body
+        document.body.appendChild(toastEl);
+    } else {
+        // Jika sudah ada, cukup ubah teksnya
+        toastEl.querySelector(".toast-body").textContent = message;
+    }
+
+    // Tampilkan toast menggunakan Bootstrap
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+}
+
+// Contoh penggunaan (mirip dengan fungsi Alert sebelumnya)
+async function Alert() {
+    showToast("E-mail atau password, SALAH!");
+}
+
+  });
+  
+  '{% if page.url == "/dashboard" %}'
+  // Mengecek apakah user sudah login
+  firebase.auth().onAuthStateChanged(function(user) {
+    toggleUI();
+    if (user) {
+      // Mendapatkan informasi user dari database
+  database.ref('users/' + user.uid).once('value').then(snapshot => {
+    if (snapshot && snapshot.exists()) {
+      const userData = snapshot.val();
+  
+      if (userData.role === 'admin') {
+        // User adalah admin, lanjutkan ke halaman yang diinginkan
+      } else {
+        // User bukan admin, arahkan kembali ke halaman login
+    toggleUI();
+      }
+    } else {
+      // Data user tidak ditemukan, arahkan kembali ke halaman lain
+      window.location.href = '{{site.baseurl}}/restricted';
+    }
+      }).catch(error => {
+        console.log(error);
+      });
+    }
+  });
+  '{% endif %}'
+  </script>
