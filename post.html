@@ -14,12 +14,9 @@ permalink: /blog/post.html
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="/blog">Blog Saya</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
         </div>
     </nav>
 
@@ -28,7 +25,7 @@ permalink: /blog/post.html
         <div id="post-container" class="text-center">
             <p class="text-muted">Memuat artikel...</p>
         </div>
-        <a href="/blog" class="btn btn-secondary mt-3">Kembali ke Beranda</a>
+        <a href="/blog" class="btn btn-sm btn-secondary mt-3 mb-5">Kembali ke Beranda</a>
     </div>
 
     <!-- Firebase SDK -->
@@ -79,9 +76,12 @@ permalink: /blog/post.html
 
                 postContainer.innerHTML = `
                     <h1 class="mb-3">${post.title}</h1>
-                    <p class="text-muted">Dipublikasikan pada ${new Date(post.date).toLocaleDateString()}</p>
-                    <img src="${post.image || 'https://via.placeholder.com/800x400'}" class="img-fluid mb-4" alt="${post.title}">
+                    <p class="text-muted">Dipublikasikan pada ${post.timestamp ? post.timestamp.toDate().toLocaleDateString() : "Tanggal tidak tersedia"
+}</p>
+					<div class='d-md-flex gap-3'>
+                    <img src="${post.image || 'https://via.placeholder.com/800x400'}" class="img-fluid rounded mb-4" alt="${post.title}">
                     <p class="text-start">${post.content}</p>
+					</div>
                 `;
             } catch (error) {
                 postContainer.innerHTML = `<p class="text-danger">Gagal memuat artikel.</p>`;
