@@ -1,0 +1,14 @@
+<div class="container">
+	<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+	  <ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="/">Home</a></li>
+		{% if page.url == '/blog' %}
+		<li class="breadcrumb-item active" aria-current="page">Blog</li>
+		{% elsif page.url contains '/blog/' or page.layout == 'post' %}
+		<li class="breadcrumb-item" aria-current="page"><a href="/blog">Blog</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Post Blog</li>{% elsif page.url '/produk/' %}
+		<li class="breadcrumb-item active" aria-current="page">Produk</li> {% elsif page.url contains '/admin/dashboard' %}
+		<li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>{% endif %}
+	  </ol>
+	</nav>
+</div>

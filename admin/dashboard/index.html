@@ -1,29 +1,8 @@
 ---
+layout: default
 permalink: /admin/dashboard
 ---
 
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: 'id-ID' }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Jekyll</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script><!-- jQuery CDN -->
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
-</head>
-<body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="/blog">Admin dashboard</a>
-        </div>
-    </nav>
 <div class="container">
 <div class="card mt-4 mx-auto p-3">
 <form id="post-form">
@@ -45,74 +24,4 @@ permalink: /admin/dashboard
 </div>
 
 </div>
-<script type="module">
-// Inisialisasi Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyDfZEKaggvi2SN4Jeyhc3XCeb4A1DJVmQE",
-  authDomain: "vems-olshop.firebaseapp.com",
-  databaseURL: "https://vems-olshop-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "vems-olshop",
-  storageBucket: "vems-olshop.firebasestorage.app",
-  messagingSenderId: "281544003271",
-  appId: "1:281544003271:web:1e1d6c0e66f0e4583638e2",
-  measurementId: "G-RGVXFFWN72"
-};
-
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
-document.getElementById("post-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const newPost = {
-        title: document.getElementById("title").value,
-        content: document.getElementById("content").value,
-        image: document.getElementById("image").value || "/images/img.png",
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    };
-
-    // Tampilkan loading
-    const submitButton = event.target.querySelector("button");
-    submitButton.disabled = true;
-    submitButton.textContent = "Menambahkan...";
-
-    // Simpan post ke Firestore
-    db.collection("posts").add(newPost)
-    .then(() => {
-        alert("Post berhasil ditambahkan!");
-        document.getElementById("post-form").reset();
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Terjadi kesalahan! Cek konsol untuk detail.");
-    })
-    .finally(() => {
-        submitButton.disabled = false;
-        submitButton.textContent = "Tambah Post";
-    });
-});
-
-// Logout function
-document.getElementById("logoutBtn").addEventListener("click", async function () {
-    try {
-        await firebase.auth().signOut();
-        console.log("Logout berhasil!");
-        alert("Anda telah keluar.");
-        window.location.href = "/admin/login";
-    } catch (error) {
-        console.error("Logout error:", error.message);
-        alert("Gagal logout: " + error.message);
-    }
-});
-
-firebase.auth().onAuthStateChanged((user) => {
-    if (!user) {
-        window.location.href = "/blog";
-    }
-});
-
-
-</script>
-
-</body>
-</html>
+{% include module-blog_admin.html %}

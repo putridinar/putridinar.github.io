@@ -1,0 +1,69 @@
+
+    <script type="module">
+	// Inisialisasi Firebase
+const firebaseConfig = {
+    apiKey: "{{site.API_KEY}}",
+    authDomain: "{{site.AUTH_DOMAIN}}",
+	databaseURL: "{{site.DATABASE_URL}}",
+    projectId: "{{site.PROJECT_ID}}",
+    storageBucket: "{{site.STORAGE_BUCKET}}",
+    messagingSenderId: "{{site.SENDER_ID}}",
+    appId: "{{site.APP_ID}}"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+async function fetchPosts() {
+    try {
+        const postsContainer = document.getElementById("posts");
+        if (!postsContainer) {
+            throw new Error('Element dengan ID "posts" tidak ditemukan.');
+        }
+
+        postsContainer.innerHTML = "<p class='fs-5 text-center'>Memuat postingan...</p>";
+
+        db.collection("posts").orderBy("timestamp", "desc").onSnapshot(snapshot => {
+            postsContainer.innerHTML = "";
+
+            if (snapshot.empty) {
+                postsContainer.innerHTML = "<p class='fs-5 text-center'>Tidak ada postingan tersedia.</p>";
+                return;
+            }
+
+            snapshot.forEach(doc => {
+                const post = doc.data();
+                const postElement = document.createElement("div");
+                postElement.classList.add("card", "shadow-sm");
+
+                postElement.innerHTML = `
+                    <img src="{{ site.baseurl }}${post.image || '/images/img.png'}" class="lazy img-card card-img-top" alt="${post.title}">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">
+                                <a href="{{site.baseurl}}post.html?id=${doc.id}">
+                                    ${post.title.substring(0, 18)}..
+                                </a>
+                            </h5>
+                        </div>
+                        <p class="card-text">${post.content ? post.content.substring(0, 50) : ''}...</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">
+                            <span>Posted ${post.timestamp?.toDate().toLocaleDateString() || "Tanggal tidak tersedia"}</span>
+                        </small>
+                    </div>
+                `;
+
+                postsContainer.appendChild(postElement);
+            });
+        });
+    } catch (error) {
+        console.error("Error fetching posts:", error);
+        alert(`Error fetching posts: ${error.message}`);
+    }
+}
+
+fetchPosts();
+
+    </script>

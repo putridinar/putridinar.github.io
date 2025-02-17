@@ -1,0 +1,25 @@
+    <!-- Modal -->
+    <div class="modal modal-xl fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="postModalLabel">Judul Post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div id="loading" class="text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">Memuat data...</p>
+                    </div>
+                    <img id="post-image" class="img-fluid d-none mb-3 rounded" alt="Post Image">
+                    <p id="post-content" class="d-none"></p>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>

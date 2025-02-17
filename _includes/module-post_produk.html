@@ -1,0 +1,53 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+            const postList = document.getElementById("post-list");
+
+            // Ambil data dari JSON
+            fetch("/assets/data/produk.json")
+                .then(response => response.json())
+                .then(posts => {
+                    postList.innerHTML = "";
+                    posts.forEach(post => {
+                        const card = document.createElement("div");
+                        card.className = "col-md-4 mb-4 row row-cols-2";
+                        card.className = "col mb-4";
+                        card.innerHTML = `
+                            <div class="card h-100 shadow-sm mb-2">
+                                <img src="${post.image}" class="card-img-top" alt="${post.title}">
+                                <div class="card-body">
+                                    <div class="card-title d-flex justify-content-between"><h5>${post.title}</h5></h5>Rp. ${post.harga}</div>
+                                    <p class="card-text">${post.content.substring(0, 50)}...</p>
+                                    <button class="btn btn-primary btn-sm" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</button>
+                                </div>
+                            </div>
+                        `;
+                        postList.appendChild(card);
+                    });
+                })
+                .catch(error => console.error("Gagal mengambil data:", error));
+        });
+
+        // Fungsi untuk menampilkan post di modal
+        function showPost(postId) {
+            document.getElementById("loading").classList.remove("d-none");
+            document.getElementById("post-image").classList.add("d-none");
+            document.getElementById("postModalLabel").classList.add("d-none");
+            document.getElementById("post-content").textContent = "";
+
+            fetch("/assets/data/produk.json")
+                .then(response => response.json())
+                .then(posts => {
+                    const post = posts.find(p => p.id === postId);
+                    if (post) {
+                        document.getElementById("loading").classList.add("d-none");
+                        document.getElementById("postModalLabel").textContent = post.title;
+                        document.getElementById("postModalLabel").classList.remove("d-none");
+                        document.getElementById("post-image").src = post.image;
+                        document.getElementById("post-image").classList.remove("d-none");
+                        document.getElementById("post-content").textContent = post.content;
+                        document.getElementById("post-content").classList.remove("d-none");
+                    }
+                })
+                .catch(error => console.error("Gagal memuat detail post:", error));
+        }
+</script>

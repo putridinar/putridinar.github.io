@@ -5,12 +5,12 @@
 // IMPORTS
 //
 
-@use "reset";
+@use "reset" as *;
 @use "mixins" as *;
 @use "variables" as *;
-@use "newstyles";
-@use "highlights";
-@use "svg-icons";
+@use "newstyles" as *;
+@use "highlights" as *;
+@use "svg-icons" as *;
 
 /**************/
 /* BASE RULES */
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-	background: $white;
+	background: #fff;
 	font: 18px/1.4 $helvetica;
 	color: $darkGray;
 }
@@ -218,7 +218,7 @@ img {
   }
 }
 
-nav {
+nav-bar {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
