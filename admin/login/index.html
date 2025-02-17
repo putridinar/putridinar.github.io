@@ -1,10 +1,10 @@
 ---
-permalink: /login
+permalink: /admin/login
 ---
 
 <!doctype html>
 <html lang="{{ site.lang | default: 'id-ID' }}" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head><script src="/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,7 @@ permalink: /login
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
 	html,
@@ -187,8 +187,7 @@ body {
     
 <main class="form-signin w-100 m-auto">
   <form id="loginForm">
-    <img class="mb-4" src="" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal text-center">Admin sign in</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" id="email" placeholder="name@example.com">
@@ -206,10 +205,10 @@ body {
       </label>
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit" id="loginButton">Sign in</button>
-    <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
+    <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2017–2024</p>
   </form>
 </main>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module">
 // Inisialisasi Firebase
 const firebaseConfig = {
@@ -246,7 +245,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         const adminDoc = await db.collection("admins").doc(user.uid).get();
         if (adminDoc.exists) {
             // Jika user adalah admin
-            window.location.href = '{{site.baseurl}}/dashboard';
+            window.location.href = '{{site.baseurl}}/admin/dashboard';
         } else {
             // Jika bukan admin
             location.href = "{{site.baseurl}}/restricted";

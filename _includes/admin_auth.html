@@ -13,13 +13,13 @@ const firebaseConfig = {
   
   firebase.initializeApp(firebaseConfig);
   
-  '{% if page.url == "/dashboard" %}'
+  '{% if page.url == "/admin/dashboard" %}'
 const signOutButton = document.getElementById('signOutButton');
     function toggleUI() {
     if (auth.currentUser) {
     } else {
       signOutButton.classList.add("hidden");
-      location.href = "{{site.baseurl}}/login";
+      location.href = "{{site.baseurl}}/admin/login";
     }
   }
   '{% endif %}'
@@ -49,7 +49,7 @@ const signOutButton = document.getElementById('signOutButton');
             const userData = snapshot.val();
             if (userData.role === 'admin') {
               // Alihkan ke halaman admin
-              window.location.href = '/dashboard';
+              window.location.href = '/admin/dashboard';
             } else {
                 // User bukan admin, arahkan kembali ke luar
                 window.location.href = '/';
