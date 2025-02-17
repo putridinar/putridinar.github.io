@@ -48,7 +48,7 @@ async function fetchPosts() {
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">
-                                <a href="{{ site.baseurl }}${post.url || '#'}">
+                                <a href="{{site.baseurl}}post.html?id=${doc.id}">
                                     ${post.title.substring(0, 18)}..
                                 </a>
                             </h5>

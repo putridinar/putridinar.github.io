@@ -19,7 +19,13 @@ permalink: /admin/dashboard
 
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/blog">Admin dashboard</a>
+        </div>
+    </nav>
 <div class="container">
+<div class="card mt-4 mx-auto p-3">
 <form id="post-form">
 <div class="mb-3">
   <label for="title" class="form-label">Masukan Judul</label>
@@ -36,6 +42,7 @@ permalink: /admin/dashboard
     <button class="btn btn-primary mb-3" type="submit">Tambah Post</button>
 </form>
 <button id="logoutBtn" class="btn btn-danger">Logout</button>
+</div>
 
 </div>
 <script type="module">
