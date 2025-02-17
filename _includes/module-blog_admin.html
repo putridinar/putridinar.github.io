@@ -51,7 +51,7 @@ document.getElementById("logoutBtn").addEventListener("click", async function ()
         await firebase.auth().signOut();
         console.log("Logout berhasil!");
         alert("Anda telah keluar.");
-        window.location.href = "/admin/login";
+        window.location.href = "/admin/login/";
     } catch (error) {
         console.error("Logout error:", error.message);
         alert("Gagal logout: " + error.message);
@@ -60,7 +60,7 @@ document.getElementById("logoutBtn").addEventListener("click", async function ()
 
 firebase.auth().onAuthStateChanged((user) => {
     if (!user) {
-        window.location.href = "/blog";
+        window.location.href = "/blog/";
     }
 });
 
