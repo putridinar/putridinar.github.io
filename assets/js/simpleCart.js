@@ -20,7 +20,7 @@ function formatBerat(angka) {
 var cart_kosong = '<div class="empty-cart" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;"><i class="fa fa-shopping-basket" aria-hidden="true" style="font-size: 95px;text-shadow: 0px 3px 10px #00000061;"></i><p class="center" style="text-shadow:4px 3px 3px #00000061;color:#000">Keranjang Belanja Kosong</p></div><div class="cartUcihaItachi"></div>';
 var tombolMinus = '<i class="fa fa-minus-circle" aria-hidden="true"></i>';
 var tombolPlus = '<i class="fa fa-plus-circle" aria-hidden="true"></i>';
-var tombolRemove = '<i class="fa fa-trash" aria-hidden="true"></>';
+var tombolRemove = '<i class="fa fa-trash" aria-hidden="true"><i/>';
 
 (function (window, document) {
     /*global HTMLElement */
@@ -1652,7 +1652,7 @@ JSON || (JSON = {});
 
 
 $(document).ready(function () {
-    var dev = 'RGFmZmFEZXY=',
+    var dev = 'UHV0cmkgRGluYXI=',
     myLicense = atob(dev),
     tpllc = $('#footer').text(),
     second = 10;
@@ -1660,7 +1660,7 @@ $(document).ready(function () {
     if (myLicense == tpllc) {
     return false
     } else {
-    $('body').append('<style>body{background:#000000b3!important;overflow:hidden}#peringatan span{font-size:50px}#peringatan{z-index:99999999999999;position:fixed;top:0;right:0;left:0;padding:16% 0;height:100%;text-align:center;background:#000000b3;color:#fff}@media only screen and (max-width: 680px){#peringatan{padding:60% 0;}h4{font-size:x-large!important;}}</style><div id="peringatan"><h4 style="margin-bottom: 35px;font-size:-webkit-xxx-large;">🔒︄1�7 Template is Locked Up</h4><p style="margin-top: 20px;font-size: 18px;letter-spacing: 2px;line-height: 30px;">Mohon untuk tidak menghapus / merubah link footer.</p></div>');
+    $('body').append('<style>body{background:#000000b3!important;overflow:hidden}#peringatan span{font-size:50px}#peringatan{z-index:99999999999999;position:fixed;top:0;right:0;left:0;padding:16% 0;height:100%;text-align:center;background:#000000b3;color:#fff}@media only screen and (max-width: 680px){#peringatan{padding:60% 0;}h4{font-size:x-large!important;}}</style><div id="peringatan"><h4 style="margin-bottom: 35px;font-size:-webkit-xxx-large;">ðï¸1¤7 Template is Locked Up</h4><p style="margin-top: 20px;font-size: 18px;letter-spacing: 2px;line-height: 30px;">Mohon untuk tidak menghapus / merubah link footer.</p></div>');
     setInterval(function () {
     second <= 1 ? window.location.href = "https://daffadev.my.id/" : $('#aktivasi').text(--second);
     }, 1e3)
