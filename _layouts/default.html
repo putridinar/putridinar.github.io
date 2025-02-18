@@ -5,9 +5,6 @@
 
  <body {% if page.url == '/blogger/' %} onload="onLoadSkeleton()"{% endif %}>
 
-{% if page.layout == 'none' %}
-{% include dark-mode_toggle.html %}
-{% endif %}
 {% include navbar.html %}
 {% include breadcrumb.html %}
     <div id="main" role="main" class="content container">
