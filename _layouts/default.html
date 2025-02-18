@@ -5,7 +5,9 @@
 
  <body {% if page.url == '/' %} onload="onLoadSkeleton()"{% endif %}>
 
+{% if page.url == '/' %}
 {% include dark-mode_toggle.html %}
+{% endif %}
 {% include navbar.html %}
 {% include breadcrumb.html %}
     <div id="main" role="main" class="content container">
@@ -13,7 +15,7 @@
     </div>
 {% include footer.html %}
 {% include analytics.html %}
-{% if page.url == '/' %}
+{% if page.url == '/produk/' %}
 <script src="{{ '/assets/js/simpleCart.js' | relative_url }}"></script>
 {% endif %}
     <!-- Bootstrap JS -->
