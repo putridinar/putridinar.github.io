@@ -52,6 +52,8 @@ permalink: /
 {% include footer.html %}
 {% include sdk.html %}
 {% include module-post_landing.html %}
-
+{% if page.layout == 'none' %}
+{% include dark-mode_toggle.html %}
+{% endif %}
 </body>
 </html>
