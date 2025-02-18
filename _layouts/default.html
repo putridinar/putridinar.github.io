@@ -5,7 +5,7 @@
 
  <body {% if page.url == '/' %} onload="onLoadSkeleton()"{% endif %}>
 
-{% if page.url == '/' %}
+{% if page.layout == 'none' %}
 {% include dark-mode_toggle.html %}
 {% endif %}
 {% include navbar.html %}
