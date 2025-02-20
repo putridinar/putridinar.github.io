@@ -34,7 +34,7 @@ async function fetchPosts() {
             snapshot.forEach(doc => {
                 const post = doc.data();
                 const postElement = document.createElement("div");
-                postElement.classList.add("card", "shadow-sm");
+                postElement.classList.add("card", "shadow-sm", "mb-2");
 
                 postElement.innerHTML = `
                     <img src="{{ site.baseurl }}${post.image || '/images/img.png'}" class="lazy img-card card-img-top" alt="${post.title}">
