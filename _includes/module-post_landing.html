@@ -25,7 +25,7 @@
                     html += `
                         <div class="col-md-4">
                             <div class="card post-card mb-4 shadow-sm">
-                                <img src="${post.image || 'https://via.placeholder.com/600'}" class="card-img-top" alt="${post.title}">
+                                <img src="${post.image || 'https://via.placeholder.com/600'}" class="card-img-top" alt="${post.title}" loading="lazy">
                                 <div class="card-body">
                                     <h5 class="card-title">${post.title}</h5>
                                     <p class="card-text">${post.content.substring(0, 80)}...</p>
