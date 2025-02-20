@@ -12,11 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         card.className = "col-md-4 mb-4 row row-cols-2";
                         card.className = "col mb-4";
                         card.innerHTML = `
-                            <div class="card h-100 shadow-sm mb-2">
+                            <div class="card h-100 shadow-sm mb-2" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">
                                 <img src="${post.image}" class="card-img-top" alt="${post.title}">
                                 <div class="card-body text-center">
                                     <div class="card-title"><h5>${post.title}</h5></h5>Rp. ${post.harga}</div>
-                                    <button class="btn btn-primary btn-sm stretched-link" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</button>
                                 </div>
                             </div>
                         `;
