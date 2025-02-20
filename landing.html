@@ -12,18 +12,19 @@ permalink: /
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="{{ '/assets/js/color-modes.js' | relative_url }}"></script>
-    <style>
-        .hero {
-            background: url('https://assets.justinmind.com/wp-content/uploads/2018/07/10-hero-image-website-ideas-to-inspire-you-header-3-768x492.png') center/cover;
-            color: black;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        .post-card img {
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
+<style>
+    .hero {
+        background: url('https://assets.justinmind.com/wp-content/uploads/2018/07/10-hero-image-website-ideas-to-inspire-you-header-3-768x492.png') center/cover;
+        color: black;
+        padding: 80px 20px;
+        text-align: center;
+    }
+    .post-card img {
+        height: 200px;
+        object-fit: cover;
+        loading: lazy; /* Added lazy loading */
+    }
+</style>
 </head>
 <body>
 
