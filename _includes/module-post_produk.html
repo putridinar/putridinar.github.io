@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <div class="card-body text-center">
                                     <div class="card-title"><h5>${post.title}</h5></h5>Rp. ${post.harga}</div>
                                     <p class="card-text">${post.content.substring(0, 50)}...</p>
-                                    <button class="btn btn-primary btn-sm" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</button>
+                                    <a href="javascript:;" class="btn btn-primary btn-sm stretched-link" onclick="showPost(${post.id})" data-bs-toggle="modal" data-bs-target="#postModal">Lihat Detail</a>
                                 </div>
                             </div>
                         `;
