@@ -155,10 +155,6 @@ body {
         Remember me
       </label>
     </div>
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="fingerprintToggle">
-            <label class="form-check-label" for="fingerprintToggle">Enable Fingerprint Login</label>
-        </div>
     <button class="btn btn-primary w-100 py-2" type="submit" id="loginButton">Sign in</button>
 
     <button class="btn btn-secondary w-100 py-2 mt-2" type="button" id="fingerprintLoginButton">Login with Fingerprint</button>
@@ -166,7 +162,15 @@ body {
   </form>
 </main>
 <script src="{{ '/assets/dist/js/bootstrap.bundle.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/fplogin.js' | relative_url }}"></script>
+<script>  document.getElementById('fingerprintLoginButton').addEventListener('click', function() {
+        // Initialize the FingerprintJS library
+        const fpPromise = FingerprintJS.load();
+        fpPromise.then(fp => fp.get()).then(result => {
+            const visitorId = result.visitorId;
+            // Handle the fingerprint login logic here
+            console.log(visitorId);
+        });
+    });</script>
 <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3"></script>
 
 {% include module-admin.html %}
