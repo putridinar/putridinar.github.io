@@ -1,14 +1,13 @@
 <script type="module">
     // Inisialisasi Firebase
     const firebaseConfig = {
-        apiKey: "AIzaSyDfZEKaggvi2SN4Jeyhc3XCeb4A1DJVmQE",
-        authDomain: "vems-olshop.firebaseapp.com",
-        databaseURL: "https://vems-olshop-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "vems-olshop",
-        storageBucket: "vems-olshop.firebasestorage.app",
-        messagingSenderId: "281544003271",
-        appId: "1:281544003271:web:1e1d6c0e66f0e4583638e2",
-        measurementId: "G-RGVXFFWN72"
+        apiKey: "{{site.API_KEY}}",
+        authDomain: "{{site.AUTH_DOMAIN}}",
+        databaseURL: "{{site.DATABASE_URL}}",
+        projectId: "{{site.PROJECT_ID}}",
+        storageBucket: "{{site.STORAGE_BUCKET}}",
+        messagingSenderId: "{{site.SENDER_ID}}",
+        appId: "{{site.APP_ID}}"
     };
 
     firebase.initializeApp(firebaseConfig);
