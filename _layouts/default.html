@@ -3,7 +3,7 @@
   
 {% include head.html %}
 
- <body {% if page.url == '/blogger/' %} onload="onLoadSkeleton()"{% endif %}>
+ <body {% if page.url == '/blogger' %} onload="onLoadSkeleton()"{% endif %}>
 
 {% include navbar.html %}
 {% include breadcrumb.html %}
@@ -16,7 +16,6 @@
 <script src="{{ '/assets/js/simpleCart.js' | relative_url }}"></script>
 {% endif %}
     <!-- Bootstrap JS -->
-<script src="{{ '/assets/js/function.js' | relative_url }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script id="dsq-count-scr" src="//blogsputri.disqus.com/count.js" async></script>
