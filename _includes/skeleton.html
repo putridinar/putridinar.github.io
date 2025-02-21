@@ -1,3 +1,5 @@
 
 
 <div id="skeleton" class="loading-skeleton container mx-auto card-posts" style="display:grid;">{% for skeleton in paginator.posts %}<div class="card shadow-sm"><img src="{{ site.baseurl }}{{ skeleton.img }}" class="img-card card-img-top" alt="{{ skeleton.title }}"><div class="card-body"><h5 class="card-title"><a href="{{ skeleton.baseurl }}{{ skeleton.url }}">{{ skeleton.title }}</a></h5><p class="card-text">{{ skeleton.content | strip_html | strip | truncate: 100 }}</p></div><div class="card-footer"><small class="text-body-secondary"><span>Last updated {{ skeleton.date | date: "%e-%m-%Y" }}</span></small></div></div>{% endfor %}</div>
+
+<script src="{{ '/assets/js/function.js' | relative_url }}"></script>
