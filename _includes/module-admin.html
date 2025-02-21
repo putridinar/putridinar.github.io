@@ -1,47 +1,60 @@
 <script type="module">
-// Inisialisasi Firebase
-const firebaseConfig = {
-				apiKey: "{{site.API_KEY}}",
-				authDomain: "{{site.AUTH_DOMAIN}}",
-				databaseURL: "{{site.DATABASE_URL}}",
-				projectId: "{{site.PROJECT_ID}}",
-				storageBucket: "{{site.STORAGE_BUCKET}}",
-				messagingSenderId: "{{site.SENDER_ID}}",
-				appId: "{{site.APP_ID}}"
-};
+    // Inisialisasi Firebase
+    const firebaseConfig = {
+        apiKey: "{{site.API_KEY}}",
+        authDomain: "{{site.AUTH_DOMAIN}}",
+        databaseURL: "{{site.DATABASE_URL}}",
+        projectId: "{{site.PROJECT_ID}}",
+        storageBucket: "{{site.STORAGE_BUCKET}}",
+        messagingSenderId: "{{site.SENDER_ID}}",
+        appId: "{{site.APP_ID}}"
+    };
 
-firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
 
-// Referensi ke Firebase Authentication dan Firestore
-const auth = firebase.auth();
-const db = firebase.firestore();
+    // Referensi ke Firebase Authentication dan Firestore
+    const auth = firebase.auth();
+    const db = firebase.firestore();
 
-// Proses login
-document.getElementById("loginForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
+    // Proses login
+    document.getElementById("loginForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
-    try {
-        // Login dengan email dan password
-        const userCredential = await auth.signInWithEmailAndPassword(email, password);
-        const user = userCredential.user;
-        console.log("Login berhasil!", user);
+        try {
+            // Login dengan email dan password
+            const userCredential = await auth.signInWithEmailAndPassword(email, password);
+            const user = userCredential.user;
+            console.log("Login berhasil!", user);
 
-        // Cek apakah user adalah admin
-        const adminDoc = await db.collection("admins").doc(user.uid).get();
-        if (adminDoc.exists) {
-            // Jika user adalah admin
-            window.location.href = '{{site.baseurl}}/admin/dashboard';
-        } else {
-            // Jika bukan admin
-            location.href = "{{site.baseurl}}/restricted";
+            // Cek apakah user adalah admin
+            const adminDoc = await db.collection("admins").doc(user.uid).get();
+            if (adminDoc.exists) {
+                // Jika user adalah admin
+                window.location.href = '{{site.baseurl}}/admin/dashboard';
+            } else {
+                // Jika bukan admin
+                location.href = "{{site.baseurl}}/restricted";
+            }
+
+        } catch (error) {
+            console.error("Login error:", error.message);
+            showAlert("Gagal login: " + error.message);
         }
+    });
 
-    } catch (error) {
-        console.error("Login error:", error.message);
-        alert("Gagal login: " + error.message);
+    function showAlert(message) {
+        const alertPlaceholder = document.getElementById('alertPlaceholder');
+        const alertHTML = `
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>`;
+        alertPlaceholder.innerHTML = alertHTML;
     }
-});
 </script>
+
+<!-- HTML Container for Bootstrap Alerts -->
+<div id="alertPlaceholder"></div>
