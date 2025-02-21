@@ -14,13 +14,3 @@ simpleCart({
     ],
     currency: "IDR",
 });
-
-// Add the fingerprint login logic here
-document.getElementById('fingerprintLoginButton').addEventListener('click', function() {
-    const fpPromise = FingerprintJS.load();
-    fpPromise.then(fp => fp.get()).then(result => {
-        const visitorId = result.visitorId;
-        // Handle the fingerprint login logic here
-        console.log(visitorId);
-    });
-});
