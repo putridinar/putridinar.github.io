@@ -52,8 +52,8 @@
             showAlert("Anda telah keluar.", "success");
             window.location.href = "/admin/login/";
         } catch (error) {
-            console.error("Logout error:", error.message);
-            showAlert("Gagal logout: " + error.message, "danger");
+            console.error("Error:", error.message);
+            showAlert("" + error.message, "danger");
         }
     });
 
