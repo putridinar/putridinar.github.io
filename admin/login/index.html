@@ -163,8 +163,8 @@ body {
 </main>
 <script src="{{ '/assets/dist/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3"></script>
-<script>
-    document.getElementById('fingerprintLoginButton').addEventListener('click', function() {
+
+<script> document.getElementById('fingerprintLoginButton').addEventListener('click', function() {
         // Initialize the FingerprintJS library
         const fpPromise = FingerprintJS.load();
         fpPromise.then(fp => fp.get()).then(result => {
@@ -186,6 +186,5 @@ document.getElementById('fingerprintLoginButton').addEventListener('click', func
 </script>
 
 {% include module-admin.html %}
-<script src="{{ '/assets/js/' | relative_url }}"></script>
     </body>
 </html>
