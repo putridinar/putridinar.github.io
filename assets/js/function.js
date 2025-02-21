@@ -1,3 +1,4 @@
+{% if page.url == '/blogger/' %}
 function onLoadSkeleton() {
   const skeletonEl = document.getElementById('skeleton');
   const dataEl = document.getElementById('myBlog');
@@ -6,8 +7,8 @@ function onLoadSkeleton() {
     dataEl.style.display = 'grid';
   }, 2500);
 }
-
-{$ if page.url='/admin/login/' $}
+{% endif %}
+{% if page.url == '/admin/login/' %}
 // Add the fingerprint login logic here
 document.getElementById('fingerprintLoginButton').addEventListener('click', function() {
     const fpPromise = FingerprintJS.load();
@@ -17,4 +18,4 @@ document.getElementById('fingerprintLoginButton').addEventListener('click', func
         console.log(visitorId);
     });
 });
-{$ endif $}
+{% endif %}
