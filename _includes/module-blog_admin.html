@@ -49,7 +49,7 @@
         try {
             await firebase.auth().signOut();
             console.log("Logout berhasil!");
-            showAlert("Anda telah keluar.", "success");
+            showAlert("Logout Berhasil...", "success");
             window.location.href = "/admin/login/";
         } catch (error) {
             console.error("Error:", error.message);
