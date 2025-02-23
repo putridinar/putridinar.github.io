@@ -61,10 +61,10 @@ document.getElementById("post-form").addEventListener("submit", function(event) 
         const content = JSON.parse(atob(data.content));
         content.push(newPost);
 
-        return fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/assets/posts.json", {
+        return fetch("https://api.github.com/repos/putridinar/putridinar.github.io/posts.json", {
             method: "PUT",
             headers: {
-                "Authorization": `token {{site.env.access_token}}`,
+                "Authorization": `token {{site.env.ACCESS_TOKEN}}`,
                 "Accept": "application/vnd.github.v3+json",
                 "Content-Type": "application/json"
             },
