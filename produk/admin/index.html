@@ -45,7 +45,7 @@ document.getElementById("post-form").addEventListener("submit", function(event) 
     submitButton.disabled = true;
     submitButton.textContent = "Menambahkan...";
 
-    fetch("https://api.github.com/repos/putridinar/putridinar.github.io/contents/assets/posts.json", {
+    fetch("https://api.github.com/repos/putridinar/putridinar.github.io/posts.json", {
         method: "GET",
         headers: {
             "Accept": "application/vnd.github.v3+json"
