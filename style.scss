@@ -1,17 +1,8 @@
----
----
+@use "reset";
+@use "variables";
+@use "highlights";
+@use "svg-icons";
 
-//
-// IMPORTS
-//
-
-@import "reset";
-@import "variables";
-// Syntax highlighting @import is at the bottom of this file
-
-/**************/
-/* BASE RULES */
-/**************/
 
 html {
   font-size: 100%;
@@ -285,5 +276,3 @@ footer {
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
