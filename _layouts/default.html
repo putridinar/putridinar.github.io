@@ -4,7 +4,7 @@
 {% include head.html %}
 
  <body {% if page.url == '/blogger/' %} onload="onLoadSkeleton()"{% endif %}>
-
+{% include preload.html %}
 {% include navbar.html %}
 {% include breadcrumb.html %}
     <div id="main" role="main" class="content container">
