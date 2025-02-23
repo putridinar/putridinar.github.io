@@ -21,7 +21,7 @@ async function fetchPosts() {
             throw new Error('Element dengan ID "posts" tidak ditemukan.');
         }
 
-        postsContainer.innerHTML = "<p class='fs-5 text-center'>{% include preload.html %}</p>";
+        postsContainer.innerHTML = "<p class='fs-5 text-center'>Memuat Data</p>";
 
         db.collection("posts").orderBy("timestamp", "desc").onSnapshot(snapshot => {
             postsContainer.innerHTML = "";
