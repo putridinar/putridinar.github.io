@@ -64,7 +64,6 @@ APP_ID: 1:243575604544:web:5c161c68407947a0b8e6a5
 MEASUREMENT_ID: G-QMRXFDSLDN
 
 markdown: kramdown
-highlighter: pygments
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
@@ -72,7 +71,8 @@ version: v1.0.0
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  sass_dir: assets/_sass
+  style: :compresed # You might prefer to minify using :compressed
 
 # Use the following plug-ins
 gems:
