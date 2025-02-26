@@ -28,7 +28,7 @@ permalink: /admin/login/
 
 <link href="{{ '/assets/dist/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
 
-    <style>
+<style>
 	html,
 body {
   height: 100%;
@@ -130,7 +130,7 @@ body {
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
-    </style>
+  </style>
 
     
   </head>
@@ -157,22 +157,10 @@ body {
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit" id="loginButton">Sign in</button>
 
-    <button class="btn btn-secondary w-100 py-2 mt-2" type="button" id="fingerprintLoginButton">Login with Fingerprint</button>
     <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2025 {{site.title}}</p>
   </form>
 </main>
 <script src="{{ '/assets/dist/js/bootstrap.bundle.min.js' | relative_url }}"></script>
-<script>  document.getElementById('fingerprintLoginButton').addEventListener('click', function() {
-        // Initialize the FingerprintJS library
-        const fpPromise = FingerprintJS.load();
-        fpPromise.then(fp => fp.get()).then(result => {
-            const visitorId = result.visitorId;
-            // Handle the fingerprint login logic here
-            console.log(visitorId);
-        });
-    });</script>
-<script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3"></script>
-
 {% include module-admin.html %}
     </body>
 </html>
