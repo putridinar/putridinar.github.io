@@ -1,8 +1,4 @@
 <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getFirestore, collection, addDoc, doc, updateDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-    import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-
     // Inisialisasi Firebase
     const firebaseConfig = {
         apiKey: "{{site.API_KEY}}",
@@ -14,65 +10,75 @@
         appId: "{{site.APP_ID}}"
     };
 
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const auth = getAuth(app);
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
 
-    document.getElementById("post-form").addEventListener("submit", async function(event) {
+    document.getElementById("post-form").addEventListener("submit", function(event) {
         event.preventDefault();
 
         const newPost = {
             title: document.getElementById("title").value,
             content: document.getElementById("content").value,
             image: document.getElementById("image").value || "/images/img.png",
-            timestamp: serverTimestamp()
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
         };
 
+        // Tampilkan loading
         const submitButton = event.target.querySelector("button");
         submitButton.disabled = true;
         submitButton.textContent = "Menambahkan...";
 
-        try {
-            await addDoc(collection(db, "posts"), newPost);
+        // Simpan post ke Firestore
+        db.collection("posts").add(newPost)
+        .then(() => {
             showAlert("Post berhasil ditambahkan!", "success");
             document.getElementById("post-form").reset();
-        } catch (error) {
+        })
+        .catch(error => {
             console.error("Error:", error);
             showAlert("Terjadi kesalahan! Cek konsol untuk detail.", "danger");
-        } finally {
+        })
+        .finally(() => {
             submitButton.disabled = false;
             submitButton.textContent = "Tambah Post";
-        }
+        });
     });
 
+    // Fungsi untuk mengedit post
     function editPost(postId) {
         const updatedPost = {
             title: document.getElementById("title").value,
             content: document.getElementById("content").value,
             image: document.getElementById("image").value || "/images/img.png",
-            timestamp: serverTimestamp()
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
         };
 
-        updateDoc(doc(db, "posts", postId), updatedPost)
-        .then(() => showAlert("Post berhasil diperbarui!", "success"))
+        db.collection("posts").doc(postId).update(updatedPost)
+        .then(() => {
+            showAlert("Post berhasil diperbarui!", "success");
+        })
         .catch(error => {
             console.error("Error:", error);
             showAlert("Terjadi kesalahan! Cek konsol untuk detail.", "danger");
         });
     }
 
+    // Fungsi untuk menghapus post
     function deletePost(postId) {
-        deleteDoc(doc(db, "posts", postId))
-        .then(() => showAlert("Post berhasil dihapus!", "success"))
+        db.collection("posts").doc(postId).delete()
+        .then(() => {
+            showAlert("Post berhasil dihapus!", "success");
+        })
         .catch(error => {
             console.error("Error:", error);
             showAlert("Terjadi kesalahan! Cek konsol untuk detail.", "danger");
         });
     }
 
+    // Logout function
     document.getElementById("logoutBtn").addEventListener("click", async function () {
         try {
-            await signOut(auth);
+            await firebase.auth().signOut();
             console.log("Logout berhasil!");
             showAlert("Logout Berhasil...", "success");
             window.location.href = "/admin/login/";
@@ -82,7 +88,7 @@
         }
     });
 
-    onAuthStateChanged(auth, (user) => {
+    firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
             window.location.href = "/blog/";
         }
