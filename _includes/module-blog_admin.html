@@ -10,75 +10,65 @@
         appId: "{{site.APP_ID}}"
     };
 
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
 
-    document.getElementById("post-form").addEventListener("submit", function(event) {
+    document.getElementById("post-form").addEventListener("submit", async function(event) {
         event.preventDefault();
 
         const newPost = {
             title: document.getElementById("title").value,
             content: document.getElementById("content").value,
             image: document.getElementById("image").value || "/images/img.png",
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            timestamp: serverTimestamp()
         };
 
-        // Tampilkan loading
         const submitButton = event.target.querySelector("button");
         submitButton.disabled = true;
         submitButton.textContent = "Menambahkan...";
 
-        // Simpan post ke Firestore
-        db.collection("posts").add(newPost)
-        .then(() => {
+        try {
+            await addDoc(collection(db, "posts"), newPost);
             showAlert("Post berhasil ditambahkan!", "success");
             document.getElementById("post-form").reset();
-        })
-        .catch(error => {
+        } catch (error) {
             console.error("Error:", error);
             showAlert("Terjadi kesalahan! Cek konsol untuk detail.", "danger");
-        })
-        .finally(() => {
+        } finally {
             submitButton.disabled = false;
             submitButton.textContent = "Tambah Post";
-        });
+        }
     });
 
-    // Fungsi untuk mengedit post
     function editPost(postId) {
         const updatedPost = {
             title: document.getElementById("title").value,
             content: document.getElementById("content").value,
             image: document.getElementById("image").value || "/images/img.png",
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            timestamp: serverTimestamp()
         };
 
-        db.collection("posts").doc(postId).update(updatedPost)
-        .then(() => {
-            showAlert("Post berhasil diperbarui!", "success");
-        })
+        updateDoc(doc(db, "posts", postId), updatedPost)
+        .then(() => showAlert("Post berhasil diperbarui!", "success"))
         .catch(error => {
             console.error("Error:", error);
             showAlert("Terjadi kesalahan! Cek konsol untuk detail.", "danger");
         });
     }
 
-    // Fungsi untuk menghapus post
     function deletePost(postId) {
-        db.collection("posts").doc(postId).delete()
-        .then(() => {
-            showAlert("Post berhasil dihapus!", "success");
-        })
+        deleteDoc(doc(db, "posts", postId))
+        .then(() => showAlert("Post berhasil dihapus!", "success"))
         .catch(error => {
             console.error("Error:", error);
             showAlert("Terjadi kesalahan! Cek konsol untuk detail.", "danger");
         });
     }
 
-    // Logout function
     document.getElementById("logoutBtn").addEventListener("click", async function () {
         try {
-            await firebase.auth().signOut();
+            await signOut(auth);
             console.log("Logout berhasil!");
             showAlert("Logout Berhasil...", "success");
             window.location.href = "/admin/login/";
@@ -88,7 +78,7 @@
         }
     });
 
-    firebase.auth().onAuthStateChanged((user) => {
+    onAuthStateChanged(auth, (user) => {
         if (!user) {
             window.location.href = "/blog/";
         }
