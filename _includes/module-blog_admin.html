@@ -44,6 +44,37 @@
         });
     });
 
+    // Fungsi untuk mengedit post
+    function editPost(postId) {
+        const updatedPost = {
+            title: document.getElementById("title").value,
+            content: document.getElementById("content").value,
+            image: document.getElementById("image").value || "/images/img.png",
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        };
+
+        db.collection("posts").doc(postId).update(updatedPost)
+        .then(() => {
+            showAlert("Post berhasil diperbarui!", "success");
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            showAlert("Terjadi kesalahan! Cek konsol untuk detail.", "danger");
+        });
+    }
+
+    // Fungsi untuk menghapus post
+    function deletePost(postId) {
+        db.collection("posts").doc(postId).delete()
+        .then(() => {
+            showAlert("Post berhasil dihapus!", "success");
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            showAlert("Terjadi kesalahan! Cek konsol untuk detail.", "danger");
+        });
+    }
+
     // Logout function
     document.getElementById("logoutBtn").addEventListener("click", async function () {
         try {
