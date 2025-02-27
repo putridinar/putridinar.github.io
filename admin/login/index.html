@@ -87,7 +87,7 @@ permalink: /admin/login/
     .then(data => {
         if (data.success) {
             alert("Login berhasil!");
-            window.location.href = "dashboard.html"; // Redirect jika login sukses
+            window.location.href = "admin/dashboard";
         } else {
             alert("Login gagal: " + data.message);
         }
