@@ -40,11 +40,11 @@ permalink: /admin/login/
     <h1 class="h3 mb-3 fw-normal text-center">Admin sign in</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+      <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
       <label for="email">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="password" placeholder="Password">
+      <input type="password" class="form-control" id="password" placeholder="Password" required>
       <label for="password">Password</label>
     </div>
 
@@ -54,20 +54,47 @@ permalink: /admin/login/
         Remember me
       </label>
     </div>
-    <button class="btn btn-primary w-100 py-2 g-recaptcha" id="loginButton" 
-        data-sitekey="{{site.SITE_KEY}}" 
-        data-callback='onSubmit' 
-        data-action='submit'>Sign in</button>
+
+    <!-- Tombol dengan reCAPTCHA -->
+    <button class="btn btn-primary w-100 py-2 g-recaptcha" 
+        data-sitekey="{{site.SITE_KEY}}"
+        data-callback="onSubmit"
+        data-action="submit">
+        Sign in
+    </button>
 
     <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2025 {{site.title}}</p>
   </form>
 </main>
 <script src="{{ '/assets/dist/js/bootstrap.bundle.min.js' | relative_url }}"></script>
- <script>
-   function onSubmit(token) {
-     document.getElementById("loginForm").submit();
-   }
- </script>
+<script>
+  function onSubmit(token) {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (!email || !password) {
+        alert("Email dan password wajib diisi!");
+        return;
+    }
+
+    // Kirim data ke server menggunakan Fetch API
+    fetch('verify.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}&g-recaptcha-response=${token}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Login berhasil!");
+            window.location.href = "dashboard.html"; // Redirect jika login sukses
+        } else {
+            alert("Login gagal: " + data.message);
+        }
+    })
+    .catch(error => console.error('Error:', error));
+  }
+</script>
 {% include module-admin.html %}
     </body>
 </html>
