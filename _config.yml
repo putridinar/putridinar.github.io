@@ -53,7 +53,7 @@ baseurl: ""
 
 # auth
 
-SITE_KEY:
+SITE_KEY: 6LdxkuQqAAAAACMENv8n1QaingZpI997tFWuMKj4
 API_KEY: AIzaSyDfZEKaggvi2SN4Jeyhc3XCeb4A1DJVmQE
 AUTH_DOMAIN: vems-olshop.firebaseapp.com
 DATABASE_URL: https://vems-olshop-default-rtdb.asia-southeast1.firebasedatabase.app
