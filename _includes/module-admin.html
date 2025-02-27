@@ -16,33 +16,50 @@
     const auth = firebase.auth();
     const db = firebase.firestore();
 
-    // Proses login
+    // Proses login dengan reCAPTCHA
     document.getElementById("loginForm").addEventListener("submit", async function(event) {
         event.preventDefault();
 
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        try {
-            // Login dengan email dan password
-            const userCredential = await auth.signInWithEmailAndPassword(email, password);
-            const user = userCredential.user;
-            console.log("Login berhasil!", user);
-
-            // Cek apakah user adalah admin
-            const adminDoc = await db.collection("admins").doc(user.uid).get();
-            if (adminDoc.exists) {
-                // Jika user adalah admin
-                window.location.href = '{{site.baseurl}}/admin/dashboard';
-            } else {
-                // Jika bukan admin
-                location.href = "{{site.baseurl}}/restricted";
-            }
-
-        } catch (error) {
-            console.error(error.message);
-            showAlert(error.message);
+        if (!email || !password) {
+            showAlert("Email dan password wajib diisi!");
+            return;
         }
+
+        grecaptcha.ready(async function() {
+            try {
+                // Jalankan reCAPTCHA v3
+                const token = await grecaptcha.execute("{{site.SITE_KEY}}", { action: "login" });
+
+                // Validasi reCAPTCHA di sisi klien
+                if (!token) {
+                    showAlert("Verifikasi reCAPTCHA gagal. Silakan coba lagi.");
+                    return;
+                }
+
+                // Login dengan email dan password
+                const userCredential = await auth.signInWithEmailAndPassword(email, password);
+                const user = userCredential.user;
+
+                console.log("Login berhasil!", user);
+
+                // Cek apakah user adalah admin di Firestore
+                const adminDoc = await db.collection("admins").doc(user.uid).get();
+                if (adminDoc.exists) {
+                    // Jika user adalah admin
+                    window.location.href = "{{site.baseurl}}/admin/dashboard";
+                } else {
+                    // Jika bukan admin
+                    window.location.href = "{{site.baseurl}}/restricted";
+                }
+
+            } catch (error) {
+                console.error(error.message);
+                showAlert(error.message);
+            }
+        });
     });
 
     function showAlert(message) {
@@ -55,6 +72,8 @@
         alertPlaceholder.innerHTML = alertHTML;
     }
 </script>
+
+<script src="https://www.google.com/recaptcha/api.js?render={{site.SITE_KEY}}"></script>
 
 <!-- HTML Container for Bootstrap Alerts -->
 <div class="position-absolute mx-auto w-75 top-50 start-50 translate-middle-x" id="alertPlaceholder"></div>
