@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $secretKey = "SECRET_KEY_ANDA"; // Ganti dengan Secret Key Anda
+    $secretKey = "{{site.SITE_KEY}}";
     $captchaResponse = $_POST["g-recaptcha-response"];
 
     if (!$captchaResponse) {
