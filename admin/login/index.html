@@ -30,7 +30,7 @@ permalink: /admin/login/
 
 {% include login_style.html %}
 
- <script src="https://www.google.com/recaptcha/api.js"></script>
+ <script src="https://www.google.com/recaptcha/api.js?render={{site.SITE_KEY}}"></script>
     
   </head>
   <body class="d-flex align-items-center py-4 bg-body-tertiary">
@@ -67,34 +67,6 @@ permalink: /admin/login/
   </form>
 </main>
 <script src="{{ '/assets/dist/js/bootstrap.bundle.min.js' | relative_url }}"></script>
-<script>
-  function onSubmit(token) {
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    if (!email || !password) {
-        alert("Email dan password wajib diisi!");
-        return;
-    }
-
-    // Kirim data ke server menggunakan Fetch API
-    fetch('../verify.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}&g-recaptcha-response=${token}`
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert("Login berhasil!");
-            window.location.href = "admin/dashboard";
-        } else {
-            alert("Login gagal: " + data.message);
-        }
-    })
-    .catch(error => console.error('Error:', error));
-  }
-</script>
 {% include module-admin.html %}
     </body>
 </html>
