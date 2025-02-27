@@ -30,7 +30,6 @@ permalink: /admin/login/
 
 {% include login_style.html %}
 
- <script src="https://www.google.com/recaptcha/api.js?render={{site.SITE_KEY}}"></script>
     
   </head>
   <body class="d-flex align-items-center py-4 bg-body-tertiary">
@@ -56,12 +55,7 @@ permalink: /admin/login/
     </div>
 
     <!-- Tombol dengan reCAPTCHA -->
-    <button class="btn btn-primary w-100 py-2 g-recaptcha" 
-        data-sitekey="{{site.SITE_KEY}}"
-        data-callback="onSubmit"
-        data-action="submit">
-        Sign in
-    </button>
+    <button class="btn btn-primary w-100 py-2" id="loginButton">Sign in</button>
 
     <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2025 {{site.title}}</p>
   </form>
