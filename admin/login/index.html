@@ -78,7 +78,7 @@ permalink: /admin/login/
     }
 
     // Kirim data ke server menggunakan Fetch API
-    fetch('../verify.php', {
+    fetch('/admin/login/verify.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}&g-recaptcha-response=${token}`
