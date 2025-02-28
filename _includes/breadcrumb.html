@@ -7,7 +7,7 @@
 		{% elsif page.url contains '/blog/' or page.layout == 'post' %}
 		<li class="breadcrumb-item" aria-current="page"><a class="badge text-bg-primary" href="/blog">Blog</a></li>
 		<li class="breadcrumb-item active" aria-current="page">Post Blog</li>{% elsif page.url '/produk/' %}
-		<li class="breadcrumb-item active" aria-current="page">Produk</li> {% elsif page.url contains '/admin/dashboard' %}
+		<li class="breadcrumb-item active" aria-current="page">Produk</li> {% elsif page.url contains '/admin/dashboard/' or page.layout == 'none' %}
 		<li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>{% endif %}
 	  </ol>
 	</nav>
