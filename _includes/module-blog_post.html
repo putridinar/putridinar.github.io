@@ -19,14 +19,14 @@
     // Fetch Single Post
     async function fetchPost() {
         if (!postId) {
-            document.getElementById("postContent").innerHTML = "<p class='text-danger'>Post tidak ditemukan.</p>";
+            document.getElementById("blogPosts").innerHTML = "<p class='text-danger'>Post tidak ditemukan.</p>";
             return;
         }
 
         try {
             const postDoc = await db.collection("posts").doc(postId).get();
             if (!postDoc.exists) {
-                document.getElementById("postContent").innerHTML = "<p class='text-danger'>Post tidak ditemukan.</p>";
+                document.getElementById("blogPosts").innerHTML = "<p class='text-danger'>Post tidak ditemukan.</p>";
                 return;
             }
 
@@ -42,7 +42,7 @@
             document.getElementById("postAuthor").textContent = post.author || "Penulis Tidak Diketahui";
         } catch (error) {
             console.error("Error fetching post:", error);
-            document.getElementById("postContent").innerHTML = "<p class='text-danger'>Gagal memuat konten.</p>";
+            document.getElementById("blogPosts").innerHTML = "<p class='text-danger'>Gagal memuat konten.</p>";
         }
     }
 
