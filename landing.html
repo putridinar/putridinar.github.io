@@ -46,7 +46,14 @@ permalink: /
     <li class="breadcrumb-item">Postingan Terbaru</li>
   </ol>
 </nav>
-        <div id="posts" class="row mt-3"></div>
+
+ <!-- Container untuk Grid Post -->
+<div class="container py-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="posts">
+        <!-- Post akan dimuat secara dinamis oleh JavaScript -->
+    </div>
+</div>
+
     </section>
 
 {% include footer.html %}
