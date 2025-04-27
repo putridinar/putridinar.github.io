@@ -3,10 +3,43 @@ layout: page
 permalink: /blog/post.html
 ---
 
-    <!-- Konten Artikel -->
-    <div class="mt-5">
-        <div id="post-container" class="text-center">
-            <p class="text-muted">Memuat artikel...</p>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Header Artikel -->
+            <div class="text-center mb-4">
+                <h1 id="postTitle" class="fw-bold display-4"></h1>
+                <p id="postDate" class="text-muted"></p>
+            </div>
+
+            <!-- Gambar Utama -->
+            <div class="text-center mb-5">
+                <img id="postImage" src="https://via.placeholder.com/1200x600" class="img-fluid rounded shadow-lg" alt="Post Image">
+            </div>
+
+            <!-- Konten Artikel -->
+            <div id="postContent" class="fs-5 lh-lg text-justify mb-4">
+                <p>Loading content...</p>
+            </div>
+
+            <!-- Footer Artikel -->
+            <div class="mt-5">
+                <div class="border-top pt-4">
+                    <p class="text-muted small">Ditulis oleh: <span id="postAuthor">Penulis Tidak Diketahui</span></p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="/blog" class="btn btn-outline-secondary">Kembali ke Blog</a>
+                    <div class="d-flex align-items-center">
+                        <span class="me-2">Bagikan:</span>
+                        <a href="#" class="btn btn-link text-primary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-link text-info"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-link text-success"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+
 	{% include module-post_page.html %}
