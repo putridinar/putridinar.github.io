@@ -1,27 +1,34 @@
-    <!-- Modal -->
-    <div class="modal modal-xl fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog">
-            <div class="modal-content simpleCart_shelfItem">
-                <div class="modal-header">
-                    <h5 class="modal-title item_name" id="postModalLabel">Judul Post</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="loading" class="text-center">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                        <p class="mt-2">Memuat data...</p>
+<!-- Modal untuk Detail Produk -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Loading...</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Gambar Produk -->
+                    <div class="col-md-6 text-center">
+                        <img id="product-image" src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm d-none" alt="Product Image">
                     </div>
-					<div class="d-md-flex gap-3">
-                    <img id="post-image" class="img-thumbnail mx-auto d-none mb-3 rounded item_thumb" alt="Post Image" style="height: auto;max-width: 480px;width: 100%;">
-<p class="">Rp. <span id="post-harga" class="item_price"></span></p>
-                    <p id="post-content" class="d-none"></p>
-					</div>
-                      <div class="modal-footer">
-                        <a href="javascript:;" type="button" class="btn btn-primary item_add">Beli Item</a>
-                      </div>
+                    <!-- Detail Produk -->
+                    <div class="col-md-6">
+                        <h3 id="product-title" class="fw-bold"></h3>
+                        <h4 id="product-price" class="text-primary fw-bold"></h4>
+                        <p id="product-description" class="text-muted"></p>
+                        <div id="loading-spinner" class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary">Beli Sekarang</button>
             </div>
         </div>
     </div>
+</div>
