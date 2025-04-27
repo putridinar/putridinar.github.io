@@ -3,5 +3,42 @@ layout: default
 permalink: /blog
 ---
 
-    <div class="r" id="posts"></div>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Header Post -->
+            <div class="text-center mb-4">
+                <h1 id="postTitle" class="fw-bold"></h1>
+                <p id="postDate" class="text-muted"></p>
+            </div>
+
+            <!-- Gambar Utama -->
+            <div class="text-center mb-4">
+                <img id="postImage" src="https://via.placeholder.com/800x400" class="img-fluid rounded shadow" alt="Post Image">
+            </div>
+
+            <!-- Konten Post -->
+            <div id="postContent" class="fs-5 lh-lg text-justify">
+                <p>Loading content...</p>
+            </div>
+
+            <!-- Footer Post -->
+            <div class="mt-5 border-top pt-4">
+                <p class="text-muted small">Ditulis oleh: <span id="postAuthor">Penulis Tidak Diketahui</span></p>
+                <div class="d-flex justify-content-between">
+                    <a href="/blog" class="btn btn-outline-primary">Kembali ke Blog</a>
+                    <div class="social-icons">
+                        <span>Bagikan:</span>
+                        <a href="#" class="btn btn-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-link"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 	{% include module-blog_post.html %}
