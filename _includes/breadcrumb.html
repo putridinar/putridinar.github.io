@@ -1,14 +1,68 @@
-<div class="container mt-2">
-	<nav style="--bs-breadcrumb-divider: '/';" aria-label="breadcrumb">
-	  <ol class="breadcrumb">
-		<li class="breadcrumb-item"><a class="badge text-bg-primary" href="/">Home</a></li>
-		{% if page.url == '/blog' %}
-		<li class="breadcrumb-item active" aria-current="page">Blog</li>
-		{% elsif page.url contains '/blog/' or page.layout == 'post' %}
-		<li class="breadcrumb-item" aria-current="page"><a class="badge text-bg-primary" href="/blog">Blog</a></li>
-		<li class="breadcrumb-item active" aria-current="page">Post Blog</li>{% elsif page.url '/produk/' %}
-		<li class="breadcrumb-item active" aria-current="page">Produk</li> {% elsif page.url contains '/admin/dashboard/' or page.layout == 'none' %}
-		<li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>{% endif %}
-	  </ol>
-	</nav>
+<!-- CSS Fancy Breadcrumb -->
+<style>
+    .breadcrumb-glass {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 1rem;
+        padding: 0.8rem 1.5rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        animation: fadeSlide 0.6s ease-in-out;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        color: #6c757d;
+        content: "›"; /* Ganti slash dengan tanda '›' modern */
+        font-weight: bold;
+        padding: 0 0.6rem;
+    }
+
+    .breadcrumb a.badge {
+        padding: 0.5em 0.9em;
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    .breadcrumb a.badge:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    @keyframes fadeSlide {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+<div class="container mt-3">
+  <nav class="breadcrumb-glass" aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item">
+        <a class="badge text-bg-primary" href="/">Home</a>
+      </li>
+
+      {% if page.url == '/blog' %}
+      <li class="breadcrumb-item active" aria-current="page">Blog</li>
+
+      {% elsif page.url contains '/blog/' or page.layout == 'post' %}
+      <li class="breadcrumb-item">
+        <a class="badge text-bg-primary" href="/blog">Blog</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Post Blog</li>
+
+      {% elsif page.url contains '/produk/' %}
+      <li class="breadcrumb-item active" aria-current="page">Produk</li>
+
+      {% elsif page.url contains '/admin/dashboard/' or page.layout == 'none' %}
+      <li class="breadcrumb-item active" aria-current="page">Admin Dashboard</li>
+      {% endif %}
+    </ol>
+  </nav>
 </div>

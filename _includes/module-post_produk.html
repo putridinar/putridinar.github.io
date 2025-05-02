@@ -12,14 +12,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 const card = document.createElement("div");
                 card.className = "col";
                 card.innerHTML = `
-                    <div class="card h-100 shadow-sm">
-                        <img src="${product.image || 'https://via.placeholder.com/600x400'}" class="card-img-top" alt="${product.title}" loading="lazy">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold">${product.title}</h5>
-                            <p class="text-primary fw-bold">Rp ${product.harga.toLocaleString('id-ID')}</p>
-                            <button class="btn btn-outline-primary" onclick="showProduct(${product.id})" data-bs-toggle="modal" data-bs-target="#productModal">Lihat Detail</button>
-                        </div>
-                    </div>
+<div class="card h-100 shadow-sm position-relative overflow-hidden product-card">
+      <!-- Full Image dengan Overlay -->
+      <div class="position-relative">
+        <img src="${product.image || 'https://putridinar.github.io/images/img.png'}" class="card-img-top img-fluid" alt="${product.title}" loading="lazy">
+        
+        <!-- Badge Diskon -->
+        ${product.discount ? `<span class="badge bg-danger position-absolute top-0 start-0 m-2 shadow">-${product.discount}%</span>` : ''}
+        
+        <!-- Love Button -->
+        <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow love-btn">
+          <i class="bi bi-heart"></i>
+        </button>
+      </div>
+
+      <!-- Info Produk -->
+      <div class="card-body text-center">
+        <h5 class="card-title fw-semibold">${product.title}</h5>
+        <p class="text-primary fw-bold">Rp ${product.harga.toLocaleString('id-ID')}</p>
+        ${product.original_price ? `<p class="text-muted text-decoration-line-through small">Rp ${product.original_price.toLocaleString('id-ID')}</p>` : ''}
+        <button class="btn btn-outline-primary" onclick="showProduct(${product.id})" data-bs-toggle="modal" data-bs-target="#productModal">Lihat Detail</button>
+      </div>
+    </div>
                 `;
                 productList.appendChild(card);
             });
@@ -44,7 +58,7 @@ function showProduct(productId) {
                 document.getElementById("product-title").textContent = product.title;
                 document.getElementById("product-price").textContent = "Rp " + product.harga.toLocaleString('id-ID');
                 document.getElementById("product-price").classList.remove("d-none");
-                document.getElementById("product-image").src = product.image || "https://via.placeholder.com/600x400";
+                document.getElementById("product-image").src = product.image || "https://putridinar.github.io/images/img.png";
                 document.getElementById("product-image").classList.remove("d-none");
                 document.getElementById("product-description").textContent = product.content || "Deskripsi tidak tersedia.";
                 document.getElementById("product-description").classList.remove("d-none");
@@ -53,3 +67,32 @@ function showProduct(productId) {
         .catch(error => console.error("Gagal memuat detail produk:", error));
 }
 </script>
+<style>
+.product-card img {
+  transition: transform 0.4s ease;
+  object-fit: cover;
+  height: 250px; /* Sesuaikan tinggi gambar */
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.love-btn:hover {
+  color: red;
+}
+
+.card-body {
+  transition: background 0.3s ease;
+}
+
+.product-card:hover .card-body {
+  background: rgba(250, 250, 250, 0.9); /* Menambah efek highlight saat hover */
+}
+
+/* Badge Diskon */
+.badge {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+</style

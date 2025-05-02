@@ -3,25 +3,24 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="productModalLabel">Loading...</h5>
+                <h5 class="modal-title" id="product-title">Loading...</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                        <div id="loading-spinner" class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                            </div>
+                        </div>
                 <div class="row">
                     <!-- Gambar Produk -->
                     <div class="col-md-6 text-center">
-                        <img id="product-image" src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm d-none" alt="Product Image">
+                        <img id="product-image" src="https://putridinar.github.io/images/img.png" class="img-fluid rounded shadow-sm d-none" alt="Product Image">
                     </div>
                     <!-- Detail Produk -->
                     <div class="col-md-6">
                         <h3 id="product-title" class="fw-bold"></h3>
                         <h4 id="product-price" class="text-primary fw-bold"></h4>
                         <p id="product-description" class="text-muted"></p>
-                        <div id="loading-spinner" class="text-center">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

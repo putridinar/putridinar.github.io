@@ -1,14 +1,72 @@
-<div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<style>
+    .offcanvas-modern {
+        backdrop-filter: blur(12px);
+        background: rgba(20, 20, 20, 0.85);
+        color: #fff;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s ease-in-out;
+		z-index: 9999;
+    }
+
+    .offcanvas-modern .offcanvas-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .offcanvas-modern .nav-link {
+        color: #eee;
+        font-size: 1rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .offcanvas-modern .nav-link i {
+        margin-right: 0.75rem;
+        font-size: 1.1rem;
+    }
+
+    .offcanvas-modern .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #0d6efd;
+        transform: translateX(3px);
+    }
+
+    .offcanvas-modern .btn-close {
+        filter: invert(1);
+    }
+
+    .offcanvas-modern .btn-outline-light {
+        border-color: rgba(255, 255, 255, 0.3);
+        color: #fff;
+    }
+
+    .offcanvas-modern .btn-outline-light:hover {
+        background-color: #0d6efd;
+        color: #fff;
+    }
+</style>
+<div class="offcanvas offcanvas-end offcanvas-modern" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h5 id="offcanvasRightLabel">{{site.title}}</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 id="offcanvasRightLabel" class="fw-bold">{{site.title}}</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/blog">Artikel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/produk">Produk</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-light" href="{{site.baseurl}}/admin/login">Login</a></li>
-                </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/"><i class="bi bi-house-door"></i> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blog"><i class="bi bi-journal-text"></i> Artikel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/produk"><i class="bi bi-box-seam"></i> Produk</a>
+      </li>
+      <li class="nav-item mt-3">
+        <a class="nav-link btn btn-outline-light w-100" href="{{site.baseurl}}/admin/login"><i class="bi bi-lock"></i> Login</a>
+      </li>
+    </ul>
   </div>
 </div>

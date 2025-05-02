@@ -1,14 +1,57 @@
+<style>
+.navbar-glass {
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  z-index: 1051;
+}
 
+    .navbar-scrolled {
+        background-color: rgba(18, 18, 18, 0.8) !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
 
-    <!-- Navbar -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-      <img src="{{ site.avatar }}" alt="{{site.title}}" width="30" height="30" class="d-inline-block rounded align-text-top"> {{site.title}}
-    </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            {% include offcanvas.html %}
-        </div>
-    </nav>
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+    }
+
+    .navbar-brand img {
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-brand:hover img {
+        transform: scale(1.1) rotate(3deg);
+    }
+.navbar-toggler {
+  display: block !important;
+}
+    .hero {
+        background: url('https://assets.justinmind.com/wp-content/uploads/2018/07/10-hero-image-website-ideas-to-inspire-you-header-3-768x492.png') center/cover;
+        color: black;
+        padding: 80px 20px;
+        text-align: center;
+    }
+    .post-card img {
+        height: 200px;
+        object-fit: cover;
+        loading: lazy; /* Added lazy loading */
+    }
+</style>
+<!-- Navbar -->
+<nav id="mainNavbar" class="navbar fixed-top navbar-expand-lg navbar-dark navbar-glass" data-aos="fade-down">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="{{ site.avatar }}" alt="{{site.title}}" width="34" height="34" class="rounded me-2">
+            {{site.title}}
+        </a>
+		
+<button class="navbar-toggler d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+    </div>
+</nav>
+        {% include offcanvas.html %}
