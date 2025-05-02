@@ -1,11 +1,9 @@
 ---
 ---
 @use "./reset" as *;
-@use "./mixins" as *;
+@use './mixins' as *;
 @use "./variables" as *;
 @use "./newstyles" as *;
-@use "./highlights" as *;
-@use "./svg-icons" as *;
 
 html {
   font-size: 100%;
