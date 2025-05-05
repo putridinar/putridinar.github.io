@@ -20,5 +20,64 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 	<script id="dsq-count-scr" src="//blogsputri.disqus.com/count.js" async></script>
+<canvas id="bg-landing"></canvas>
+
+<style>
+  #bg-landing {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    z-index: -1;
+  }
+</style>
+
+<script>
+  const canvas = document.getElementById("bg-landing");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let landingParticles = [];
+
+  for (let i = 0; i < 100; i++) {
+    landingParticles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 1.5,
+      vy: (Math.random() - 0.5) * 1.5,
+      r: 1 + Math.random() * 2
+    });
+  }
+
+  function draw() {
+    ctx.fillStyle = "rgba(17,17,17,0.2)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    for (let p of landingParticles) {
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
+      ctx.fillStyle = "#00ccff";
+      ctx.fill();
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
+
   </body>
 </html>
